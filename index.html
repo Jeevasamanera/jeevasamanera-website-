@@ -20,28 +20,25 @@
       line-height: 1.6;
     }
 
-     header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  padding: 100px 30px 60px;
-}
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 30px;
+    }
 
-  
-      h1 {
-  font-size: clamp(28px, 7vw, 60px);
-  font-weight: bold;
-  letter-spacing: 4px;
-  white-space: nowrap;
-}
-    
+    h1 {
+      font-size: clamp(28px, 7vw, 60px);
+      font-weight: bold;
+      letter-spacing: 4px;
+      white-space: nowrap;
+    }
 
-.subtitle {
-  margin-top: 15px;
-  margin-bottom: 60px;
+    .subtitle {
+      margin-top: 15px;
+      margin-bottom: 60px;
       font-size: 18px;
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -61,23 +58,73 @@
       font-size: 14px;
     }
 
-    section {
-      padding: 100px 8%;
-      max-width: 1100px;
-      margin: auto;
+    .reflectre-cover {
+      margin-bottom: 70px;
     }
 
-    h2 {
+    .reflectre-cover img {
+      width: min(500px, 85vw);
+      height: auto;
+      display: block;
+    }
+
+    .curatorial {
+      max-width: 800px;
+      margin-bottom: 100px;
+      text-align: left;
+    }
+
+    .curatorial h2,
+    .about h2,
+    .reflectre h2 {
       font-size: 42px;
       font-weight: normal;
       margin-bottom: 25px;
     }
 
-    .reflectre {
-      min-height: 70vh;
+    .curatorial p {
+      font-size: 20px;
+      opacity: 0.8;
+    }
+
+    .about {
+      width: 100%;
+      max-width: 1100px;
+      padding: 100px 8%;
+      margin: auto;
+    }
+
+    .about-content {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      gap: 60px;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .about-photo {
+      flex: 0 0 40%;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .artist-statement {
+      flex: 1;
+    }
+
+    .artist-statement p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .reflectre {
+      padding: 100px 8%;
+      max-width: 1100px;
+      margin: auto;
+      min-height: 60vh;
     }
 
     .reflectre p {
@@ -92,46 +139,34 @@
       opacity: 0.5;
       font-size: 13px;
     }
-  </.about-content {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-}
 
-.about-photo {
-  flex: 0 0 40%;
-}
+    @media (max-width: 700px) {
 
-.about-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+      nav {
+        position: static;
+        margin-bottom: 50px;
+      }
 
-.artist-statement {
-  flex: 1;
-}
+      .about-content {
+        flex-direction: column;
+        gap: 35px;
+      }
 
-.artist-statement p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
+      .about-photo {
+        width: 100%;
+      }
 
-@media (max-width: 700px) {
-  .about-content {
-    flex-direction: column;
-    gap: 35px;
-  }
-
-  .about-photo {
-    width: 100%;
-  }
-}style>
+      h1 {
+        white-space: normal;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
+
     <nav>
       <a href="#reflectre">REFLECTRE</a>
       <a href="#about">ABOUT</a>
@@ -139,88 +174,98 @@
 
     <h1>JEEVA SAMANERA</h1>
 
-<div class="subtitle">
-  Artist · Philosopher · Creator
-</div>
-
-<div class="reflectre-cover">
-  <img src="Reflectre%20cover%20page.png" alt="REFLECTRE — Jeeva Samanera">
-</div>
-
-<div class="curatorial">
-  <h2>REFLECTRE</h2>
-
-  <p>
-    REFLECTRE is my exploration thorough reflection. It is an attempt
-    to acknowledge and express. How our position, our memories, 
-    our experiences and our awareness shapes the world, we believe we are 
-looking at.
-  </p>
-</div>
-  
-    <section id="about">
-  <h2>About</h2>
-
-  <div class="about-content">
-
-    <div class="about-photo">
-      <img src="jeeva-samanera.jpg" alt="Jeeva Samanera">
+    <div class="subtitle">
+      Artist · Philosopher · Creator
     </div>
 
-    <div class="artist-statement">
-      <p>
-        Jeeva Samanera is an artist, philosopher, creator exploring ideas of
-        consciousness, spirituality, human identity, symbolism and transformation
-        through visual art.
-      </p>
-
-      <p>
-        I am using charcoal as a medium and a metaphor in order to explore the
-        fragile space between human vulnerability and transformation, between
-        light and its shadow, between presence and disappearance, between positive
-        and negative space.
-      </p>
-
-      <p>
-        The monochromatic language of charcoal allows me to strip away from the
-        distractions and reveal essential emotional and psychological
-        multidimensional landscapes to investigate the emotional and symbolic
-        dimensions of human consciousness and spirituality, often drawing attention
-        to moments that are easily overlooked yet deeply significant.
-      </p>
-
-      <p>
-        In my recent works, this inquiry has evolved into a more focused examination
-        of traces. As an artist and curator, I am interested in encounters that
-        invite contemplation rather than certainty.
-      </p>
-
-      <p>
-        My practice seeks to transcend fleeting spiritual experiences into lasting
-        essence of humanity through structural visual experiences of sequential
-        philosophical insights, contrast of sequential patterns and tonal depth,
-        encouraging viewers to reflect on their own stories of loss, resilience,
-        belonging and renewal through portraiture, symbolism, atmospheric imagery
-        with kairolume — a moment when purpose and clarity converge.
-      </p>
+    <div class="reflectre-cover">
+      <img src="Reflectre%20cover%20page.png"
+           alt="REFLECTRE — Jeeva Samanera">
     </div>
 
-  </div>
-</section>
-    </header>
+    <div class="curatorial">
+
+      <h2>REFLECTRE</h2>
+
+      <p>
+        REFLECTRE is my exploration through reflection. It is an attempt
+        to acknowledge and express how our position, our memories, our
+        experiences and our awareness shape the world we believe we are
+        looking at.
+      </p>
+
+    </div>
+
+  </header>
+
+  <section id="about" class="about">
+
+    <h2>About</h2>
+
+    <div class="about-content">
+
+      <div class="about-photo">
+        <img src="jeeva-samanera.jpg"
+             alt="Jeeva Samanera">
+      </div>
+
+      <div class="artist-statement">
+
+        <p>
+          Jeeva Samanera is an artist, philosopher, creator exploring ideas
+          of consciousness, spirituality, human identity, symbolism and
+          transformation through visual art.
+        </p>
+
+        <p>
+          I am using charcoal as a medium and a metaphor in order to explore
+          the fragile space between human vulnerability and transformation,
+          between light and its shadow, between presence and disappearance,
+          between positive and negative space.
+        </p>
+
+        <p>
+          The monochromatic language of charcoal allows me to strip away
+          distractions and reveal essential emotional and psychological
+          multidimensional landscapes, investigating the emotional and
+          symbolic dimensions of human consciousness and spirituality.
+        </p>
+
+        <p>
+          In my recent works, this inquiry has evolved into a more focused
+          examination of traces. As an artist and curator, I am interested
+          in encounters that invite contemplation rather than certainty.
+        </p>
+
+        <p>
+          My practice seeks to transcend fleeting spiritual experiences
+          into lasting essence of humanity through structural visual
+          experiences of sequential philosophical insights, contrast of
+          sequential patterns and tonal depth, encouraging viewers to
+          reflect on their own stories of loss, resilience, belonging and
+          renewal through portraiture, symbolism, atmospheric imagery
+          with kairolume — a moment when purpose and clarity converge.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
 
   <section id="reflectre" class="reflectre">
+
     <h2>REFLECTRE</h2>
 
     <p>
-      A Spiritual Contemporary Art book
-  
+      A Spiritual Contemporary Art Book
     </p>
-  
+
+  </section>
 
   <footer>
     © 2026 Jeeva Samanera
   </footer>
 
 </body>
-</html>
+  </html>
