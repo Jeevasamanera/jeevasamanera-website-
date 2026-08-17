@@ -92,7 +92,41 @@
       opacity: 0.5;
       font-size: 13px;
     }
-  </style>
+  </.about-content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.about-photo {
+  flex: 0 0 40%;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.artist-statement {
+  flex: 1;
+}
+
+.artist-statement p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+  .about-content {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .about-photo {
+    width: 100%;
+  }
+}style>
 </head>
 
 <body>
@@ -124,14 +158,55 @@ looking at.
   </p>
 </div>
   
-    <h2>About</h2>
+    <section id="about">
+  <h2>About</h2>
 
-    <p>
-      Jeeva Samanera is an artist, philosopher, creator exploring ideas of
-      consciousness, spirituality, human identity, symbolism and transformation through
-      visual art.
-      I am using charcoal as a medium and  a metaphor in order to explore the fragile space between human vulnerability and transformation, between light and it's shadow, between presence and disappearence, between positive and negative space. The monochromatic language of charcoal allows me to strip away from the distractions and reveal essential emotional and psychological multidimensional landscapes to investigate the emotional and symbolic dimensions of human consciousness and spirituality often drawing attention to moments that are easily overlooked yet deeply significant. In my recent works, this inquiry has evolved into a more focused examination of traces. As an artist and curator I am interested in encounters that invites contemplation rather than certainty. My practice seeks to transcend fleeting  spiritual experiences into lasting essence of humanity through structural vidual experiences of sequential philosophical insights, contrast of sequential patterns and tonal depth encourageds viewers to reflect on their own stories of loss, resilience, belonging and renewal  through portraiture, symbolism, atmospheric imagery with kairolume <a moment when purpose and clarity converge>
-    </p>
+  <div class="about-content">
+
+    <div class="about-photo">
+      <img src="jeeva-samanera.jpg" alt="Jeeva Samanera">
+    </div>
+
+    <div class="artist-statement">
+      <p>
+        Jeeva Samanera is an artist, philosopher, creator exploring ideas of
+        consciousness, spirituality, human identity, symbolism and transformation
+        through visual art.
+      </p>
+
+      <p>
+        I am using charcoal as a medium and a metaphor in order to explore the
+        fragile space between human vulnerability and transformation, between
+        light and its shadow, between presence and disappearance, between positive
+        and negative space.
+      </p>
+
+      <p>
+        The monochromatic language of charcoal allows me to strip away from the
+        distractions and reveal essential emotional and psychological
+        multidimensional landscapes to investigate the emotional and symbolic
+        dimensions of human consciousness and spirituality, often drawing attention
+        to moments that are easily overlooked yet deeply significant.
+      </p>
+
+      <p>
+        In my recent works, this inquiry has evolved into a more focused examination
+        of traces. As an artist and curator, I am interested in encounters that
+        invite contemplation rather than certainty.
+      </p>
+
+      <p>
+        My practice seeks to transcend fleeting spiritual experiences into lasting
+        essence of humanity through structural visual experiences of sequential
+        philosophical insights, contrast of sequential patterns and tonal depth,
+        encouraging viewers to reflect on their own stories of loss, resilience,
+        belonging and renewal through portraiture, symbolism, atmospheric imagery
+        with kairolume — a moment when purpose and clarity converge.
+      </p>
+    </div>
+
+  </div>
+</section>
     </header>
 
   <section id="reflectre" class="reflectre">
@@ -141,10 +216,7 @@ looking at.
       A Spiritual Contemporary Art book
   
     </p>
-  </section>
-
-  <section id="about">
-  </section>
+  
 
   <footer>
     © 2026 Jeeva Samanera
