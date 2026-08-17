@@ -102,21 +102,23 @@
     }
 
     .about-content {
-      display: flex;
-      gap: 60px;
-      align-items: flex-start;
-      text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
     }
 
     .about-photo {
-      flex: 0 0 40%;
-    }
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
 
-    .about-photo img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
     .artist-statement {
       flex: 1;
@@ -211,12 +213,14 @@
 
     <div class="about-content">
 
-      <div class="about-photo">
-        <img src="Jeeva%20samanera.jpg"
-     alt="Jeeva Samanera">
-      </div>
+  <div class="about-photo">
+    <img src="Jeeva%20samanera.jpg"
+         alt="Jeeva Samanera">
+  </div>
 
-      <div class="artist-statement">
+  <div class="artist-statement">
+
+    <h3>ARTISTIC / CURATORIAL CONCEPT OF MY ART</h3>
 
         <p>
           Jeeva Samanera is an artist, philosopher, creator exploring ideas
