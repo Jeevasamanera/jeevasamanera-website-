@@ -65,8 +65,9 @@
     .reflectre-cover {
   margin: 20px auto 90px;
   display: flex;
-  justify-content: center;
-}
+  flex-direction: column;
+  align-items: center;
+    }
 
 .reflectre-cover img {
   width: min(500px, 82vw);
@@ -75,14 +76,15 @@
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);}
 .open-book {
   display: inline-block;
-  margin-top: 25px;
-  padding: 12px 28px;
-  border: 1px solid #f4f0e8;
-  color: #f4f0e8;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: #f4f0e8;
+  color: #111;
   text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
 }
 
 .open-book:hover {
