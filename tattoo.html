@@ -143,10 +143,9 @@
 
   </section>    <main class="gallery">  <article class="artwork">  
 
-    <a href="https://github.com/Jeevasamanera/jeevasamanera-website-/blob/main/IMG_20260525_121607_905.jpg">
-  <img src="./IMG_20260525_121607_905.jpg"
-       alt="Jeeva Samanera tattoo artwork">
-    </a>
+    <img src="./IMG_20260525_121607_905.jpg"
+     alt="Jeeva Samanera tattoo artwork"
+     onclick="openImage(this.src)">
 
   <h3>Untitled I</h3>
 
@@ -158,5 +157,36 @@
 
   </main>    <footer>  
     © 2026 Jeeva Samanera  
-  </footer>  </body>  
+  </footer> <div id="imageViewer" onclick="closeImage()">
+  <img id="largeImage" src="" alt="Tattoo artwork">
+</div>
+
+<script>
+function openImage(src) {
+  document.getElementById("largeImage").src = src;
+  document.getElementById("imageViewer").style.display = "flex";
+}
+
+function closeImage() {
+  document.getElementById("imageViewer").style.display = "none";
+}
+#imageViewer {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  cursor: pointer;
+}
+
+#imageViewer img {
+  max-width: 95%;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  }</script> </body>  
 </html>
