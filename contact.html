@@ -2,33 +2,288 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Jeeva Samanera | Contact</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background: #111;
+      color: #f4f0e8;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 70px 30px 40px;
+      text-align: center;
+    }
+
+    nav {
+      margin-bottom: 60px;
+    }
+
+    nav a {
+      color: #f4f0e8;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    h1 {
+      font-size: clamp(36px, 8vw, 70px);
+      letter-spacing: 5px;
+    }
+
+    .subtitle {
+      margin-top: 15px;
+      font-size: 17px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .contact {
+      max-width: 900px;
+      margin: 70px auto;
+      padding: 0 30px 100px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      font-weight: normal;
+      margin-bottom: 25px;
+    }
+
+    .contact p {
+      font-size: 18px;
+      opacity: 0.75;
+      margin-bottom: 20px;
+    }
+
+    .details {
+      margin-top: 35px;
+    }
+
+    .email {
+      color: #f4f0e8;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .email:hover {
+      opacity: 0.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      background: transparent;
+      border: 1px solid #555;
+      color: #f4f0e8;
+      font-family: Georgia, serif;
+      font-size: 16px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #aaa;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #f4f0e8;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      align-self: flex-start;
+      padding: 12px 28px;
+      background: #f4f0e8;
+      color: #111;
+      border: none;
+      border-radius: 4px;
+      font-family: Georgia, serif;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    footer {
+      padding: 50px;
+      text-align: center;
+      opacity: 0.5;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      header {
+        padding-top: 50px;
+      }
+
+      nav {
+        margin-bottom: 50px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
-  <h1>CONTACT</h1>
 
-  <p>Jeeva Samanera</p>
+  <header>
 
-  <p>Lisbon, Portugal</p>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#reflectre">REFLECTRE</a>
+      <a href="tattoo.html">TATTOO</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
 
-  <p>Email: YOUR-EMAIL-HERE</p>
+    <h1>JEEVA SAMANERA</h1>
 
-  <form>
-    <input type="text" placeholder="Your Name">
-    <br><br>
+    <div class="subtitle">
+      Contact
+    </div>
 
-    <input type="email" placeholder="Your Email">
-    <br><br>
+  </header>
 
-    <textarea placeholder="Your Message"></textarea>
-    <br><br>
 
-    <button type="submit">SEND MESSAGE</button>
-  </form>
+  <main class="contact">
+
+    <div class="contact-grid">
+
+
+      <section>
+
+        <h2>Get in Touch</h2>
+
+        <p>
+          For tattoo enquiries, exhibitions, collaborations,
+          artistic projects and other creative enquiries,
+          feel free to get in touch.
+        </p>
+
+
+        <div class="details">
+
+          <p>
+            <strong>Email</strong><br>
+
+            <a
+              class="email"
+              href="mailto:samanerajeeva@gmail.com"
+            >
+              samanerajeeva@gmail.com
+            </a>
+
+          </p>
+
+          <p>
+            <strong>Location</strong><br>
+            Lisbon, Portugal
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <section>
+
+        <h2>Send a Message</h2>
+
+        <form
+          action="mailto:samanerajeeva@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+          >
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          >
+
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+
+          <button type="submit">
+            SEND MESSAGE
+          </button>
+
+        </form>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+  <footer>
+    © 2026 Jeeva Samanera
+  </footer>
+
 
 </body>
 
