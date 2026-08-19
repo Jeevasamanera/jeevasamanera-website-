@@ -197,7 +197,46 @@
         white-space: normal;
       }
     }
-  </style>
+ .open-book {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: #f4f0e8;
+  color: #111;
+  border: none;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.open-book:hover {
+  opacity: 0.8;
+}
+
+.reflectre-book {
+  display: none;
+  width: 100%;
+  max-width: 1000px;
+  margin: 35px auto 0;
+}
+
+.reflectre-book iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 700px) {
+
+  .reflectre-book iframe {
+    height: 550px;
+  }
+
+} </style>
 </head>
 
 <body>
@@ -386,7 +425,22 @@
     <footer>
     © 2026 Jeeva Samanera
   </footer>
+<script>
 
+function openReflectre() {
+
+  const book = document.getElementById("reflectre-book");
+
+  book.style.display = "block";
+
+  book.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+}
+
+</script>
 </body>
 </html>
 
