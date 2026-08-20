@@ -5,12 +5,18 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>REFLECTRE — Jeeva Samanera</title>
+<title>REFLECTRE</title>
+
+<meta name="description"
+content="REFLECTRE — Jeeva Samanera">
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
 
 * {
     box-sizing: border-box;
@@ -24,117 +30,94 @@ html {
 
 body {
     background: #111;
-    color: #eee;
-    font-family: Georgia, serif;
+    color: #f4f0e8;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     position: fixed;
+
     top: 0;
     left: 0;
-    width: 100%;
 
+    width: 100%;
     height: 60px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     padding: 0 25px;
 
-    background: rgba(0,0,0,0.75);
+    background: rgba(17,17,17,0.90);
 
-    z-index: 10;
+    z-index: 100;
 }
 
 nav a {
-    color: white;
+    color: #f4f0e8;
+
     text-decoration: none;
 
     font-family: Arial, sans-serif;
 
-    font-size: 11px;
+    font-size: 10px;
 
     letter-spacing: 3px;
 }
 
 
-/* COVER */
+/* =========================
+   COVER
+========================= */
 
 .cover {
-    height: 100vh;
 
-    position: relative;
+    min-height: 78vh;
 
     display: flex;
-    align-items: flex-end;
+
+    align-items: center;
     justify-content: center;
 
-    overflow: hidden;
-
-    background: black;
+    padding: 100px 25px 40px;
 }
 
-.cover img {
-    position: absolute;
+.cover-image {
 
-    width: 100%;
-    height: 100%;
+    width: min(500px, 82vw);
 
-    object-fit: cover;
 }
 
-.cover-overlay {
-    position: relative;
+.cover-image img {
 
     width: 100%;
 
-    padding: 80px 20px 60px;
+    height: auto;
 
-    text-align: center;
+    display: block;
 
-    background:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,0.9)
-        );
-}
-
-.cover h1 {
-    font-size: clamp(45px, 9vw, 100px);
-
-    font-weight: normal;
-
-    letter-spacing: 12px;
-}
-
-.cover p {
-    margin-top: 15px;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 12px;
-
-    letter-spacing: 5px;
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.45);
 }
 
 
-/* EDITIONS */
+/* =========================
+   EDITIONS
+========================= */
 
 .editions {
 
-    min-height: 35vh;
-
-    padding: 50px 25px 100px;
+    padding: 25px 25px 100px;
 
     display: flex;
 
     justify-content: center;
-
-    align-items: center;
 }
 
 .edition-options {
@@ -145,26 +128,28 @@ nav a {
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 40px;
+    gap: 25px;
 }
 
 .edition-option {
 
-    padding: 25px;
-
-    border: 1px solid #444;
-
-    color: #eee;
-
-    text-decoration: none;
-
-    text-align: center;
+    min-height: 120px;
 
     display: flex;
 
     flex-direction: column;
 
+    align-items: center;
+
+    justify-content: center;
+
     gap: 15px;
+
+    border: 1px solid #444;
+
+    color: #f4f0e8;
+
+    text-decoration: none;
 
     transition: 0.3s ease;
 }
@@ -182,130 +167,19 @@ nav a {
     font-size: 11px;
 
     letter-spacing: 4px;
-
 }
 
 .edition-option strong {
 
-    font-family: Georgia, serif;
-
     font-size: 18px;
 
     font-weight: normal;
-
-}
-
-@media (max-width: 600px) {
-
-    .edition-options {
-
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-
-    }
-
 }
 
 
-/* CARDS */
-
-.cards {
-
-    width: min(850px, 100%);
-
-    margin-top: 60px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 25px;
-}
-
-.card {
-
-    min-height: 300px;
-
-    border: 1px solid #444;
-
-    padding: 45px 30px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.card small {
-
-    font-family: Arial, sans-serif;
-
-    letter-spacing: 4px;
-
-    color: #888;
-}
-
-.card h3 {
-
-    margin-top: 20px;
-
-    font-size: 30px;
-
-    font-weight: normal;
-
-    letter-spacing: 4px;
-}
-
-.price {
-
-    margin-top: 15px;
-
-    font-size: 24px;
-}
-
-.card p {
-
-    max-width: 280px;
-
-    margin-top: 20px;
-
-    color: #aaa;
-
-    line-height: 1.8;
-
-    font-size: 14px;
-}
-
-.button {
-
-    margin-top: 30px;
-
-    padding: 13px 25px;
-
-    border: 1px solid #777;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-}
-
-.button:hover {
-
-    background: white;
-
-    color: black;
-}
-
-
-/* INTRODUCTION */
+/* =========================
+   INTRODUCTION
+========================= */
 
 .introduction {
 
@@ -315,21 +189,33 @@ nav a {
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
 
-    text-align: center;
+    justify-content: center;
 }
 
 .introduction-content {
 
-    max-width: 800px;
+    width: min(800px, 100%);
+
+}
+
+.section-label {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #888;
 }
 
 .introduction h2 {
 
-    font-size: 40px;
+    margin-top: 20px;
+
+    font-size: 42px;
 
     font-weight: normal;
 
@@ -338,7 +224,7 @@ nav a {
 
 .introduction p {
 
-    margin-top: 35px;
+    margin-top: 30px;
 
     color: #bbb;
 
@@ -348,19 +234,182 @@ nav a {
 }
 
 
-/* MOBILE */
+/* =========================
+   ARTWORK
+========================= */
 
-@media (max-width: 700px) {
+.artwork {
 
-    .cards {
+    min-height: 100vh;
 
-        grid-template-columns: 1fr;
+    padding: 120px 25px;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.artwork-number {
+
+    margin-bottom: 35px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #777;
+}
+
+.artwork-image {
+
+    width: min(850px, 95vw);
+
+    height: auto;
+
+    display: block;
+
+}
+
+.artwork-content {
+
+    width: min(800px, 95vw);
+
+    margin-top: 40px;
+}
+
+.artwork-content h3 {
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    letter-spacing: 3px;
+}
+
+.artwork-content p {
+
+    margin-top: 20px;
+
+    color: #aaa;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   ARTISTIC / CURATORIAL
+========================= */
+
+.concept {
+
+    min-height: 100vh;
+
+    padding: 120px 25px;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.concept-content {
+
+    width: min(800px, 100%);
+}
+
+.concept h2 {
+
+    margin-top: 20px;
+
+    font-size: 40px;
+
+    font-weight: normal;
+
+    letter-spacing: 3px;
+}
+
+.concept p {
+
+    margin-top: 30px;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 2;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 60px 25px;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+
+    color: #666;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .cover {
+
+        min-height: 70vh;
+
+        padding-top: 90px;
 
     }
 
-    .cover h1 {
+    .cover-image {
 
-        letter-spacing: 7px;
+        width: 78vw;
+
+    }
+
+    .edition-options {
+
+        grid-template-columns: 1fr;
+
+        width: min(400px, 90vw);
+
+    }
+
+    .introduction h2 {
+
+        font-size: 34px;
+
+    }
+
+    .concept h2 {
+
+        font-size: 32px;
 
     }
 
@@ -374,16 +423,14 @@ nav a {
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
 <a href="index.html">
 ← BACK
-</a>
-
-<a href="#editions">
-REFLECTRE
 </a>
 
 <a href="#editions">
@@ -393,58 +440,75 @@ EDITIONS
 </nav>
 
 
-<!-- COVER -->
+
+<!-- =========================
+     COVER
+========================= -->
 
 <section class="cover">
 
+<div class="cover-image">
+
 <img
 src="Reflectre%20monochrome%20cover.png"
-alt="REFLECTRE — Jeeva Samanera">
-
-<div class="cover-overlay">
-
-<h1>
-REFLECTRE
-</h1>
-
-<p>
-JEEVA SAMANERA
-</p>
+alt="REFLECTRE">
 
 </div>
 
 </section>
 
 
-<!-- EDITIONS -->
 
-<section class="editions" id="editions">
+<!-- =========================
+     EDITIONS
+========================= -->
 
-    <div class="edition-options">
+<section
+class="editions"
+id="editions">
 
-        <a href="#introduction" class="edition-option">
-
-            <span>ONLINE</span>
-
-            <strong>€5.55</strong>
-
-        </a>
+<div class="edition-options">
 
 
-        <a href="#" class="edition-option">
+<a
+href="#introduction"
+class="edition-option">
 
-            <span>DOWNLOAD</span>
+<span>
+ONLINE
+</span>
 
-            <strong>COMING SOON</strong>
+<strong>
+€5.55
+</strong>
 
-        </a>
+</a>
 
-    </div>
+
+<a
+href="#"
+class="edition-option">
+
+<span>
+DOWNLOAD
+</span>
+
+<strong>
+COMING SOON
+</strong>
+
+</a>
+
+
+</div>
 
 </section>
 
 
-<!-- INTRODUCTION -->
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
 
 <section
 class="introduction"
@@ -452,23 +516,23 @@ id="introduction">
 
 <div class="introduction-content">
 
-<h2>
+<div class="section-label">
 INTRODUCTION
+</div>
+
+<h2>
+REFLECTRE
 </h2>
 
 <p>
-
-Your REFLECTRE introduction
-will be placed here.
-
+Your final REFLECTRE introduction will
+be placed here.
 </p>
 
 <p>
-
-After this section we will add
-Artwork 01 through Artwork 25,
-each with its description.
-
+This section will contain the introduction
+to the complete art book before the
+twenty-five artworks begin.
 </p>
 
 </div>
@@ -476,6 +540,113 @@ each with its description.
 </section>
 
 
+
+<!-- =========================
+     ARTWORK 01
+========================= -->
+
+<section class="artwork">
+
+<div class="artwork-number">
+ARTWORK 01
+</div>
+
+<img
+class="artwork-image"
+src="reflectre/artwork-01.jpg"
+alt="REFLECTRE Artwork 01">
+
+<div class="artwork-content">
+
+<h3>
+Artwork Title
+</h3>
+
+<p>
+Artwork description will be placed here.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ARTWORK 02
+========================= -->
+
+<section class="artwork">
+
+<div class="artwork-number">
+ARTWORK 02
+</div>
+
+<img
+class="artwork-image"
+src="reflectre/artwork-02.jpg"
+alt="REFLECTRE Artwork 02">
+
+<div class="artwork-content">
+
+<h3>
+Artwork Title
+</h3>
+
+<p>
+Artwork description will be placed here.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ARTISTIC & CURATORIAL
+========================= -->
+
+<section class="concept">
+
+<div class="concept-content">
+
+<div class="section-label">
+FINAL SECTION
+</div>
+
+<h2>
+Artistic &amp; Curatorial Concept
+</h2>
+
+<p>
+Your artistic and curatorial concept
+will be placed here.
+</p>
+
+<p>
+This final section will bring together
+the philosophical and artistic foundations
+of REFLECTRE.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+REFLECTRE · 2026
+
+</footer>
+
+
 </body>
 
-</html>
+    </html>
