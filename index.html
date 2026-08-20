@@ -1,81 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Jeeva Samanera | Artist</title>
-  
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Jeeva Samanera | Artist</title>
+
 <link rel="icon" type="image/png" href="favicon.png">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
 
-    body {
-      font-family: Georgia, serif;
-      background: #111;
-      color: #f4f0e8;
-      line-height: 1.6;
-    }
+<style>
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 60px 30px;
-    }
+/* =========================
+   BASIC
+========================= */
 
-    h1 {
-      font-size: clamp(28px, 7vw, 60px);
-      font-weight: bold;
-      letter-spacing: 4px;
-      white-space: nowrap;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    .subtitle {
-      margin-top: 15px;
-      margin-bottom: 60px;
-      font-size: 18px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      opacity: 0.7;
-    }
+body {
+    font-family: Georgia, serif;
+    background: #111;
+    color: #f4f0e8;
+    line-height: 1.6;
+}
 
-    nav {
-      position: absolute;
-      top: 25px;
-      right: 25px;
-    }
 
-    nav a {
-      color: #f4f0e8;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
+/* =========================
+   HEADER
+========================= */
 
-    .reflectre-cover {
-      margin-bottom: 70px;
-    }
+header {
 
-    .reflectre-cover {
-  margin: 20px auto 90px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-    }
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 30px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+
+    font-size: clamp(28px, 7vw, 60px);
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+}
+
+.subtitle {
+
+    margin-top: 15px;
+
+    margin-bottom: 60px;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+}
+
+nav a {
+
+    color: #f4f0e8;
+
+    text-decoration: none;
+
+    margin-left: 20px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   REFLECTRE COVER
+========================= */
+
+.reflectre-cover {
+
+    margin: 20px auto 90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
 
 .reflectre-cover img {
-  width: min(500px, 82vw);
-  height: auto;
-  display: block;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);}
+
+    width: min(500px, 82vw);
+
+    height: auto;
+
+    display: block;
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   REFLECTRE DESCRIPTION
+========================= */
+
+.curatorial {
+
+    max-width: 800px;
+
+    margin: 35px auto 25px;
+
+    text-align: left;
+}
+
+.curatorial h2 {
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.curatorial p {
+
+    font-size: 20px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   OPEN REFLECTRE BUTTON
+========================= */
+
 .open-book {
+
     display: inline-block;
 
     margin-top: 25px;
@@ -104,7 +200,8 @@
 
     transition: all 0.3s ease;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
 }
 
 .open-book:hover {
@@ -117,356 +214,558 @@
 
     transform: translateY(-2px);
 
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.4);
 }
 
-    .curatorial {
-  max-width: 800px;
-  margin: 35px auto 25px;
-  text-align: left;
-    }
 
-    .curatorial h2,
-    .about h2,
-    .reflectre h2 {
-      font-size: 42px;
-      font-weight: normal;
-      margin-bottom: 25px;
-    }
+/* =========================
+   ABOUT
+========================= */
 
-    .curatorial p {
-      font-size: 20px;
-      opacity: 0.8;
-    }
+.about {
 
-    .about {
-      width: 100%;
-      max-width: 1100px;
-      padding: 100px 8%;
-      margin: auto;
-    }
+    width: 100%;
 
-    .about-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-    }
+    max-width: 1100px;
 
-    .about-photo {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto 60px;
+    padding: 100px 8%;
+
+    margin: auto;
+}
+
+.about h2 {
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.about-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: left;
+}
+
+.about-photo {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
 }
 
 .about-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
 }
 
-    .artist-statement {
-      flex: 1;
-    }
+.artist-statement {
 
-    .artist-statement p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+    flex: 1;
+}
 
-    .reflectre {
-      padding: 100px 8%;
-      max-width: 1100px;
-      margin: auto;
-      min-height: 60vh;
-    }
+.artist-statement p {
 
-    .reflectre p {
-      max-width: 700px;
-      font-size: 20px;
-      opacity: 0.8;
-    }
+    font-size: 18px;
 
-    footer {
-      padding: 40px;
-      text-align: center;
-      opacity: 0.5;
-      font-size: 13px;
-    }.artwork-image {
-  width: 100%;
-  margin-top: 70px;
-  margin-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   REFLECTRE SECTION
+========================= */
+
+.reflectre {
+
+    padding: 100px 8%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    min-height: 60vh;
+}
+
+.reflectre h2 {
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.reflectre p {
+
+    max-width: 700px;
+
+    font-size: 20px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   ARTWORK
+========================= */
+
+.artwork-image {
+
+    width: 100%;
+
+    margin-top: 70px;
+
+    margin-bottom: 25px;
 }
 
 .artwork-image img {
-  width: 75%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+
+    width: 75%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
 }
 
-    @media (max-width: 700px) {
 
-      nav {
-        position: static;
-        margin-bottom: 50px;
-      }
+/* =========================
+   FOOTER
+========================= */
 
-      .about-content {
-        flex-direction: column;
-        gap: 35px;
-      }
+footer {
 
-      .about-photo {
-        width: 100%;
-      }
+    padding: 40px;
 
-      h1 {
-        white-space: normal;
-      }
-    }
- .open-book {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 22px;
-  background: #f4f0e8;
-  color: #111;
-  border: none;
-  font-family: Georgia, serif;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  border-radius: 4px;
-  cursor: pointer;
+    text-align: center;
+
+    opacity: 0.5;
+
+    font-size: 13px;
 }
 
-.open-book:hover {
-  opacity: 0.8;
-}
 
-.reflectre-book {
-  display: none;
-  width: 100%;
-  max-width: 1000px;
-  margin: 35px auto 0;
-}
-    .reflectre-book iframe {
-  width: 100%;
-  height: 900px;
-  border: none;
-  display: block;
-    }
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
-  .reflectre-book iframe {
-    height: 750px;
-  }
+    nav {
 
-} </style>
+        position: static;
+
+        margin-bottom: 50px;
+    }
+
+    .about-content {
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .about-photo {
+
+        width: 100%;
+    }
+
+    h1 {
+
+        white-space: normal;
+    }
+
+    .curatorial {
+
+        text-align: center;
+    }
+
+    .curatorial h2 {
+
+        font-size: 34px;
+    }
+
+    .curatorial p {
+
+        font-size: 17px;
+    }
+
+    .open-book {
+
+        padding: 15px 32px;
+
+        font-size: 12px;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-  <header>
-    
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+
 <nav>
-  <a href="#reflectre">REFLECTRE</a>
-  <a href="#about">ABOUT</a>
-  <a href="tattoo.html">TATTOO</a>
-  <a href="contact.html">CONTACT</a>
+
+<a href="#reflectre">
+REFLECTRE
+</a>
+
+<a href="#about">
+ABOUT
+</a>
+
+<a href="tattoo.html">
+TATTOO
+</a>
+
+<a href="contact.html">
+CONTACT
+</a>
+
 </nav>
-    <h1>JEEVA SAMANERA</h1>
-
-    <div class="subtitle">
-      Artist · Philosopher · Creator
-    </div>
-
-    <div class="reflectre-cover">
-
-  <img
-src="Reflectre%20monochrome%20cover.png"
-alt="REFLECTRE — Jeeva Samanera">
 
 
+<h1>
+JEEVA SAMANERA
+</h1>
+
+
+<div class="subtitle">
+
+Artist · Philosopher · Creator
+
+</div>
+
+
+
+<!-- =========================
+     REFLECTRE
+========================= -->
 
 <div class="reflectre-cover">
 
 
+<img
+src="Reflectre%20monochrome%20cover.png"
+alt="REFLECTRE — Jeeva Samanera"
+>
 
-  <div class="curatorial">
 
-    <h2>REFLECTRE</h2>
+<div class="curatorial">
 
-    <p>
-      REFLECTRE is my exploration through reflection. It is an attempt
-      to acknowledge and express how our position, our memories, our
-      experiences and our awareness shape the world we believe we are
-      looking at.
-    </p>
 
-  </div>
+<h2>
+REFLECTRE
+</h2>
 
-  
-<a href="reflectre.html" class="open-book">
-  OPEN REFLECTRE
-</a>
-  
+
+<p>
+
+REFLECTRE is my exploration through reflection.
+It is an attempt to acknowledge and express how
+our position, our memories, our experiences and
+our awareness shape the world we believe we are
+looking at.
+
+</p>
+
+
 </div>
 
-    
 
-  </header>
+<!-- DIRECT LINK TO REFLECTRE PAGE -->
 
-  <section id="about" class="about">
+<a
+href="reflectre.html"
+class="open-book">
 
-    <h2>About</h2>
+OPEN REFLECTRE
 
-    <div class="about-content">
+</a>
 
-  <div class="about-photo">
-    <img src="Jeeva%20samanera.jpg"
-         alt="Jeeva Samanera">
-  </div>
 
-  <div class="artist-statement">
+</div>
 
-    <h3>ARTISTIC / CURATORIAL CONCEPT OF MY ART</h3>
 
-        <p>
-          Jeeva Samanera is an artist, philosopher, creator exploring ideas
-          of consciousness, spirituality, human identity, symbolism and
-          transformation through visual art.
-        </p>
+</header>
 
-        <p>
-          I am using charcoal as a medium and a metaphor in order to explore
-          the fragile space between human vulnerability and transformation,
-          between light and its shadow, between presence and disappearance,
-          between positive and negative space.
-        </p>
 
-        <p>
-          The monochromatic language of charcoal allows me to strip away
-          distractions and reveal essential emotional and psychological
-          multidimensional landscapes, investigating the emotional and
-          symbolic dimensions of human consciousness and spirituality.
-        </p>
 
-        <p>
-          In my recent works, this inquiry has evolved into a more focused
-          examination of traces. As an artist and curator, I am interested
-          in encounters that invite contemplation rather than certainty.
-        </p>
+<!-- =========================
+     ABOUT
+========================= -->
 
-        <p>
-          My practice seeks to transcend fleeting spiritual experiences
-          into lasting essence of humanity through structural visual
-          experiences of sequential philosophical insights, contrast of
-          sequential patterns and tonal depth, encouraging viewers to
-          reflect on their own stories of loss, resilience, belonging and
-          renewal through portraiture, symbolism, atmospheric imagery
-          with kairolume — a moment when purpose and clarity converge.
-        </p>
+<section
+id="about"
+class="about">
 
-      </div>
 
-    </div>
+<h2>
+About
+</h2>
 
-  </section>
 
-  <section id="reflectre" class="reflectre">
+<div class="about-content">
 
-  <h2>REFLECTRE</h2>
 
-  <p class="series-title">
-    A Spiritual Contemporary Art Series — 2026
-  </p>
+<div class="about-photo">
 
-  <div class="exhibition-intro">
 
-    <h3>Introduction</h3>
+<img
+src="Jeeva%20samanera.jpg"
+alt="Jeeva Samanera"
+>
 
-    <p>
-      REFLECTRE is an ongoing exploration of consciousness, perception
-      and the relationship between the inner and outer worlds. Through
-      charcoal, portraiture, symbolism and atmospheric imagery, the
-      series investigates memory, vulnerability, transformation and
-      spiritual experience.
-    </p>
 
-    <p>
-      Each work exists as a fragment of a larger philosophical landscape.
-      Rather than offering definitive answers, REFLECTRE creates spaces
-      for contemplation — inviting the viewer to encounter their own
-      memories, emotions and perceptions within the work.
-    </p>
-  </div>
+</div>
 
-  <div class="artwork-gallery">
 
-    <article class="artwork">
-      <div class="artwork-image">
-  <img src="The%20space.jpeg" alt="REFLECTRE — The Space">
-      </div>
+<div class="artist-statement">
 
-      <h3>The Space</h3>
 
-      <p>
-        What happens out there, happens somewhere prior in a consciousness. 
-        The Space is a reflective field of awareness which reflects the human consciousness. 
-        Renaissance of it's holographic existence is indeed not a distant concept but an 
-        unfinished  expression. The Space is a reflective field not in the sense of
-        holographic in existence but in meaning.
-        This idea of understanding the Universe, a projection of soulful consciousness 
-        is totally a new dimension of looking at the universe. It proposes that the
-        universe is a construct of pure awareness of  consciousness which leads to it's
-        physical and non physical existence at the same time. However, the physical 
-        construct of the Space is merely a projection of awareness of consciousness. 
-        The active participants of the creation of Universe is somehow you yourself and
-        your consciousness which triggers and captures the awareness through psychological 
-        process in Life.
-        The universe's physical existence (appearance) is just a projection of the
-        consciousness. Perhaps that's the reason behind it's phisycal expansion as human 
-        consciousness is also expanding.
-      </p>
-    </article>
+<h3>
+ARTISTIC / CURATORIAL CONCEPT OF MY ART
+</h3>
 
-    <article class="artwork">
-      <div class="artwork-image">
-        <!-- Artwork 2 will go here -->
-      </div>
 
-      <h3>Artwork Title</h3>
+<p>
 
-      <p>
-        Short descriptive essay about the work will go here.
-      </p>
-    </article>
+Jeeva Samanera is an artist, philosopher,
+creator exploring ideas of consciousness,
+spirituality, human identity, symbolism and
+transformation through visual art.
 
-  </div>
+</p>
 
-  
 
-    <footer>
-    © 2026 Jeeva Samanera
-  </footer>
-<script>
+<p>
 
-function openReflectre() {
+I am using charcoal as a medium and a metaphor
+in order to explore the fragile space between
+human vulnerability and transformation, between
+light and its shadow, between presence and
+disappearance, between positive and negative space.
 
-  const book = document.getElementById("reflectre-book");
+</p>
 
-  book.style.display = "block";
 
-  book.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
+<p>
 
-}
+The monochromatic language of charcoal allows me
+to strip away distractions and reveal essential
+emotional and psychological multidimensional
+landscapes, investigating the emotional and
+symbolic dimensions of human consciousness
+and spirituality.
 
-</script>
+</p>
+
+
+<p>
+
+In my recent works, this inquiry has evolved
+into a more focused examination of traces.
+As an artist and curator, I am interested in
+encounters that invite contemplation rather
+than certainty.
+
+</p>
+
+
+<p>
+
+My practice seeks to transcend fleeting spiritual
+experiences into lasting essence of humanity
+through structural visual experiences of
+sequential philosophical insights, contrast of
+sequential patterns and tonal depth, encouraging
+viewers to reflect on their own stories of loss,
+resilience, belonging and renewal through
+portraiture, symbolism, atmospheric imagery
+with kairolume — a moment when purpose and
+clarity converge.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================
+     REFLECTRE SECTION
+========================= -->
+
+<section
+id="reflectre"
+class="reflectre">
+
+
+<h2>
+REFLECTRE
+</h2>
+
+
+<p class="series-title">
+
+A Spiritual Contemporary Art Series — 2026
+
+</p>
+
+
+<div class="exhibition-intro">
+
+
+<h3>
+Introduction
+</h3>
+
+
+<p>
+
+REFLECTRE is an ongoing exploration of
+consciousness, perception and the relationship
+between the inner and outer worlds. Through
+charcoal, portraiture, symbolism and atmospheric
+imagery, the series investigates memory,
+vulnerability, transformation and spiritual
+experience.
+
+</p>
+
+
+<p>
+
+Each work exists as a fragment of a larger
+philosophical landscape. Rather than offering
+definitive answers, REFLECTRE creates spaces
+for contemplation — inviting the viewer to
+encounter their own memories, emotions and
+perceptions within the work.
+
+</p>
+
+
+</div>
+
+
+
+<div class="artwork-gallery">
+
+
+<article class="artwork">
+
+
+<div class="artwork-image">
+
+
+<img
+src="The%20space.jpeg"
+alt="REFLECTRE — The Space"
+>
+
+
+</div>
+
+
+<h3>
+The Space
+</h3>
+
+
+<p>
+
+What happens out there, happens somewhere prior
+in a consciousness.
+
+The Space is a reflective field of awareness
+which reflects the human consciousness.
+
+Renaissance of it's holographic existence is
+indeed not a distant concept but an unfinished
+expression.
+
+The Space is a reflective field not in the sense
+of holographic in existence but in meaning.
+
+This idea of understanding the Universe, a
+projection of soulful consciousness is totally
+a new dimension of looking at the universe.
+
+It proposes that the universe is a construct
+of pure awareness of consciousness which leads
+to it's physical and non physical existence at
+the same time.
+
+However, the physical construct of the Space is
+merely a projection of awareness of consciousness.
+
+The active participants of the creation of
+Universe is somehow you yourself and your
+consciousness which triggers and captures the
+awareness through psychological process in Life.
+
+The universe's physical existence (appearance)
+is just a projection of the consciousness.
+
+Perhaps that's the reason behind it's phisycal
+expansion as human consciousness is also expanding.
+
+</p>
+
+
+</article>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+© 2026 Jeeva Samanera
+
+</footer>
+
+
 </body>
-</html>
 
+  </html>
