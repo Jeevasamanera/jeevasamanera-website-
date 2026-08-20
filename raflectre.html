@@ -3,393 +3,499 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <title>REFLECTRE — Jeeva Samanera</title>
+<title>REFLECTRE — Jeeva Samanera</title>
 
-    <meta name="description"
-          content="REFLECTRE — A contemporary art series by Jeeva Samanera.">
+<style>
 
-    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+body {
+    background: #111;
+    color: #eee;
+    font-family: Georgia, serif;
+}
 
-        body {
-            background: #0d0d0d;
-            color: #e8e4dc;
-            font-family: Georgia, "Times New Roman", serif;
-        }
 
+/* NAVIGATION */
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
+    height: 60px;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-            padding: 0 30px;
+    padding: 0 25px;
 
-            background: rgba(13, 13, 13, 0.88);
-            backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.75);
 
-            z-index: 1000;
-        }
+    z-index: 10;
+}
 
-        nav a {
-            color: #e8e4dc;
-            text-decoration: none;
+nav a {
+    color: white;
+    text-decoration: none;
 
-            font-family: Arial, sans-serif;
-            font-size: 11px;
+    font-family: Arial, sans-serif;
 
-            letter-spacing: 3px;
-        }
+    font-size: 11px;
 
-        nav .nav-title {
-            font-size: 14px;
-            letter-spacing: 5px;
-        }
+    letter-spacing: 3px;
+}
 
 
-        /* =========================
-           COVER
-        ========================= */
+/* COVER */
 
-        .cover {
-            height: 100vh;
-            min-height: 650px;
+.cover {
+    height: 100vh;
 
-            position: relative;
+    position: relative;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 
-            overflow: hidden;
+    overflow: hidden;
 
-            background: #000;
-        }
+    background: black;
+}
 
-        .cover img {
-            position: absolute;
+.cover img {
+    position: absolute;
 
-            width: 100%;
-            height: 100%;
+    width: 100%;
+    height: 100%;
 
-            object-fit: cover;
+    object-fit: cover;
+}
 
-            opacity: 0.82;
-        }
+.cover-overlay {
+    position: relative;
 
-        .cover-overlay {
-            position: absolute;
-            inset: 0;
+    width: 100%;
 
-            display: flex;
-            flex-direction: column;
+    padding: 80px 20px 60px;
 
-            justify-content: flex-end;
-            align-items: center;
+    text-align: center;
 
-            padding-bottom: 70px;
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.9)
+        );
+}
 
-            background:
-                linear-gradient(
-                    to bottom,
-                    transparent 40%,
-                    rgba(0,0,0,0.85)
-                );
-        }
+.cover h1 {
+    font-size: clamp(45px, 9vw, 100px);
 
-        .cover-title {
-            font-size: clamp(48px, 9vw, 110px);
+    font-weight: normal;
 
-            font-weight: normal;
+    letter-spacing: 12px;
+}
 
-            letter-spacing: 18px;
+.cover p {
+    margin-top: 15px;
 
-            margin-left: 18px;
-        }
+    font-family: Arial, sans-serif;
 
-        .cover-artist {
-            margin-top: 12px;
+    font-size: 12px;
 
-            font-family: Arial, sans-serif;
+    letter-spacing: 5px;
+}
 
-            font-size: 12px;
 
-            letter-spacing: 6px;
-        }
+/* EDITIONS */
 
+.editions {
 
-        /* =========================
-           EDITION SECTION
-        ========================= */
+    min-height: 100vh;
 
-        .edition {
-            min-height: 100vh;
+    padding: 120px 25px;
 
-            display: flex;
-            flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-            justify-content: center;
-            align-items: center;
+    align-items: center;
+    justify-content: center;
 
-            padding: 100px 25px;
+    text-align: center;
+}
 
-            text-align: center;
-        }
+.editions h2 {
 
-        .edition-intro {
-            max-width: 650px;
+    font-size: 42px;
 
-            margin-bottom: 60px;
-        }
+    font-weight: normal;
 
-        .edition-intro span {
-            font-family: Arial, sans-serif;
+    letter-spacing: 5px;
+}
 
-            font-size: 10px;
+.editions-intro {
 
-            letter-spacing: 5px;
+    max-width: 600px;
 
-            opacity: 0.5;
-        }
+    margin-top: 25px;
 
-        .edition-intro h1 {
-            margin-top: 20px;
+    color: #aaa;
 
-            font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.8;
+}
 
-            font-weight: normal;
 
-            letter-spacing: 6px;
-        }
+/* CARDS */
 
-        .edition-intro p {
-            margin-top: 25px;
+.cards {
 
-            color: #aaa59d;
+    width: min(850px, 100%);
 
-            font-size: 16px;
+    margin-top: 60px;
 
-            line-height: 1.9;
-        }
+    display: grid;
 
+    grid-template-columns: 1fr 1fr;
 
-        /* =========================
-           EDITION CARDS
-        ========================= */
+    gap: 25px;
+}
 
-        .edition-options {
+.card {
 
-            width: min(850px, 100%);
+    min-height: 300px;
 
-            display: grid;
+    border: 1px solid #444;
 
-            grid-template-columns: repeat(2, 1fr);
+    padding: 45px 30px;
 
-            gap: 25px;
-        }
+    display: flex;
+    flex-direction: column;
 
-        .edition-card {
+    align-items: center;
+    justify-content: center;
+}
 
-            min-height: 330px;
+.card small {
 
-            border: 1px solid #353535;
+    font-family: Arial, sans-serif;
 
-            padding: 50px 35px;
+    letter-spacing: 4px;
 
-            display: flex;
+    color: #888;
+}
 
-            flex-direction: column;
+.card h3 {
 
-            justify-content: center;
+    margin-top: 20px;
 
-            align-items: center;
+    font-size: 30px;
 
-            transition: 0.4s ease;
+    font-weight: normal;
 
-            background: #111;
-        }
+    letter-spacing: 4px;
+}
 
-        .edition-card:hover {
+.price {
 
-            border-color: #777;
+    margin-top: 15px;
 
-            transform: translateY(-5px);
+    font-size: 24px;
+}
 
-        }
+.card p {
 
-        .edition-card .label {
+    max-width: 280px;
 
-            font-family: Arial, sans-serif;
+    margin-top: 20px;
 
-            font-size: 11px;
+    color: #aaa;
 
-            letter-spacing: 5px;
+    line-height: 1.8;
 
-            opacity: 0.55;
-        }
+    font-size: 14px;
+}
 
-        .edition-card h2 {
+.button {
 
-            margin-top: 20px;
+    margin-top: 30px;
 
-            font-size: 30px;
+    padding: 13px 25px;
 
-            font-weight: normal;
+    border: 1px solid #777;
 
-            letter-spacing: 4px;
-        }
+    color: white;
 
-        .price {
+    text-decoration: none;
 
-            margin-top: 18px;
+    font-family: Arial, sans-serif;
 
-            font-size: 25px;
-        }
+    font-size: 10px;
 
-        .edition-card p {
+    letter-spacing: 3px;
+}
 
-            max-width: 280px;
+.button:hover {
 
-            margin-top: 20px;
+    background: white;
 
-            color: #aaa59d;
+    color: black;
+}
 
-            font-size: 14px;
 
-            line-height: 1.8;
-        }
+/* INTRODUCTION */
 
+.introduction {
 
-        /* =========================
-           BUTTON
-        ========================= */
+    min-height: 100vh;
 
-        .edition-button {
+    padding: 120px 25px;
 
-            margin-top: 30px;
+    display: flex;
 
-            padding: 14px 30px;
+    justify-content: center;
 
-            border: 1px solid #777;
+    align-items: center;
 
-            color: #eee;
+    text-align: center;
+}
 
-            text-decoration: none;
+.introduction-content {
 
-            font-family: Arial, sans-serif;
+    max-width: 800px;
+}
 
-            font-size: 10px;
+.introduction h2 {
 
-            letter-spacing: 3px;
+    font-size: 40px;
 
-            transition: 0.3s;
-        }
+    font-weight: normal;
 
-        .edition-button:hover {
+    letter-spacing: 4px;
+}
 
-            background: #eee;
+.introduction p {
 
-            color: #111;
+    margin-top: 35px;
 
-        }
+    color: #bbb;
 
+    font-size: 17px;
 
-        /* =========================
-           INTRODUCTION
-        ========================= */
+    line-height: 2;
+}
 
-        .introduction {
 
-            min-height: 100vh;
+/* MOBILE */
 
-            padding: 120px 25px;
+@media (max-width: 700px) {
 
-            display: flex;
+    .cards {
 
-            justify-content: center;
+        grid-template-columns: 1fr;
 
-            align-items: center;
-        }
+    }
 
-        .introduction-content {
+    .cover h1 {
 
-            width: min(800px, 100%);
+        letter-spacing: 7px;
 
-            text-align: center;
-        }
+    }
 
-        .small-title {
+}
 
-            font-family: Arial, sans-serif;
+</style>
 
-            font-size: 10px;
+</head>
 
-            letter-spacing: 5px;
 
-            opacity: 0.5;
-        }
+<body>
 
-        .introduction h2 {
 
-            margin-top: 25px;
+<!-- NAVIGATION -->
 
-            font-size: 45px;
+<nav>
 
-            font-weight: normal;
+<a href="index.html">
+← BACK
+</a>
 
-            letter-spacing: 4px;
-        }
+<a href="#editions">
+REFLECTRE
+</a>
 
-        .introduction-text {
+<a href="#editions">
+EDITIONS
+</a>
 
-            margin-top: 45px;
+</nav>
 
-            color: #c0bbb3;
 
-            font-size: 17px;
+<!-- COVER -->
 
-            line-height: 2;
-        }
+<section class="cover">
 
+<img
+src="Reflectre%20cover%20page.png"
+alt="REFLECTRE cover">
 
-        /* =========================
-           ARTWORK
-        ========================= */
+<div class="cover-overlay">
 
-        .artwork {
+<h1>
+REFLECTRE
+</h1>
 
-            min-height: 100vh;
+<p>
+JEEVA SAMANERA
+</p>
 
-            padding: 100px 25px;
+</div>
 
-            display: flex;
+</section>
 
-            flex-direction: column;
 
-            align-items: center;
+<!-- EDITIONS -->
 
-            justify-content:
+<section
+class="editions"
+id="editions">
+
+<h2>
+CHOOSE YOUR EDITION
+</h2>
+
+<p class="editions-intro">
+
+Enter the world of REFLECTRE through
+the online reading experience or the
+downloadable personal edition.
+
+</p>
+
+
+<div class="cards">
+
+
+<!-- ONLINE -->
+
+<div class="card">
+
+<small>
+EDITION I
+</small>
+
+<h3>
+ONLINE
+</h3>
+
+<div class="price">
+€5.55
+</div>
+
+<p>
+
+Read the complete REFLECTRE
+art collection online.
+
+</p>
+
+<a
+href="#introduction"
+class="button">
+
+ENTER ONLINE
+
+</a>
+
+</div>
+
+
+<!-- DOWNLOAD -->
+
+<div class="card">
+
+<small>
+EDITION II
+</small>
+
+<h3>
+DOWNLOAD
+</h3>
+
+<div class="price">
+COMING SOON
+</div>
+
+<p>
+
+Downloadable personal edition
+with permission for personal
+printing.
+
+</p>
+
+<a
+href="#"
+class="button">
+
+COMING SOON
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section
+class="introduction"
+id="introduction">
+
+<div class="introduction-content">
+
+<h2>
+INTRODUCTION
+</h2>
+
+<p>
+
+Your REFLECTRE introduction
+will be placed here.
+
+</p>
+
+<p>
+
+After this section we will add
+Artwork 01 through Artwork 25,
+each with its description.
+
+</p>
+
+</div>
+
+</section>
+
+
+</body>
+
+</html>
