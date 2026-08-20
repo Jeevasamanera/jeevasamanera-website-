@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -12,10 +14,6 @@
           content="REFLECTRE — A contemporary art series by Jeeva Samanera.">
 
     <style>
-
-        /* =========================
-           RESET
-        ========================= */
 
         * {
             margin: 0;
@@ -42,7 +40,6 @@
             position: fixed;
             top: 0;
             left: 0;
-
             width: 100%;
             height: 60px;
 
@@ -146,7 +143,7 @@
 
 
         /* =========================
-           EDITION CHOICE
+           EDITION SECTION
         ========================= */
 
         .edition {
@@ -253,7 +250,6 @@
             letter-spacing: 5px;
 
             opacity: 0.55;
-
         }
 
         .edition-card h2 {
@@ -265,7 +261,6 @@
             font-weight: normal;
 
             letter-spacing: 4px;
-
         }
 
         .price {
@@ -273,7 +268,6 @@
             margin-top: 18px;
 
             font-size: 25px;
-
         }
 
         .edition-card p {
@@ -287,7 +281,6 @@
             font-size: 14px;
 
             line-height: 1.8;
-
         }
 
 
@@ -326,7 +319,7 @@
 
 
         /* =========================
-           BOOK INTRODUCTION
+           INTRODUCTION
         ========================= */
 
         .introduction {
@@ -358,7 +351,6 @@
             letter-spacing: 5px;
 
             opacity: 0.5;
-
         }
 
         .introduction h2 {
@@ -370,7 +362,6 @@
             font-weight: normal;
 
             letter-spacing: 4px;
-
         }
 
         .introduction-text {
@@ -382,7 +373,6 @@
             font-size: 17px;
 
             line-height: 2;
-
         }
 
 
@@ -402,510 +392,4 @@
 
             align-items: center;
 
-            justify-content: center;
-
-            border-top: 1px solid #202020;
-        }
-
-        .artwork-number {
-
-            margin-bottom: 30px;
-
-            font-family: Arial, sans-serif;
-
-            font-size: 10px;
-
-            letter-spacing: 5px;
-
-            opacity: 0.45;
-        }
-
-        .artwork-image {
-
-            width: min(850px, 95vw);
-
-            max-height: 70vh;
-
-            object-fit: contain;
-
-            display: block;
-        }
-
-        .artwork-description {
-
-            width: min(800px, 95vw);
-
-            margin-top: 35px;
-        }
-
-        .artwork-description h3 {
-
-            font-size: 27px;
-
-            font-weight: normal;
-
-            letter-spacing: 3px;
-        }
-
-        .artwork-description p {
-
-            margin-top: 15px;
-
-            color: #aaa59d;
-
-            font-size: 15px;
-
-            line-height: 1.9;
-        }
-
-
-        /* =========================
-           CONCEPT
-        ========================= */
-
-        .concept {
-
-            min-height: 100vh;
-
-            padding: 120px 25px;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-        }
-
-        .concept-content {
-
-            width: min(850px, 100%);
-
-        }
-
-        .concept-content h2 {
-
-            margin-top: 20px;
-
-            font-size: 40px;
-
-            font-weight: normal;
-
-            letter-spacing: 3px;
-        }
-
-        .concept-content p {
-
-            margin-top: 30px;
-
-            color: #bbb6ae;
-
-            font-size: 17px;
-
-            line-height: 2;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-
-            min-height: 40vh;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-            align-items: center;
-
-            text-align: center;
-
-            border-top: 1px solid #222;
-        }
-
-        footer h2 {
-
-            font-size: 30px;
-
-            font-weight: normal;
-
-            letter-spacing: 8px;
-        }
-
-        footer p {
-
-            margin-top: 15px;
-
-            color: #777;
-
-            font-family: Arial, sans-serif;
-
-            font-size: 11px;
-
-            letter-spacing: 3px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 700px) {
-
-            nav {
-                padding: 0 15px;
-            }
-
-            nav .nav-title {
-                font-size: 11px;
-            }
-
-            .cover-title {
-                font-size: 48px;
-                letter-spacing: 9px;
-                margin-left: 9px;
-            }
-
-            .cover-artist {
-                font-size: 10px;
-                letter-spacing: 4px;
-            }
-
-            .edition-options {
-
-                grid-template-columns: 1fr;
-
-                max-width: 400px;
-            }
-
-            .edition-card {
-
-                min-height: 280px;
-            }
-
-            .introduction h2 {
-
-                font-size: 35px;
-            }
-
-            .concept-content h2 {
-
-                font-size: 32px;
-            }
-
-        }
-
-    </style>
-
-</head>
-
-
-<body>
-
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
-<nav>
-
-    <a href="index.html">
-        ← BACK
-    </a>
-
-    <a href="#top" class="nav-title">
-        REFLECTRE
-    </a>
-
-    <a href="#editions">
-        EDITIONS
-    </a>
-
-</nav>
-
-
-
-<!-- =========================
-     COVER
-========================= -->
-
-<section class="cover" id="top">
-
-    <img
-        src="Reflectre%20cover%20page.png"
-        alt="REFLECTRE cover"
-    >
-
-    <div class="cover-overlay">
-
-        <div class="cover-title">
-            REFLECTRE
-        </div>
-
-        <div class="cover-artist">
-            JEEVA SAMANERA
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     EDITIONS
-========================= -->
-
-<section class="edition" id="editions">
-
-    <div class="edition-intro">
-
-        <span>
-            DIGITAL ART BOOK
-        </span>
-
-        <h1>
-            Choose Your Edition
-        </h1>
-
-        <p>
-            Enter the world of REFLECTRE through
-            an online reading experience or choose
-            the downloadable personal edition.
-        </p>
-
-    </div>
-
-
-
-    <div class="edition-options">
-
-
-        <!-- ONLINE -->
-
-        <div class="edition-card">
-
-            <div class="label">
-                EDITION I
-            </div>
-
-            <h2>
-                ONLINE
-            </h2>
-
-            <div class="price">
-                €5.55
-            </div>
-
-            <p>
-                Read and experience the complete
-                REFLECTRE collection online.
-            </p>
-
-            <a
-                href="#introduction"
-                class="edition-button"
-            >
-                ENTER ONLINE
-            </a>
-
-        </div>
-
-
-
-        <!-- DOWNLOAD -->
-
-        <div class="edition-card">
-
-            <div class="label">
-                EDITION II
-            </div>
-
-            <h2>
-                DOWNLOAD
-            </h2>
-
-            <div class="price">
-                PRICE SOON
-            </div>
-
-            <p>
-                A downloadable personal edition
-                for those who wish to keep and
-                print the book.
-            </p>
-
-            <a
-                href="#"
-                class="edition-button"
-            >
-                COMING SOON
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     INTRODUCTION
-========================= -->
-
-<section class="introduction" id="introduction">
-
-    <div class="introduction-content">
-
-        <div class="small-title">
-            INTRODUCTION
-        </div>
-
-        <h2>
-            REFLECTRE
-        </h2>
-
-        <div class="introduction-text">
-
-            <p>
-                Your final REFLECTRE introduction
-                will be placed here.
-            </p>
-
-            <br>
-
-            <p>
-                This is the beginning of the
-                complete digital art book.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ARTWORK 01
-========================= -->
-
-<section class="artwork">
-
-    <div class="artwork-number">
-        ARTWORK 01
-    </div>
-
-    <img
-        class="artwork-image"
-        src="reflectre/artwork-01.jpg"
-        alt="REFLECTRE Artwork 01"
-    >
-
-    <div class="artwork-description">
-
-        <h3>
-            Artwork Title
-        </h3>
-
-        <p>
-            Artwork description will be added here.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ARTWORK 02
-========================= -->
-
-<section class="artwork">
-
-    <div class="artwork-number">
-        ARTWORK 02
-    </div>
-
-    <img
-        class="artwork-image"
-        src="reflectre/artwork-02.jpg"
-        alt="REFLECTRE Artwork 02"
-    >
-
-    <div class="artwork-description">
-
-        <h3>
-            Artwork Title
-        </h3>
-
-        <p>
-            Artwork description will be added here.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ARTISTIC & CURATORIAL CONCEPT
-========================= -->
-
-<section class="concept">
-
-    <div class="concept-content">
-
-        <div class="small-title">
-            FINAL SECTION
-        </div>
-
-        <h2>
-            Artistic &amp; Curatorial Concept
-        </h2>
-
-        <p>
-            Your final artistic and curatorial
-            concept will be placed here.
-        </p>
-
-        <p>
-            This section will bring together the
-            philosophical, artistic and conceptual
-            foundations of REFLECTRE.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <h2>
-        REFLECTRE
-    </h2>
-
-    <p>
-        JEEVA SAMANERA
-    </p>
-
-</footer>
-
-
-
-</body>
-</html>
+            justify-content:
