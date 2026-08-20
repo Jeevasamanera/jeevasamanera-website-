@@ -5,7 +5,8 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>REFLECTRE</title>
 
@@ -41,6 +42,7 @@ body {
 
 nav {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -62,11 +64,13 @@ nav {
 
 nav a {
     color: #f4f0e8;
+
     text-decoration: none;
 
     font-family: Arial, sans-serif;
 
     font-size: 10px;
+
     letter-spacing: 3px;
 }
 
@@ -76,9 +80,11 @@ nav a {
 ========================= */
 
 .cover {
+
     min-height: 78vh;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -86,11 +92,15 @@ nav a {
 }
 
 .cover-image {
+
     width: min(500px, 82vw);
+
 }
 
 .cover-image img {
+
     width: 100%;
+
     height: auto;
 
     display: block;
@@ -106,10 +116,89 @@ nav a {
 
 .editions {
 
-    padding: 40px 20px 120px;
+    padding: 30px 20px 120px;
 
     text-align: center;
 }
+
+
+/* =========================
+   EDITION BUTTONS
+========================= */
+
+.edition-buttons {
+
+    width: min(700px, 100%);
+
+    margin: 0 auto 90px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.edition-button {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 110px;
+
+    border: 1px solid #555;
+
+    background: #171717;
+
+    color: #f4f0e8;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.edition-button span {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+.edition-button strong {
+
+    margin-top: 12px;
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+}
+
+.edition-button:hover {
+
+    background: #f4f0e8;
+
+    color: #111;
+
+    border-color: #f4f0e8;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   EDITION DETAILS TITLE
+========================= */
 
 .editions h2 {
 
@@ -146,6 +235,7 @@ nav a {
 }
 
 .table-row:last-child {
+
     border-bottom: none;
 }
 
@@ -159,6 +249,7 @@ nav a {
 }
 
 .table-row > div:last-child {
+
     border-right: none;
 }
 
@@ -515,6 +606,22 @@ footer {
         width: 78vw;
     }
 
+    .edition-buttons {
+
+        grid-template-columns: 1fr;
+
+        width: min(350px, 90vw);
+
+        gap: 15px;
+
+        margin-bottom: 70px;
+    }
+
+    .edition-button {
+
+        min-height: 90px;
+    }
+
     .edition-table {
 
         width: 100%;
@@ -616,12 +723,56 @@ class="editions"
 id="editions">
 
 
+<!-- =========================
+     EDITION BUTTONS
+========================= -->
+
+<div class="edition-buttons">
+
+
+<a
+href="#online"
+class="edition-button">
+
+<span>
+ONLINE
+</span>
+
+<strong>
+€5.55
+</strong>
+
+</a>
+
+
+<a
+href="#download"
+class="edition-button">
+
+<span>
+DOWNLOAD
+</span>
+
+<strong>
+€29.99
+</strong>
+
+</a>
+
+
+</div>
+
+
+
 <h2>
-EDITIONS
+EDITION DETAILS
 </h2>
 
 
-<!-- COMPARISON TABLE -->
+
+<!-- =========================
+     COMPARISON TABLE
+========================= -->
 
 <div class="edition-table">
 
@@ -631,21 +782,34 @@ EDITIONS
 <div></div>
 
 <div>
+
 ONLINE
-<span>€5.55</span>
+
+<span>
+€5.55
+</span>
+
 </div>
 
 <div>
+
 DOWNLOAD
-<span>€29.99</span>
+
+<span>
+€29.99
+</span>
+
 </div>
 
 </div>
+
 
 
 <div class="table-row">
 
-<div>Complete digital book</div>
+<div>
+Complete digital book
+</div>
 
 <div>✓</div>
 
@@ -654,9 +818,12 @@ DOWNLOAD
 </div>
 
 
+
 <div class="table-row">
 
-<div>All 25 artworks</div>
+<div>
+All 25 artworks
+</div>
 
 <div>✓</div>
 
@@ -665,9 +832,12 @@ DOWNLOAD
 </div>
 
 
+
 <div class="table-row">
 
-<div>Artwork descriptions</div>
+<div>
+Artwork descriptions
+</div>
 
 <div>✓</div>
 
@@ -676,395 +846,95 @@ DOWNLOAD
 </div>
 
 
-<div class="table-row">
-
-<div>Artistic &amp; Curatorial Concept</div>
-
-<div>✓</div>
-
-<div>✓</div>
-
-</div>
-
 
 <div class="table-row">
 
-<div>Read online</div>
-
-<div>✓</div>
-
-<div>✓</div>
-
-</div>
-
-
-<div class="table-row">
-
-<div>Downloadable file</div>
-
-<div>✕</div>
-
-<div>✓</div>
-
-</div>
-
-
-<div class="table-row">
-
-<div>Personal printing</div>
-
-<div>✕</div>
-
-<div>✓</div>
-
-</div>
-
-
-<div class="table-row">
-
-<div>Personal archival copy</div>
-
-<div>✕</div>
-
-<div>✓</div>
-
-</div>
-
-
-<div class="table-row">
-
-<div>Personal sharing</div>
-
-<div>✕</div>
-
-<div>✓</div>
-
-</div>
-
-
-<div class="table-row">
-
-<div>Public redistribution</div>
-
-<div>✕</div>
-
-<div>✕</div>
-
-</div>
-
-
-<div class="table-row">
-
-<div>Commercial use</div>
-
-<div>✕</div>
-
-<div>✕</div>
-
-</div>
-
-
-<div class="table-row">
-
-<div>Sell / license artworks</div>
-
-<div>✕</div>
-
-<div>✕</div>
-
-</div>
-
-
-<div class="table-row">
-
-<div>Modify artworks</div>
-
-<div>✕</div>
-
-<div>✕</div>
-
-</div>
-
-
-<div class="table-row">
-
-<div>Commercial reproduction</div>
-
-<div>✕</div>
-
-<div>✕</div>
-
-</div>
-
-
-</div>
-
-
-<!-- DETAILS -->
-
-<div class="edition-details">
-
-
-<!-- ONLINE -->
-
-<div class="edition-detail">
-
-<h3>
-ONLINE — €5.55
-</h3>
-
-<h4>
-INCLUDED
-</h4>
-
-<ul>
-
-<li>Complete REFLECTRE digital book</li>
-
-<li>All 25 artworks</li>
-
-<li>Artwork descriptions and philosophical texts</li>
-
-<li>Artistic &amp; Curatorial Concept</li>
-
-<li>Online reading access</li>
-
-</ul>
-
-
-<h4>
-NOT INCLUDED
-</h4>
-
-<ul>
-
-<li>Downloading the book or artwork files</li>
-
-<li>Printing</li>
-
-<li>Public redistribution</li>
-
-<li>Commercial use or reproduction</li>
-
-<li>Sale or licensing of artworks</li>
-
-</ul>
-
-</div>
-
-
-<!-- DOWNLOAD -->
-
-<div class="edition-detail">
-
-<h3>
-DOWNLOAD — €29.99
-</h3>
-
-<h4>
-INCLUDED
-</h4>
-
-<ul>
-
-<li>Complete REFLECTRE digital book</li>
-
-<li>All 25 artworks</li>
-
-<li>Artwork descriptions and philosophical texts</li>
-
-<li>Artistic &amp; Curatorial Concept</li>
-
-<li>Downloadable digital copy</li>
-
-<li>Personal printing</li>
-
-<li>Personal archival use</li>
-
-<li>Personal sharing</li>
-
-</ul>
-
-
-<h4>
-NOT INCLUDED
-</h4>
-
-<ul>
-
-<li>Commercial use</li>
-
-<li>Selling or licensing artworks</li>
-
-<li>Public redistribution</li>
-
-<li>Commercial reproduction</li>
-
-<li>Commercial alteration of artworks</li>
-
-</ul>
-
-</div>
-
-
-</div>
-
-
-<p class="copyright-note">
-
-Copyright © 2026 Jeeva Samanera.
-All artworks remain the intellectual property
-of the artist. Purchasing either edition does
-not transfer copyright or commercial rights.
-
-</p>
-
-
-</section>
-
-
-
-<!-- =========================
-     INTRODUCTION
-========================= -->
-
-<section
-class="introduction"
-id="introduction">
-
-<div class="introduction-content">
-
-<div class="section-label">
-INTRODUCTION
-</div>
-
-<h2>
-REFLECTRE
-</h2>
-
-<p>
-Your final REFLECTRE introduction will
-be placed here.
-</p>
-
-<p>
-This section will contain the introduction
-to the complete art book before the
-twenty-five artworks begin.
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     ARTWORK 01
-========================= -->
-
-<section class="artwork">
-
-<div class="artwork-number">
-ARTWORK 01
-</div>
-
-<img
-class="artwork-image"
-src="reflectre/artwork-01.jpg"
-alt="REFLECTRE Artwork 01">
-
-<div class="artwork-content">
-
-<h3>
-Artwork Title
-</h3>
-
-<p>
-Artwork description will be placed here.
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     ARTWORK 02
-========================= -->
-
-<section class="artwork">
-
-<div class="artwork-number">
-ARTWORK 02
-</div>
-
-<img
-class="artwork-image"
-src="reflectre/artwork-02.jpg"
-alt="REFLECTRE Artwork 02">
-
-<div class="artwork-content">
-
-<h3>
-Artwork Title
-</h3>
-
-<p>
-Artwork description will be placed here.
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     ARTISTIC & CURATORIAL
-========================= -->
-
-<section class="concept">
-
-<div class="concept-content">
-
-<div class="section-label">
-FINAL SECTION
-</div>
-
-<h2>
+<div>
 Artistic &amp; Curatorial Concept
-</h2>
+</div>
 
-<p>
-Your artistic and curatorial concept
-will be placed here.
-</p>
+<div>✓</div>
 
-<p>
-This final section will bring together
-the philosophical and artistic foundations
-of REFLECTRE.
-</p>
+<div>✓</div>
 
 </div>
 
-</section>
+
+
+<div class="table-row">
+
+<div>
+Read online
+</div>
+
+<div>✓</div>
+
+<div>✓</div>
+
+</div>
 
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<div class="table-row">
 
-<footer>
+<div>
+Downloadable file
+</div>
 
-REFLECTRE · 2026
+<div>✕</div>
 
-</footer>
+<div>✓</div>
+
+</div>
 
 
-</body>
 
-</html>
+<div class="table-row">
+
+<div>
+Personal printing
+</div>
+
+<div>✕</div>
+
+<div>✓</div>
+
+</div>
+
+
+
+<div class="table-row">
+
+<div>
+Personal archival copy
+</div>
+
+<div>✕</div>
+
+<div>✓</div>
+
+</div>
+
+
+
+<div class="table-row">
+
+<div>
+Personal sharing
+</div>
+
+<div>✕</div>
+
+<div>✓</div>
+
+</div>
+
+
+
+<div class="table-row">
+
+<div>
+Public redistribution
+</div>
+
+<div>✕</div>
