@@ -5,7 +5,8 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>REFLECTRE — Online Edition</title>
 
@@ -21,41 +22,29 @@
     padding: 0;
 }
 
-html,
-body {
-    width: 100%;
-    min-height: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-
     background: #000;
-
     color: #fff;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
 
 /* =====================================================
-   TOP BAR
+   TOP NAVIGATION
 ===================================================== */
 
 .topbar {
-
     height: 60px;
-
     width: 100%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     padding: 0 25px;
@@ -65,28 +54,27 @@ body {
     border-bottom: 1px solid #222;
 
     font-family: Arial, sans-serif;
-
     font-size: 10px;
-
     letter-spacing: 3px;
 }
 
 .topbar a {
-
     color: #fff;
-
     text-decoration: none;
+}
+
+.topbar a:hover {
+    opacity: 0.6;
 }
 
 
 /* =====================================================
-   BOOK CONTAINER
+   BOOK AREA
 ===================================================== */
 
 .book-area {
 
-    min-height:
-        calc(100vh - 130px);
+    min-height: calc(100vh - 130px);
 
     display: flex;
 
@@ -94,207 +82,54 @@ body {
 
     justify-content: center;
 
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 
 /* =====================================================
-   FIXED BOOK
+   CLOSED BOOK
 ===================================================== */
 
-.book {
-
-    position: relative;
-
-    width: min(900px, 90vw);
-
-    aspect-ratio: 1.5 / 1;
-
-    background: #000;
-
-    box-shadow:
-        0 30px 70px
-        rgba(0,0,0,0.8);
-
-    overflow: hidden;
-}
-
-
-/* =====================================================
-   OPEN BOOK PAGES
-===================================================== */
-
-.pages {
-
-    position: absolute;
-
-    inset: 0;
+.closed-book {
 
     display: flex;
 
-    background: #000;
-
-    opacity: 0;
-
-    transition: opacity .25s ease;
-}
-
-
-/* pages appear after opening */
-
-.book.open .pages {
-
-    opacity: 1;
-}
-
-
-/* =====================================================
-   PAGE
-===================================================== */
-
-.page {
-
-    position: relative;
-
-    width: 50%;
-
-    height: 100%;
-
-    background: #000;
-
-    color: #fff;
-
-    display: flex;
+    flex-direction: column;
 
     align-items: center;
 
     justify-content: center;
 
-    padding: 45px;
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.closed-book.hidden {
+
+    display: none;
 }
 
 
 /* =====================================================
-   CENTRE SPINE
-===================================================== */
-
-.page.left {
-
-    border-right:
-        1px solid #222;
-}
-
-.page.right {
-
-    border-left:
-        1px solid #222;
-}
-
-
-/* =====================================================
-   PAGE CONTENT
-===================================================== */
-
-.page-content {
-
-    width: 100%;
-
-    max-width: 340px;
-}
-
-.label {
-
-    font-family: Arial, sans-serif;
-
-    font-size: 9px;
-
-    letter-spacing: 5px;
-
-    color: #666;
-
-    margin-bottom: 25px;
-}
-
-.page h2 {
-
-    font-size: 30px;
-
-    font-weight: normal;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 30px;
-}
-
-.page p {
-
-    font-size: 15px;
-
-    line-height: 2;
-
-    color: #ccc;
-}
-
-
-/* =====================================================
-   PAGE NUMBERS
-===================================================== */
-
-.page-number {
-
-    position: absolute;
-
-    bottom: 18px;
-
-    left: 50%;
-
-    transform:
-        translateX(-50%);
-
-    font-family: Arial, sans-serif;
-
-    font-size: 8px;
-
-    letter-spacing: 2px;
-
-    color: #444;
-}
-
-
-/* =====================================================
-   CLOSED COVER
+   COVER IMAGE
 ===================================================== */
 
 .cover {
 
-    position: absolute;
+    width: min(420px, 78vw);
 
-    z-index: 100;
-
-    left: 25%;
-
-    top: 0;
-
-    width: 50%;
-
-    height: 100%;
+    aspect-ratio: 0.707 / 1;
 
     background: #000;
 
     overflow: hidden;
 
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.85);
+
     cursor: pointer;
-
-    transform-origin: left center;
-
-    transition:
-        transform
-        1.25s
-        cubic-bezier(.65,.05,.36,1);
 }
-
-
-/* cover image */
 
 .cover img {
 
@@ -309,25 +144,166 @@ body {
 
 
 /* =====================================================
-   OPENING COVER
+   OPEN BOOK
 ===================================================== */
 
-.book.open .cover {
+.open-book {
 
-    transform:
-        rotateY(-180deg);
+    display: none;
+
+    width: min(1000px, 92vw);
+
+    aspect-ratio: 1.5 / 1;
+
+    position: relative;
+
+    background: #000;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.8);
+
+    animation:
+        bookAppear 0.7s ease forwards;
+}
+
+.open-book.visible {
+
+    display: flex;
+}
+
+
+@keyframes bookAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
 /* =====================================================
-   CENTRE HINGE
+   PAGES
 ===================================================== */
 
-.hinge {
+.page {
+
+    width: 50%;
+
+    height: 100%;
+
+    position: relative;
+
+    background: #000;
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 55px;
+}
+
+
+/* LEFT PAGE */
+
+.left-page {
+
+    border-right: 1px solid #222;
+}
+
+
+/* RIGHT PAGE */
+
+.right-page {
+
+    border-left: 1px solid #222;
+}
+
+
+/* =====================================================
+   PAGE CONTENT
+===================================================== */
+
+.page-content {
+
+    width: 100%;
+
+    max-width: 360px;
+}
+
+.section-label {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.page h1 {
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+}
+
+.page p {
+
+    color: #ccc;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   PAGE NUMBERS
+===================================================== */
+
+.page-number {
 
     position: absolute;
 
-    z-index: 110;
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #444;
+}
+
+
+/* =====================================================
+   CENTRE SPINE
+===================================================== */
+
+.spine {
+
+    position: absolute;
 
     top: 0;
 
@@ -337,40 +313,38 @@ body {
 
     height: 100%;
 
-    background: #222;
+    background: #333;
 
-    pointer-events: none;
+    transform: translateX(-50%);
+
+    z-index: 10;
 }
 
 
 /* =====================================================
-   CONTROLS
+   OPEN BUTTON
 ===================================================== */
 
-.controls {
+.open-button {
 
-    height: 70px;
+    margin-top: 28px;
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 25px;
-
-    border-top:
-        1px solid #222;
-}
-
-button {
+    padding: 15px 34px;
 
     background: transparent;
 
     color: #fff;
 
-    border:
-        1px solid #444;
+    border: 1px solid #555;
 
-    padding:
-       
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s
