@@ -12,9 +12,9 @@ content="width=device-width, initial-scale=1.0">
 
 <style>
 
-/* =========================
+/* ==================================================
    BASIC
-========================= */
+================================================== */
 
 * {
     box-sizing: border-box;
@@ -22,10 +22,8 @@ content="width=device-width, initial-scale=1.0">
     padding: 0;
 }
 
-html,
-body {
-    width: 100%;
-    min-height: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,15 +32,20 @@ body {
 
     color: #eee8dc;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    min-height: 100vh;
 
     overflow-x: hidden;
 }
 
 
-/* =========================
+/* ==================================================
    TOP BAR
-========================= */
+================================================== */
 
 .topbar {
 
@@ -56,9 +59,9 @@ body {
 
     padding: 0 25px;
 
-    border-bottom: 1px solid #292929;
-
     background: #090909;
+
+    border-bottom: 1px solid #292929;
 
     font-family: Arial, sans-serif;
 
@@ -75,9 +78,9 @@ body {
 }
 
 
-/* =========================
+/* ==================================================
    BOOK AREA
-========================= */
+================================================== */
 
 .book-area {
 
@@ -93,9 +96,9 @@ body {
 }
 
 
-/* =========================
+/* ==================================================
    BOOK
-========================= */
+================================================== */
 
 .book {
 
@@ -105,107 +108,48 @@ body {
 
     aspect-ratio: 1.5 / 1;
 
-    perspective: 2000px;
+    perspective: 2200px;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
+    filter:
+        drop-shadow(
+            0 30px 50px rgba(0,0,0,0.65)
+        );
 }
 
 
-/* =========================
-   CLOSED COVER
-========================= */
+/* ==================================================
+   OPEN BOOK
+================================================== */
 
-.cover {
+.book-spread {
 
     position: absolute;
 
-    width: 50%;
-
-    height: 100%;
-
-    left: 25%;
-
-    top: 0;
-
-    background: #000;
-
-    z-index: 10;
-
-    transform-origin: left center;
-
-    transition:
-        transform 1.3s cubic-bezier(.65,.05,.36,1),
-        box-shadow 1.3s ease;
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,0.7);
-
-    cursor: pointer;
-
-    overflow: hidden;
-}
-
-
-.cover img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-}
-
-
-/* Opened cover */
-
-.book.open .cover {
-
-    transform:
-        rotateY(-180deg);
-
-    pointer-events: none;
-
-}
-
-
-/* =========================
-   OPEN BOOK
-========================= */
-
-.open-book {
-
-    width: 100%;
-
-    height: 100%;
+    inset: 0;
 
     display: flex;
 
-    background: #ddd8ce;
-
-    box-shadow:
-        0 30px 70px rgba(0,0,0,0.7);
+    background: #eee8dc;
 }
 
 
-/* =========================
-   PAGE
-========================= */
+/* ==================================================
+   PAGES
+================================================== */
 
-.book-page {
-
-    position: relative;
+.page {
 
     width: 50%;
 
     height: 100%;
+
+    position: relative;
 
     background: #eee8dc;
 
     color: #171717;
+
+    overflow: hidden;
 
     display: flex;
 
@@ -214,68 +158,69 @@ body {
     justify-content: center;
 
     padding: 45px;
-
-    overflow: hidden;
 }
 
 
-/* LEFT PAGE */
+/* LEFT */
 
 .left-page {
 
-    border-right: 1px solid #c7c0b5;
+    border-right: 1px solid #c9c2b8;
 
     box-shadow:
-        inset -12px 0 18px rgba(0,0,0,0.08);
+        inset -14px 0 22px
+        rgba(0,0,0,0.07);
 }
 
 
-/* RIGHT PAGE */
+/* RIGHT */
 
 .right-page {
 
-    border-left: 1px solid #c7c0b5;
+    border-left: 1px solid #c9c2b8;
 
     box-shadow:
-        inset 12px 0 18px rgba(0,0,0,0.08);
+        inset 14px 0 22px
+        rgba(0,0,0,0.07);
 }
 
 
-/* =========================
+/* ==================================================
    SPINE
-========================= */
+================================================== */
 
 .spine {
 
     position: absolute;
 
-    left: 50%;
-
     top: 0;
 
-    transform: translateX(-50%);
+    left: 50%;
 
     width: 5px;
 
     height: 100%;
 
+    transform:
+        translateX(-50%);
+
+    z-index: 20;
+
+    pointer-events: none;
+
     background:
         linear-gradient(
             to right,
-            rgba(0,0,0,0.18),
-            rgba(255,255,255,0.15),
-            rgba(0,0,0,0.18)
+            rgba(0,0,0,0.15),
+            rgba(255,255,255,0.25),
+            rgba(0,0,0,0.15)
         );
-
-    z-index: 5;
-
-    pointer-events: none;
 }
 
 
-/* =========================
+/* ==================================================
    PAGE CONTENT
-========================= */
+================================================== */
 
 .page-content {
 
@@ -286,7 +231,7 @@ body {
 
 .page-label {
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 
     font-family: Arial, sans-serif;
 
@@ -294,16 +239,7 @@ body {
 
     letter-spacing: 5px;
 
-    color: #777;
-}
-
-.page h1 {
-
-    font-size: 42px;
-
-    font-weight: normal;
-
-    letter-spacing: 6px;
+    color: #888;
 }
 
 .page h2 {
@@ -327,9 +263,9 @@ body {
 }
 
 
-/* =========================
+/* ==================================================
    BLANK PAGE
-========================= */
+================================================== */
 
 .blank-page {
 
@@ -337,33 +273,157 @@ body {
 }
 
 
-/* =========================
+/* ==================================================
    PAGE NUMBER
-========================= */
+================================================== */
 
-.page-number-small {
+.page-number {
 
     position: absolute;
 
-    bottom: 18px;
+    bottom: 17px;
 
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     font-family: Arial, sans-serif;
 
     font-size: 8px;
 
-    color: #999;
-
     letter-spacing: 2px;
+
+    color: #999;
 }
 
 
-/* =========================
+/* ==================================================
+   COVER
+================================================== */
+
+.cover {
+
+    position: absolute;
+
+    z-index: 100;
+
+    top: 0;
+
+    left: 25%;
+
+    width: 50%;
+
+    height: 100%;
+
+    background: #000;
+
+    transform-origin: left center;
+
+    transition:
+        transform 1.4s
+        cubic-bezier(.65,.05,.36,1);
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,0.7);
+}
+
+
+.cover img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* OPEN COVER */
+
+.book.open .cover {
+
+    transform:
+        rotateY(-180deg);
+}
+
+
+/* ==================================================
+   SPREAD TURNING PAGE
+================================================== */
+
+.turn-page {
+
+    position: absolute;
+
+    z-index: 50;
+
+    top: 0;
+
+    left: 50%;
+
+    width: 50%;
+
+    height: 100%;
+
+    background: #eee8dc;
+
+    transform-origin: left center;
+
+    transform-style: preserve-3d;
+
+    display: none;
+
+    backface-visibility: hidden;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.25);
+}
+
+
+/* turn page active */
+
+.turn-page.turning {
+
+    display: block;
+
+    animation:
+        turnPage 1s
+        cubic-bezier(.65,.05,.36,1)
+        forwards;
+}
+
+
+@keyframes turnPage {
+
+    0% {
+
+        transform:
+            rotateY(0deg);
+
+    }
+
+    100% {
+
+        transform:
+            rotateY(-180deg);
+
+    }
+
+}
+
+
+/* ==================================================
    CONTROLS
-========================= */
+================================================== */
 
 .controls {
 
@@ -380,7 +440,7 @@ body {
     border-top: 1px solid #292929;
 }
 
-.control-button {
+.control {
 
     background: transparent;
 
@@ -398,112 +458,142 @@ body {
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
-.control-button:hover {
+.control:hover {
 
     background: #eee8dc;
 
     color: #111;
 }
 
-.control-button:disabled {
+.control:disabled {
 
-    opacity: 0.25;
+    opacity: .25;
 
     cursor: default;
 }
 
-.page-count {
+.status {
 
-    min-width: 70px;
+    min-width: 90px;
 
     text-align: center;
 
     font-family: Arial, sans-serif;
 
-    font-size: 10px;
-
-    color: #777;
+    font-size: 9px;
 
     letter-spacing: 2px;
+
+    color: #777;
 }
 
 
-/* =========================
+/* ==================================================
    MOBILE
-========================= */
+================================================== */
 
 @media (max-width: 700px) {
+
+    .topbar {
+
+        padding: 0 15px;
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .book-area {
+
+        padding: 30px 12px;
+    }
+
 
     .book {
 
         width: 88vw;
 
-        aspect-ratio: 0.72 / 1;
-
+        aspect-ratio: .72 / 1;
     }
 
-    .open-book {
 
-        position: relative;
+    .book-spread {
 
+        display: block;
     }
 
-    .book-page {
+
+    .page {
 
         width: 100%;
 
-        padding: 35px 25px;
+        height: 100%;
 
+        padding: 30px 25px;
     }
+
 
     .left-page {
 
         display: none;
-
     }
+
 
     .right-page {
 
         width: 100%;
 
         border-left: none;
+
+        box-shadow: none;
     }
+
 
     .spine {
 
         display: none;
-
     }
+
 
     .cover {
 
+        left: 0;
+
         width: 100%;
+    }
+
+
+    .turn-page {
 
         left: 0;
+
+        width: 100%;
     }
+
 
     .book.open .cover {
 
         transform:
             rotateY(-160deg)
-            translateX(-30%);
+            translateX(-20%);
     }
 
-}
+
+    .controls {
+
+        gap: 10px;
+    }
 
 
-/* =========================
-   REDUCED MOTION
-========================= */
+    .control {
 
-@media (prefers-reduced-motion: reduce) {
+        padding: 10px 14px;
 
-    .cover {
-
-        transition: none;
+        font-size: 9px;
     }
 
 }
@@ -516,9 +606,9 @@ body {
 <body>
 
 
-<!-- =========================
+<!-- ==================================================
      TOP BAR
-========================= -->
+================================================== -->
 
 <header class="topbar">
 
@@ -534,38 +624,40 @@ REFLECTRE · ONLINE EDITION
 
 
 
-<!-- =========================
+<!-- ==================================================
      BOOK
-========================= -->
+================================================== -->
 
 <main class="book-area">
 
-
-<div class="book" id="book">
-
-
-<!-- =========================
-     OPEN BOOK
-========================= -->
-
-<div class="open-book">
+<div
+class="book"
+id="book">
 
 
-<!-- LEFT PAGE -->
+<!-- ==================================================
+     SPREAD 01
+================================================== -->
 
-<section class="book-page left-page blank-page">
+<div class="book-spread">
 
-<div class="page-number-small">
+
+<!-- LEFT -->
+
+<section
+class="page left-page blank-page">
+
+<div class="page-number">
 02
 </div>
 
 </section>
 
 
+<!-- RIGHT -->
 
-<!-- RIGHT PAGE -->
-
-<section class="book-page right-page">
+<section
+class="page right-page">
 
 <div class="page-content">
 
@@ -592,20 +684,31 @@ spiritual experience.
 
 </div>
 
-<div class="page-number-small">
+<div class="page-number">
 03
 </div>
 
 </section>
 
+</div>
+
+
+
+<!-- ==================================================
+     TURNING PAGE
+================================================== -->
+
+<div
+class="turn-page"
+id="turnPage">
 
 </div>
 
 
 
-<!-- =========================
+<!-- ==================================================
      COVER
-========================= -->
+================================================== -->
 
 <div
 class="cover"
@@ -628,15 +731,15 @@ alt="REFLECTRE">
 
 
 
-<!-- =========================
+<!-- ==================================================
      CONTROLS
-========================= -->
+================================================== -->
 
 <div class="controls">
 
 <button
+class="control"
 id="previousButton"
-class="control-button"
 onclick="previousPage()"
 disabled>
 
@@ -646,8 +749,8 @@ disabled>
 
 
 <div
-class="page-count"
-id="pageCount">
+class="status"
+id="status">
 
 COVER
 
@@ -655,8 +758,8 @@ COVER
 
 
 <button
+class="control"
 id="nextButton"
-class="control-button"
 onclick="nextPage()">
 
 OPEN BOOK →
@@ -669,16 +772,18 @@ OPEN BOOK →
 
 <script>
 
-/* =========================
-   BOOK STATE
-========================= */
+/* ==================================================
+   STATE
+================================================== */
 
 let opened = false;
 
+let spread = 0;
 
-/* =========================
+
+/* ==================================================
    OPEN BOOK
-========================= */
+================================================== */
 
 function openBook() {
 
@@ -690,23 +795,15 @@ function openBook() {
         .getElementById("book")
         .classList.add("open");
 
-    document
-        .getElementById("pageCount")
-        .textContent = "02–03";
+    spread = 1;
 
-    document
-        .getElementById("nextButton")
-        .textContent = "NEXT →";
-
-    document
-        .getElementById("previousButton")
-        .disabled = false;
+    updateControls();
 }
 
 
-/* =========================
-   NEXT PAGE
-========================= */
+/* ==================================================
+   NEXT
+================================================== */
 
 function nextPage() {
 
@@ -717,43 +814,147 @@ function nextPage() {
         return;
     }
 
-    alert(
-        "Next REFLECTRE spread will appear here."
-    );
+
+    /*
+       Spread 1 is currently the
+       Introduction.
+
+       For now we show the page-turn
+       animation and then return to
+       the same spread.
+
+       Artwork spreads will replace
+       this in the next step.
+    */
+
+    if (spread === 1) {
+
+        const turn =
+            document.getElementById("turnPage");
+
+        turn.classList.remove("turning");
+
+        void turn.offsetWidth;
+
+        turn.classList.add("turning");
+
+        setTimeout(function() {
+
+            spread = 2;
+
+            updateControls();
+
+        }, 1000);
+
+    }
+
 }
 
 
-/* =========================
+/* ==================================================
    PREVIOUS
-========================= */
+================================================== */
 
 function previousPage() {
 
     if (!opened) return;
 
-    opened = false;
 
-    document
-        .getElementById("book")
-        .classList.remove("open");
+    if (spread === 2) {
 
-    document
-        .getElementById("pageCount")
-        .textContent = "COVER";
+        const turn =
+            document.getElementById("turnPage");
 
-    document
-        .getElementById("nextButton")
-        .textContent = "OPEN BOOK →";
+        turn.classList.remove("turning");
 
-    document
-        .getElementById("previousButton")
-        .disabled = true;
+        spread = 1;
+
+        updateControls();
+
+        return;
+    }
+
+
+    if (spread === 1) {
+
+        opened = false;
+
+        document
+            .getElementById("book")
+            .classList.remove("open");
+
+        spread = 0;
+
+        updateControls();
+    }
+
 }
 
 
-/* =========================
+/* ==================================================
+   CONTROLS
+================================================== */
+
+function updateControls() {
+
+    const status =
+        document.getElementById("status");
+
+    const previous =
+        document.getElementById(
+            "previousButton"
+        );
+
+    const next =
+        document.getElementById(
+            "nextButton"
+        );
+
+
+    if (spread === 0) {
+
+        status.textContent = "COVER";
+
+        previous.disabled = true;
+
+        next.textContent =
+            "OPEN BOOK →";
+
+        return;
+    }
+
+
+    if (spread === 1) {
+
+        status.textContent =
+            "02–03";
+
+        previous.disabled = false;
+
+        next.textContent =
+            "NEXT →";
+
+        return;
+    }
+
+
+    if (spread === 2) {
+
+        status.textContent =
+            "04–05";
+
+        previous.disabled = false;
+
+        next.textContent =
+            "NEXT →";
+    }
+
+}
+
+
+/* ==================================================
    KEYBOARD
-========================= */
+================================================== */
 
 document.addEventListener(
     "keydown",
@@ -774,9 +975,16 @@ document.addEventListener(
     }
 );
 
+
+/* ==================================================
+   INITIAL
+================================================== */
+
+updateControls();
+
 </script>
 
 
 </body>
 
-   </html>
+</html>
