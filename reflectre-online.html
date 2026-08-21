@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>REFLECTRE — Online Edition</title>
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
 
 * {
     box-sizing: border-box;
@@ -14,14 +22,22 @@
     padding: 0;
 }
 
-html, body {
+html,
+body {
     min-height: 100%;
 }
 
 body {
-    background: #090909;
-    color: #eee8dc;
-    font-family: Georgia, "Times New Roman", serif;
+
+    background: #000;
+
+    color: #fff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     overflow-x: hidden;
 }
 
@@ -31,20 +47,32 @@ body {
 ========================= */
 
 .topbar {
+
     height: 60px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     padding: 0 25px;
-    border-bottom: 1px solid #292929;
-    background: #090909;
+
+    background: #000;
+
+    border-bottom: 1px solid #222;
+
     font-family: Arial, sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 3px;
 }
 
 .topbar a {
-    color: #eee8dc;
+
+    color: #fff;
+
     text-decoration: none;
 }
 
@@ -54,11 +82,16 @@ body {
 ========================= */
 
 .book-area {
+
     min-height: calc(100vh - 130px);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
-    padding: 45px 20px;
+
+    padding: 40px 20px;
 }
 
 
@@ -67,23 +100,47 @@ body {
 ========================= */
 
 .book {
+
     position: relative;
-    width: min(900px, 92vw);
+
+    width: min(900px, 90vw);
+
     aspect-ratio: 1.5 / 1;
+
     perspective: 2200px;
 }
 
 
 /* =========================
-   OPEN BOOK
+   OPEN SPREAD
 ========================= */
 
 .book-spread {
+
     position: absolute;
+
     inset: 0;
+
     display: flex;
-    background: #eee8dc;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.65);
+
+    background: #000;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    transition:
+        opacity .4s ease;
+}
+
+
+/* Show only after opening */
+
+.book.open .book-spread {
+
+    visibility: visible;
+
+    opacity: 1;
 }
 
 
@@ -92,26 +149,44 @@ body {
 ========================= */
 
 .page {
+
     position: relative;
+
     width: 50%;
+
     height: 100%;
-    background: #eee8dc;
-    color: #171717;
+
+    background: #000;
+
+    color: #fff;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
-    padding: 45px;
+
+    padding: 50px;
+
     overflow: hidden;
 }
 
+
+/* LEFT PAGE */
+
 .left-page {
-    border-right: 1px solid #c8c0b5;
-    box-shadow: inset -12px 0 20px rgba(0,0,0,0.07);
+
+    border-right:
+        1px solid #222;
 }
 
+
+/* RIGHT PAGE */
+
 .right-page {
-    border-left: 1px solid #c8c0b5;
-    box-shadow: inset 12px 0 20px rgba(0,0,0,0.07);
+
+    border-left:
+        1px solid #222;
 }
 
 
@@ -120,63 +195,95 @@ body {
 ========================= */
 
 .spine {
-    position: absolute;
-    z-index: 20;
-    left: 50%;
-    top: 0;
-    width: 5px;
-    height: 100%;
-    transform: translateX(-50%);
-    pointer-events: none;
 
-    background: linear-gradient(
-        to right,
-        rgba(0,0,0,0.16),
-        rgba(255,255,255,0.22),
-        rgba(0,0,0,0.16)
-    );
+    position: absolute;
+
+    z-index: 20;
+
+    left: 50%;
+
+    top: 0;
+
+    width: 1px;
+
+    height: 100%;
+
+    background: #333;
+
+    transform:
+        translateX(-50%);
+
+    pointer-events: none;
 }
 
 
 /* =========================
-   PAGE CONTENT
+   CONTENT
 ========================= */
 
 .page-content {
+
     width: 100%;
-    max-width: 340px;
+
+    max-width: 350px;
 }
 
 .page-label {
-    margin-bottom: 22px;
+
+    margin-bottom: 25px;
+
     font-family: Arial, sans-serif;
+
     font-size: 9px;
+
     letter-spacing: 5px;
-    color: #888;
+
+    color: #777;
 }
 
 .page h2 {
-    font-size: 28px;
+
+    font-size: 30px;
+
     font-weight: normal;
-    letter-spacing: 3px;
-    margin-bottom: 25px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
 }
 
 .page p {
+
     font-size: 15px;
-    line-height: 1.9;
-    color: #444;
+
+    line-height: 2;
+
+    color: #ccc;
 }
 
+
+/* =========================
+   PAGE NUMBER
+========================= */
+
 .page-number {
+
     position: absolute;
-    bottom: 17px;
+
+    bottom: 18px;
+
     left: 50%;
-    transform: translateX(-50%);
+
+    transform:
+        translateX(-50%);
+
     font-family: Arial, sans-serif;
+
     font-size: 8px;
+
     letter-spacing: 2px;
-    color: #999;
+
+    color: #555;
 }
 
 
@@ -185,37 +292,58 @@ body {
 ========================= */
 
 .cover {
+
     position: absolute;
+
     z-index: 100;
+
     left: 25%;
+
     top: 0;
+
     width: 50%;
+
     height: 100%;
 
     background: #000;
 
-    transform-origin: left center;
+    transform-origin:
+        left center;
 
     transition:
-        transform 1.4s cubic-bezier(.65,.05,.36,1);
+        transform 1.4s
+        cubic-bezier(.65,.05,.36,1);
 
     cursor: pointer;
 
     overflow: hidden;
 
     box-shadow:
-        0 25px 60px rgba(0,0,0,0.75);
+        0 25px 60px
+        rgba(0,0,0,0.8);
 }
+
+
+/* COVER IMAGE */
 
 .cover img {
+
     width: 100%;
+
     height: 100%;
-    display: block;
+
     object-fit: cover;
+
+    display: block;
 }
 
+
+/* OPEN COVER */
+
 .book.open .cover {
-    transform: rotateY(-180deg);
+
+    transform:
+        rotateY(-180deg);
 }
 
 
@@ -224,29 +352,37 @@ body {
 ========================= */
 
 .turning-page {
+
     position: absolute;
 
     z-index: 50;
 
     top: 0;
+
     left: 50%;
 
     width: 50%;
+
     height: 100%;
 
-    background: #eee8dc;
+    background: #000;
 
-    transform-origin: left center;
-
-    transform-style: preserve-3d;
+    transform-origin:
+        left center;
 
     display: none;
 
+    border-left:
+        1px solid #222;
+
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.3);
+        0 10px 30px
+        rgba(255,255,255,0.04);
 }
 
+
 .turning-page.active {
+
     display: block;
 
     animation:
@@ -255,14 +391,21 @@ body {
         forwards;
 }
 
+
 @keyframes pageTurn {
 
     from {
-        transform: rotateY(0deg);
+
+        transform:
+            rotateY(0deg);
+
     }
 
     to {
-        transform: rotateY(-180deg);
+
+        transform:
+            rotateY(-180deg);
+
     }
 
 }
@@ -273,26 +416,35 @@ body {
 ========================= */
 
 .controls {
+
     height: 70px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 25px;
 
-    border-top: 1px solid #292929;
+    border-top:
+        1px solid #222;
 }
 
 .control {
+
     background: transparent;
-    color: #eee8dc;
 
-    border: 1px solid #555;
+    color: #fff;
 
-    padding: 11px 22px;
+    border:
+        1px solid #444;
 
-    font-family: Arial, sans-serif;
+    padding:
+        12px 24px;
+
+    font-family:
+        Arial, sans-serif;
 
     font-size: 10px;
 
@@ -304,27 +456,33 @@ body {
 }
 
 .control:hover {
-    background: #eee8dc;
-    color: #111;
+
+    background: #fff;
+
+    color: #000;
 }
 
 .control:disabled {
+
     opacity: .25;
+
     cursor: default;
 }
 
 .status {
+
     min-width: 80px;
 
     text-align: center;
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial, sans-serif;
 
     font-size: 9px;
 
     letter-spacing: 2px;
 
-    color: #777;
+    color: #555;
 }
 
 
@@ -335,77 +493,99 @@ body {
 @media (max-width: 700px) {
 
     .topbar {
+
         padding: 0 15px;
+
         font-size: 8px;
-        letter-spacing: 2px;
     }
+
 
     .book-area {
-        padding: 30px 12px;
+
+        padding: 30px 15px;
     }
+
 
     .book {
+
         width: 88vw;
-        aspect-ratio: 0.72 / 1;
+
+        aspect-ratio:
+            .72 / 1;
     }
 
+
     .book-spread {
+
         display: block;
     }
 
+
     .page {
+
         width: 100%;
-        height: 100%;
-        padding: 30px 25px;
+
+        padding:
+            35px 28px;
     }
+
 
     .left-page {
+
         display: none;
     }
+
 
     .right-page {
+
         width: 100%;
-        border-left: none;
-        box-shadow: none;
+
+        border: none;
     }
 
+
     .spine {
+
         display: none;
     }
 
+
     .cover {
+
         left: 0;
+
         width: 100%;
     }
+
 
     .turning-page {
+
         left: 0;
+
         width: 100%;
     }
 
+
     .book.open .cover {
+
         transform:
             rotateY(-160deg)
             translateX(-20%);
     }
 
-    .controls {
-        gap: 10px;
-    }
-
-    .control {
-        padding: 10px 14px;
-        font-size: 9px;
-    }
-
 }
 
 </style>
+
 </head>
 
 
 <body>
 
+
+<!-- =========================
+     TOP BAR
+========================= -->
 
 <header class="topbar">
 
@@ -421,21 +601,26 @@ REFLECTRE · ONLINE EDITION
 
 
 
+<!-- =========================
+     BOOK
+========================= -->
+
 <main class="book-area">
 
-<div class="book" id="book">
+<div
+class="book"
+id="book">
 
 
-<!-- =========================
-     FIRST OPEN SPREAD
-========================= -->
+<!-- OPEN BOOK -->
 
 <div class="book-spread">
 
 
-    <!-- BLANK LEFT PAGE -->
+    <!-- LEFT PAGE -->
 
-    <section class="page left-page">
+    <section
+    class="page left-page">
 
         <div class="page-number">
             02
@@ -444,9 +629,10 @@ REFLECTRE · ONLINE EDITION
     </section>
 
 
-    <!-- INTRODUCTION RIGHT PAGE -->
+    <!-- RIGHT PAGE -->
 
-    <section class="page right-page">
+    <section
+    class="page right-page">
 
         <div class="page-content">
 
@@ -459,18 +645,22 @@ REFLECTRE · ONLINE EDITION
             </h2>
 
             <p>
+
                 REFLECTRE is an ongoing exploration
                 of consciousness, perception and the
                 relationship between the inner and
                 outer worlds.
+
             </p>
 
-            <p style="margin-top:20px;">
+            <p style="margin-top:22px;">
+
                 Through charcoal, portraiture,
                 symbolism and atmospheric imagery,
                 the series investigates memory,
                 vulnerability, transformation and
                 spiritual experience.
+
             </p>
 
         </div>
@@ -485,29 +675,25 @@ REFLECTRE · ONLINE EDITION
 
 
 
-<!-- =========================
-     FUTURE TURNING PAGE
-========================= -->
+<!-- PAGE TURN -->
 
 <div
-    class="turning-page"
-    id="turningPage">
+class="turning-page"
+id="turningPage">
 </div>
 
 
 
-<!-- =========================
-     COVER
-========================= -->
+<!-- COVER -->
 
 <div
-    class="cover"
-    id="cover"
-    onclick="openBook()">
+class="cover"
+id="cover"
+onclick="openBook()">
 
-    <img
-        src="Reflectre%20monochrome%20cover.png"
-        alt="REFLECTRE">
+<img
+src="Reflectre%20monochrome%20cover.png"
+alt="REFLECTRE">
 
 </div>
 
@@ -528,31 +714,31 @@ REFLECTRE · ONLINE EDITION
 <div class="controls">
 
 <button
-    class="control"
-    id="previousButton"
-    onclick="previousPage()"
-    disabled>
+class="control"
+id="previousButton"
+onclick="previousPage()"
+disabled>
 
-    ← PREVIOUS
+← PREVIOUS
 
 </button>
 
 
 <div
-    class="status"
-    id="status">
+class="status"
+id="status">
 
-    COVER
+COVER
 
 </div>
 
 
 <button
-    class="control"
-    id="nextButton"
-    onclick="nextPage()">
+class="control"
+id="nextButton"
+onclick="nextPage()">
 
-    OPEN BOOK →
+OPEN BOOK →
 
 </button>
 
@@ -566,7 +752,7 @@ let opened = false;
 
 
 /* =========================
-   OPEN BOOK
+   OPEN
 ========================= */
 
 function openBook() {
@@ -596,8 +782,12 @@ function nextPage() {
         return;
     }
 
+
     const page =
-        document.getElementById("turningPage");
+        document.getElementById(
+            "turningPage"
+        );
+
 
     page.classList.remove("active");
 
@@ -605,15 +795,17 @@ function nextPage() {
 
     page.classList.add("active");
 
-    setTimeout(function() {
 
-        alert(
-            "Artwork 01 will be placed on the next spread."
-        );
+    setTimeout(function() {
 
         page.classList.remove("active");
 
+        alert(
+            "Artwork 01 will be added here next."
+        );
+
     }, 1100);
+
 }
 
 
@@ -661,7 +853,8 @@ function updateControls() {
 
         previous.disabled = true;
 
-        status.textContent = "COVER";
+        status.textContent =
+            "COVER";
 
         next.textContent =
             "OPEN BOOK →";
@@ -675,6 +868,7 @@ function updateControls() {
 
         next.textContent =
             "NEXT →";
+
     }
 
 }
@@ -702,4 +896,5 @@ document.addEventListener(
 </script>
 
 </body>
-</html>
+
+    </html>
