@@ -36,7 +36,7 @@ body {
 
 
 /* =====================================================
-   TOP NAVIGATION
+   TOP BAR
 ===================================================== */
 
 .topbar {
@@ -73,116 +73,28 @@ body {
 ===================================================== */
 
 .book-area {
-
     min-height: calc(100vh - 130px);
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 
 /* =====================================================
-   CLOSED BOOK
+   BOOK FRAME
 ===================================================== */
 
-.closed-book {
+.book {
+    position: relative;
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
-}
-
-.closed-book.hidden {
-
-    display: none;
-}
-
-
-/* =====================================================
-   COVER IMAGE
-===================================================== */
-
-.cover {
-
-    width: min(420px, 78vw);
-
-    aspect-ratio: 0.707 / 1;
-
-    background: #000;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,0.85);
-
-    cursor: pointer;
-}
-
-.cover img {
-
-    width: 100%;
-
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-}
-
-
-/* =====================================================
-   OPEN BOOK
-===================================================== */
-
-.open-book {
-
-    display: none;
-
-    width: min(1000px, 92vw);
+    width: min(900px, 90vw);
 
     aspect-ratio: 1.5 / 1;
 
-    position: relative;
-
-    background: #000;
-
-    box-shadow:
-        0 25px 70px rgba(0,0,0,0.8);
-
-    animation:
-        bookAppear 0.7s ease forwards;
-}
-
-.open-book.visible {
-
-    display: flex;
-}
-
-
-@keyframes bookAppear {
-
-    from {
-        opacity: 0;
-        transform: scale(0.96);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    perspective: 2200px;
 }
 
 
@@ -190,40 +102,52 @@ body {
    PAGES
 ===================================================== */
 
-.page {
+.pages {
+    position: absolute;
 
-    width: 50%;
+    inset: 0;
 
-    height: 100%;
-
-    position: relative;
+    display: flex;
 
     background: #000;
 
-    color: #fff;
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    pointer-events: none;
+}
+
+.book.open .pages {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   INDIVIDUAL PAGE
+===================================================== */
+
+.page {
+    position: relative;
+
+    width: 50%;
+    height: 100%;
+
+    background: #000;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     padding: 55px;
 }
 
-
-/* LEFT PAGE */
-
 .left-page {
-
     border-right: 1px solid #222;
 }
 
-
-/* RIGHT PAGE */
-
 .right-page {
-
     border-left: 1px solid #222;
 }
 
@@ -233,14 +157,11 @@ body {
 ===================================================== */
 
 .page-content {
-
     width: 100%;
-
-    max-width: 360px;
+    max-width: 350px;
 }
 
 .section-label {
-
     font-family: Arial, sans-serif;
 
     font-size: 9px;
@@ -253,7 +174,6 @@ body {
 }
 
 .page h1 {
-
     font-size: 32px;
 
     font-weight: normal;
@@ -264,7 +184,6 @@ body {
 }
 
 .page p {
-
     color: #ccc;
 
     font-size: 15px;
@@ -278,10 +197,9 @@ body {
 ===================================================== */
 
 .page-number {
-
     position: absolute;
 
-    bottom: 20px;
+    bottom: 18px;
 
     left: 50%;
 
@@ -302,8 +220,9 @@ body {
 ===================================================== */
 
 .spine {
-
     position: absolute;
+
+    z-index: 20;
 
     top: 0;
 
@@ -317,7 +236,63 @@ body {
 
     transform: translateX(-50%);
 
-    z-index: 10;
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   COVER
+===================================================== */
+
+.cover {
+    position: absolute;
+
+    z-index: 100;
+
+    top: 0;
+
+    left: 25%;
+
+    width: 50%;
+
+    height: 100%;
+
+    background: #000;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transform-origin: right center;
+
+    transform: rotateY(0deg);
+
+    transition:
+        transform 1.4s
+        cubic-bezier(.65,.05,.36,1);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.8);
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   COVER FLIPS OPEN
+===================================================== */
+
+.book.open .cover {
+    transform: rotateY(180deg);
+
+    pointer-events: none;
 }
 
 
@@ -326,12 +301,19 @@ body {
 ===================================================== */
 
 .open-button {
+    position: absolute;
 
-    margin-top: 28px;
+    z-index: 200;
+
+    left: 50%;
+
+    bottom: -65px;
+
+    transform: translateX(-50%);
 
     padding: 15px 34px;
 
-    background: transparent;
+    background: #000;
 
     color: #fff;
 
@@ -345,6 +327,448 @@ body {
 
     cursor: pointer;
 
+    white-space: nowrap;
+
     transition:
         background 0.3s ease,
-        color 0.3s
+        color 0.3s ease;
+}
+
+.open-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* Hide button once book opens */
+
+.book.open .open-button {
+    display: none;
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.controls {
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    border-top: 1px solid #222;
+}
+
+.control-button {
+    padding: 12px 24px;
+
+    background: transparent;
+
+    color: #fff;
+
+    border: 1px solid #444;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.control-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.control-button:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.page-status {
+    min-width: 70px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .topbar {
+        padding: 0 15px;
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+    .book-area {
+        padding: 40px 15px 90px;
+    }
+
+    .book {
+        width: 90vw;
+
+        aspect-ratio: 0.72 / 1;
+
+        perspective: 1800px;
+    }
+
+    /*
+       On a phone the book becomes
+       a single vertical page after opening.
+    */
+
+    .pages {
+        display: block;
+    }
+
+    .left-page {
+        display: none;
+    }
+
+    .right-page {
+        width: 100%;
+
+        height: 100%;
+
+        border: none;
+
+        padding: 35px;
+    }
+
+    .spine {
+        display: none;
+    }
+
+    /*
+       Closed cover fills the phone book.
+    */
+
+    .cover {
+        left: 0;
+
+        width: 100%;
+
+        transform-origin: left center;
+    }
+
+    .book.open .cover {
+        transform: rotateY(-160deg);
+    }
+
+    .page h1 {
+        font-size: 27px;
+    }
+
+    .page p {
+        font-size: 14px;
+
+        line-height: 1.9;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .right-page {
+        padding: 25px;
+    }
+
+    .page h1 {
+        font-size: 24px;
+    }
+
+    .page p {
+        font-size: 13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<header class="topbar">
+
+    <a href="reflectre.html">
+        ← BACK
+    </a>
+
+    <span>
+        REFLECTRE · ONLINE EDITION
+    </span>
+
+</header>
+
+
+
+<!-- =====================================================
+     BOOK
+===================================================== -->
+
+<main class="book-area">
+
+<div class="book" id="book">
+
+
+    <!-- =================================================
+         PAGES BEHIND COVER
+    ================================================= -->
+
+    <div class="pages">
+
+
+        <!-- LEFT — BLANK -->
+
+        <section class="page left-page">
+
+            <div class="page-number">
+                02
+            </div>
+
+        </section>
+
+
+
+        <!-- RIGHT — INTRODUCTION -->
+
+        <section class="page right-page">
+
+            <div class="page-content">
+
+                <div class="section-label">
+                    INTRODUCTION
+                </div>
+
+                <h1>
+                    REFLECTRE
+                </h1>
+
+                <p>
+
+                    REFLECTRE is an ongoing exploration
+                    of consciousness, perception and the
+                    relationship between the inner and
+                    outer worlds.
+
+                </p>
+
+                <p style="margin-top:22px;">
+
+                    Through charcoal, portraiture,
+                    symbolism and atmospheric imagery,
+                    the series investigates memory,
+                    vulnerability, transformation and
+                    spiritual experience.
+
+                </p>
+
+            </div>
+
+            <div class="page-number">
+                03
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CENTRE SPINE
+    ================================================= -->
+
+    <div class="spine"></div>
+
+
+
+    <!-- =================================================
+         COVER
+    ================================================= -->
+
+    <div
+        class="cover"
+        id="cover"
+        onclick="openBook()">
+
+        <img
+            src="Reflectre%20monochrome%20cover.png"
+            alt="REFLECTRE">
+
+    </div>
+
+
+
+    <!-- =================================================
+         OPEN BUTTON
+    ================================================= -->
+
+    <button
+        class="open-button"
+        id="openButton"
+        onclick="openBook()">
+
+        OPEN REFLECTRE
+
+    </button>
+
+
+</div>
+
+</main>
+
+
+
+<!-- =====================================================
+     CONTROLS
+===================================================== -->
+
+<div class="controls">
+
+    <button
+        class="control-button"
+        id="previousButton"
+        onclick="closeBook()"
+        disabled>
+
+        ← PREVIOUS
+
+    </button>
+
+
+    <div
+        class="page-status"
+        id="pageStatus">
+
+        COVER
+
+    </div>
+
+
+    <button
+        class="control-button"
+        id="nextButton"
+        onclick="openBook()">
+
+        OPEN BOOK →
+
+    </button>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   OPEN BOOK
+===================================================== */
+
+function openBook() {
+
+    const book =
+        document.getElementById("book");
+
+    book.classList.add("open");
+
+    document
+        .getElementById("previousButton")
+        .disabled = false;
+
+    document
+        .getElementById("nextButton")
+        .textContent = "NEXT →";
+
+    document
+        .getElementById("pageStatus")
+        .textContent = "02–03";
+}
+
+
+/* =====================================================
+   CLOSE BOOK
+===================================================== */
+
+function closeBook() {
+
+    const book =
+        document.getElementById("book");
+
+    book.classList.remove("open");
+
+    document
+        .getElementById("previousButton")
+        .disabled = true;
+
+    document
+        .getElementById("nextButton")
+        .textContent = "OPEN BOOK →";
+
+    document
+        .getElementById("pageStatus")
+        .textContent = "COVER";
+}
+
+
+/* =====================================================
+   KEYBOARD
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "ArrowRight") {
+            openBook();
+        }
+
+        if (event.key === "ArrowLeft") {
+            closeBook();
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
