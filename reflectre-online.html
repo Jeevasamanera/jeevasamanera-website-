@@ -489,10 +489,6 @@ body {
     }
 
 
-    /* ---------------------------------------------
-       BOOK AREA
-    --------------------------------------------- */
-
     .book-area {
         min-height: calc(100vh - 125px);
 
@@ -501,10 +497,6 @@ body {
         align-items: flex-start;
     }
 
-
-    /* ---------------------------------------------
-       BOOK STAGE
-    --------------------------------------------- */
 
     .book-stage {
         width: 94vw;
@@ -516,10 +508,6 @@ body {
     }
 
 
-    /* ---------------------------------------------
-       COVER
-    --------------------------------------------- */
-
     .closed-cover {
         width: 72vw;
 
@@ -529,10 +517,6 @@ body {
     }
 
 
-    /* ---------------------------------------------
-       OPEN BOOK
-    --------------------------------------------- */
-
     .book {
         display: block;
 
@@ -541,12 +525,7 @@ body {
     }
 
 
-    /* ---------------------------------------------
-       MOBILE PAGES
-       
-       We show the two Introduction pages
-       one after another.
-    --------------------------------------------- */
+    /* MOBILE PAGES */
 
     .left-page,
     .right-page {
@@ -559,20 +538,16 @@ body {
 
     .left-page {
         display: flex;
-
         border-bottom: none;
     }
 
     .right-page {
         display: flex;
-
         border-top: none;
     }
 
 
-    /* ---------------------------------------------
-       MOBILE CONTENT
-    --------------------------------------------- */
+    /* MOBILE CONTENT */
 
     .page-content {
         height: 100%;
@@ -606,9 +581,7 @@ body {
     }
 
 
-    /* ---------------------------------------------
-       MOBILE INTRODUCTION
-    --------------------------------------------- */
+    /* MOBILE INTRODUCTION */
 
     .introduction-page {
         overflow: hidden;
@@ -633,27 +606,15 @@ body {
     }
 
 
-    /* ---------------------------------------------
-       MOBILE PAGE NUMBERS
-    --------------------------------------------- */
-
     .page-number {
         bottom: 14px;
     }
 
 
-    /* ---------------------------------------------
-       SPINE
-    --------------------------------------------- */
-
     .spine {
         display: none;
     }
 
-
-    /* ---------------------------------------------
-       OPEN BUTTON
-    --------------------------------------------- */
 
     .open-button {
         bottom: -48px;
@@ -663,10 +624,6 @@ body {
         font-size: 9px;
     }
 
-
-    /* ---------------------------------------------
-       CONTROLS
-    --------------------------------------------- */
 
     .controls {
         height: 65px;
@@ -768,7 +725,7 @@ body {
 
 
 <!-- =====================================================
-     BOOK
+     BOOK AREA
 ===================================================== -->
 
 <main class="book-area">
@@ -779,7 +736,7 @@ body {
 
 
     <!-- =================================================
-         COVER
+         CLOSED COVER
     ================================================= -->
 
     <div
@@ -804,11 +761,10 @@ body {
 
 
         <!-- =============================================
-             LEFT PAGE — INTRODUCTION CONTINUATION
+             PAGE 02 — INTRODUCTION BEGINS
         ============================================== -->
 
-        
-<section class="page right-page">
+        <section class="page left-page">
 
             <div class="page-content introduction-page">
 
@@ -825,9 +781,8 @@ body {
                     of consciousness, perception, and the
                     relationship between the inner and
                     outer worlds.
-                      
                 </p>
-                  
+
                 <p>
                     Through charcoal, portraiture,
                     symbolism, and atmospheric imagery,
@@ -835,40 +790,36 @@ body {
                     vulnerability, transformation, and
                     spiritual experience.
                 </p>
-                
 
-                  
- <p>
+                <p>
                     Each work emerges from an attempt
                     to observe the invisible structures
                     that shape how we experience ourselves
                     and the world around us.
-       REFLECTRE does not seek to define
-                    consciousness or offer a singular
-                    interpretation of existence.
                 </p>
 
             </div>
 
             <div class="page-number">
                 02
-            </
+            </div>
 
         </section>
 
 
 
         <!-- =============================================
-             RIGHT PAGE — INTRODUCTION CLOSING
+             PAGE 03 — INTRODUCTION CONTINUES
         ============================================== -->
 
-        
-                  <section class="page right-page">
+        <section class="page right-page">
 
             <div class="page-content introduction-page">
 
                 <p>
-                     Instead,
+                    REFLECTRE does not seek to define
+                    consciousness or offer a singular
+                    interpretation of existence. Instead,
                     it creates a space for contemplation —
                     a place where perception can become
                     uncertain, where memory can overlap
@@ -876,27 +827,28 @@ body {
                     between the internal and external begins
                     to dissolve.
                 </p>
-            
+
                 <p>
-                    In this sense, reflection becomes more
-                    than the act of looking at an image.
-                    It becomes an encounter with oneself.
-                </p>
-<p>
                     The works are fragments of a larger
                     philosophical landscape. They explore
                     the possibility that what we perceive
                     is never entirely separate from the
                     consciousness through which we perceive it.
-</p>
-               
-<p>
+                </p>
+
+                <p>
+                    In this sense, reflection becomes more
+                    than the act of looking at an image.
+                    It becomes an encounter with oneself.
+                </p>
+
+                <p>
                     Each work therefore invites the viewer
                     to pause, observe, and recognise
                     something of their own experience
                     within the image.
                 </p>
-                  div>
+
                 <p class="closing-line">
                     <em>
                         REFLECTRE is not a conclusion.<br>
@@ -909,6 +861,7 @@ body {
             <div class="page-number">
                 03
             </div>
+
         </section>
 
 
@@ -924,7 +877,7 @@ body {
 
 
     <!-- =================================================
-         OPEN BUTTON
+         OPEN REFLECTRE BUTTON
     ================================================= -->
 
     <button
@@ -934,7 +887,6 @@ body {
         OPEN REFLECTRE
 
     </button>
-
 
 </div>
 
@@ -981,10 +933,14 @@ body {
 
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
 /* =====================================================
-   OPEN BOOK
+   OPEN REFLECTRE
 ===================================================== */
 
 function openReflectre() {
@@ -1014,7 +970,7 @@ function openReflectre() {
 
 
 /* =====================================================
-   CLOSE BOOK
+   RETURN TO COVER
 ===================================================== */
 
 function closeReflectre() {
@@ -1044,7 +1000,7 @@ function closeReflectre() {
 
 
 /* =====================================================
-   KEYBOARD CONTROLS
+   KEYBOARD
 ===================================================== */
 
 document.addEventListener(
