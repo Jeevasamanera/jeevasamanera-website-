@@ -521,211 +521,137 @@ body {
     }
 
 
-    /* =========================================
-       MOBILE BOOK
-    ========================================= */
+    /* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: 55px;
+        padding: 0 14px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .book-area {
+        min-height: calc(100vh - 125px);
+        padding: 20px 12px 70px;
+    }
+
+    /* MOBILE BOOK */
 
     .book-stage {
-
         width: 92vw;
 
-        height: 135vw;
+        height: calc(100vh - 190px);
 
-        min-height: 560px;
-
-        max-height: 760px;
-
+        min-height: 520px;
+        max-height: 720px;
     }
 
-
-    /* =========================================
-       CLOSED COVER
-    ========================================= */
+    /* CLOSED COVER */
 
     .closed-cover {
-
-        width: 78vw;
-
+        width: min(76vw, 360px);
         height: auto;
-
         aspect-ratio: 0.707 / 1;
-
     }
 
-
-    /* =========================================
-       OPEN BOOK
-    ========================================= */
+    /* OPEN BOOK */
 
     .book {
-
         width: 100%;
-
         height: 100%;
-
         display: block;
-
     }
 
-
-    /* =========================================
-       MOBILE PAGE
-    ========================================= */
+    /* SINGLE READING PAGE */
 
     .page {
-
         width: 100%;
-
         height: 100%;
-
         border: 1px solid #222;
-
     }
-
 
     .left-page {
-
         display: none;
-
     }
-
 
     .right-page {
-
         width: 100%;
-
         height: 100%;
-
-        border-left: 1px solid #222;
-
-        border-right: 1px solid #222;
-
+        border: 1px solid #222;
     }
 
-
-    /* =========================================
-       MOBILE READING AREA
-    ========================================= */
+    /* READING CONTENT */
 
     .page-content {
-
-        padding:
-
-            65px
-
-            34px
-
-            75px
-
-            34px;
-
+        padding: 55px 32px 70px;
     }
-
 
     .section-label {
-
         font-size: 8px;
-
         letter-spacing: 4px;
-
-        margin-bottom: 25px;
-
+        margin-bottom: 24px;
     }
-
 
     .page h1 {
-
-        font-size: 29px;
-
+        font-size: 28px;
         letter-spacing: 4px;
-
-        margin-bottom: 32px;
-
+        margin-bottom: 30px;
     }
-
 
     .page p {
-
         max-width: none;
-
         font-size: 15px;
-
         line-height: 2;
-
-        margin-bottom: 25px;
-
+        margin-bottom: 24px;
     }
-
 
     .page-number {
-
-        bottom: 22px;
-
+        bottom: 20px;
     }
-
 
     .spine {
-
         display: none;
-
     }
 
-
-    /* =========================================
-       OPEN BUTTON
-    ========================================= */
-
     .open-button {
-
         bottom: -55px;
-
         padding: 15px 30px;
-
     }
 
 }
 
 
 /* =====================================================
-   SMALL MOBILE
+   SMALL PHONES
 ===================================================== */
 
 @media (max-width: 380px) {
 
     .book-stage {
-
         width: 93vw;
-
-        height: 145vw;
-
-        min-height: 540px;
-
-        max-height: 700px;
-
+        height: calc(100vh - 180px);
+        min-height: 500px;
+        max-height: 680px;
     }
 
     .page-content {
-
-        padding: 55px 27px 65px;
-
+        padding: 48px 26px 65px;
     }
 
     .page h1 {
-
         font-size: 25px;
-
     }
 
     .page p {
-
         font-size: 14px;
-
         line-height: 1.9;
-
     }
 
 }
-
 
 <!-- =====================================================
      TOP NAVIGATION
