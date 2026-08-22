@@ -329,68 +329,71 @@ body {
     flex-direction: column;
 
     align-items: center;
-}
 
-.artwork-label {
-    align-self: flex-start;
+    justify-content: space-between;
 
-    font-family: Arial, sans-serif;
-
-    font-size: 9px;
-
-    letter-spacing: 5px;
-
-    color: #666;
-
-    margin-bottom: 25px;
-}
-
-.artwork-page h1 {
-    font-size: 30px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 30px;
+    padding: 45px 45px 55px;
 }
 
 .artwork-image {
     width: 100%;
 
-    height: 430px;
+    height: calc(100% - 75px);
 
     display: flex;
 
     align-items: center;
 
     justify-content: center;
-
-    margin-top: 10px;
 }
 
 .artwork-image img {
-    max-width: 100%;
-
-    max-height: 100%;
-
     width: auto;
 
     height: auto;
+
+    max-width: 100%;
+
+    max-height: 100%;
 
     display: block;
 
     object-fit: contain;
 }
 
-.artwork-number {
-    margin-top: 25px;
+.artwork-caption {
 
-    font-family: Arial, sans-serif;
+    width: 100%;
 
-    font-size: 9px;
+    text-align: center;
 
-    letter-spacing: 3px;
+    font-family: Georgia, "Times New Roman", serif;
 
-    color: #555;
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    letter-spacing: 1px;
+
+    color: #ccc;
+}
+
+.artwork-caption div:first-child {
+
+    color: #fff;
+
+    font-style: italic;
+
+}
+
+.artwork-caption div:last-child {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #666;
+
 }
 
 
@@ -801,40 +804,33 @@ body {
 
     /* MOBILE ARTWORK */
 
-    .artwork-page .page-content {
+.artwork-page .page-content {
 
-        padding-top: 28px;
-    }
+    padding: 25px 22px 38px;
 
-    .artwork-page h1 {
+}
 
-        font-size: 23px;
+.artwork-image {
 
-        margin-bottom: 15px;
-    }
+    height: calc(100% - 55px);
 
-    .artwork-label {
+}
 
-        font-size: 7px;
+.artwork-caption {
 
-        letter-spacing: 3px;
+    font-size: 11px;
 
-        margin-bottom: 12px;
-    }
+    line-height: 1.5;
 
-    .artwork-image {
+}
 
-        height: 190px;
+.artwork-caption div:last-child {
 
-        margin-top: 0;
-    }
+    font-size: 8px;
 
-    .artwork-number {
+    letter-spacing: 1.5px;
 
-        margin-top: 12px;
-
-        font-size: 7px;
-    }
+}
 
 
     /* MOBILE DESCRIPTION */
@@ -1171,42 +1167,42 @@ body {
 
 
             <!-- =========================================
-                 PAGE 04 — ARTWORK
-            ========================================== -->
+     PAGE 04 — ARTWORK
+========================================== -->
 
-            <section
-                class="page left-page artwork-page">
+<section
+    class="page left-page artwork-page">
 
-                <div class="page-content">
+    <div class="page-content">
 
-                    <div class="artwork-label">
-                        REFLECTRE · ARTWORK 01
-                    </div>
+        <div class="artwork-image">
 
-                    <h1>
-                        THE SPACE
-                    </h1>
+            <img
+                src="The%20space.jpeg"
+                alt="The Space — Jeeva Samanera"
+            >
 
-                    <div class="artwork-image">
+        </div>
 
-                        <img
-                            src="The%20space.jpeg"
-                            alt="REFLECTRE — The Space"
-                        >
+        <div class="artwork-caption">
 
-                    </div>
+            <div>
+                The Space
+            </div>
 
-                    <div class="artwork-number">
-                        THE SPACE · 2026
-                    </div>
+            <div>
+                © 2026 Jeeva Samanera
+            </div>
 
-                </div>
+        </div>
 
-                <div class="page-number">
-                    04
-                </div>
+    </div>
 
-            </section>
+    <div class="page-number">
+        04
+    </div>
+
+</section>
 
 
 
