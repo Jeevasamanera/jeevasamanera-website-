@@ -315,6 +315,7 @@ body {
 }
 
 
+
 /* =====================================================
    ARTWORK PAGE
 ===================================================== */
@@ -330,9 +331,9 @@ body {
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: flex-start;
 
-    padding: 45px 45px 55px;
+    padding: 25px 25px 55px;
 }
 
 .artwork-image {
@@ -348,13 +349,9 @@ body {
 }
 
 .artwork-image img {
-    width: auto;
+    width: 100%;
 
-    height: auto;
-
-    max-width: 100%;
-
-    max-height: 100%;
+    height: 100%;
 
     display: block;
 
@@ -362,7 +359,6 @@ body {
 }
 
 .artwork-caption {
-
     width: 100%;
 
     text-align: center;
@@ -376,26 +372,23 @@ body {
     letter-spacing: 1px;
 
     color: #ccc;
+
+    margin-top: 8px;
 }
 
 .artwork-caption div:first-child {
-
     color: #fff;
 
     font-style: italic;
-
 }
 
 .artwork-caption div:last-child {
-
     font-size: 10px;
 
     letter-spacing: 2px;
 
     color: #666;
-
 }
-
 
 /* =====================================================
    ARTWORK DESCRIPTION
@@ -805,31 +798,35 @@ body {
     /* MOBILE ARTWORK */
 
 .artwork-page .page-content {
-
-    padding: 25px 22px 38px;
-
+    padding: 15px 12px 35px;
 }
 
 .artwork-image {
+    width: 100%;
 
     height: calc(100% - 55px);
+}
 
+.artwork-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
 }
 
 .artwork-caption {
-
     font-size: 11px;
 
     line-height: 1.5;
 
+    margin-top: 5px;
 }
 
 .artwork-caption div:last-child {
-
     font-size: 8px;
 
     letter-spacing: 1.5px;
-
 }
 
 
