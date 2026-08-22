@@ -315,7 +315,6 @@ body {
 }
 
 
-
 /* =====================================================
    ARTWORK PAGE
 ===================================================== */
@@ -396,6 +395,7 @@ body {
     margin-top: 2px;
 }
 
+
 /* =====================================================
    ARTWORK DESCRIPTION
 ===================================================== */
@@ -454,11 +454,9 @@ body {
     z-index: 10;
 
     top: 0;
-
     left: 50%;
 
     width: 1px;
-
     height: 100%;
 
     background: #333;
@@ -477,7 +475,6 @@ body {
     z-index: 30;
 
     bottom: -55px;
-
     left: 50%;
 
     transform: translateX(-50%);
@@ -507,7 +504,6 @@ body {
 
 .open-button:hover {
     background: #fff;
-
     color: #000;
 }
 
@@ -539,7 +535,6 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 25px;
@@ -569,13 +564,11 @@ body {
 
 .control-button:hover {
     background: #fff;
-
     color: #000;
 }
 
 .control-button:disabled {
     opacity: 0.25;
-
     cursor: default;
 }
 
@@ -602,7 +595,6 @@ body {
 
     .book-stage {
         width: 94vw;
-
         height: 650px;
     }
 
@@ -620,15 +612,10 @@ body {
 
     .introduction-page p {
         font-size: 13px;
-
         line-height: 1.75;
-
         margin-bottom: 17px;
     }
 
-    .artwork-image {
-        height: 370px;
-    }
 }
 
 
@@ -795,61 +782,59 @@ body {
     }
 
 
-    /* =====================================================
-   MOBILE ARTWORK
-===================================================== */
+    /* MOBILE ARTWORK */
 
-.artwork-page .page-content {
-    padding: 5px;
-}
+    .artwork-page .page-content {
 
-.artwork-image {
-    width: 100%;
-    height: 100%;
-}
+        padding: 5px;
+    }
 
-.artwork-image img {
-    width: 100%;
-    height: 100%;
+    .artwork-image {
 
-    object-fit: contain;
-}
+        width: 100%;
+        height: 100%;
+    }
 
-.artwork-caption {
-    bottom: 20px;
+    .artwork-image img {
 
-    font-size: 11px;
-}
+        width: 100%;
+        height: 100%;
 
-.artwork-caption div:last-child {
-    font-size: 7px;
+        object-fit: contain;
+    }
 
-    letter-spacing: 1.5px;
-}
+    .artwork-caption {
 
+        bottom: 20px;
 
-    /* =====================================================
-   ARTWORK DESCRIPTION
-===================================================== */
+        font-size: 11px;
+    }
 
-.artwork-description {
-    overflow: hidden;
-}
+    .artwork-caption div:last-child {
+
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+    }
 
 
-.artwork-description .page-content {
-    padding: 25px 24px 38px;
+    /* MOBILE DESCRIPTION */
 
-    overflow: hidden;
-}
+    .artwork-description .page-content {
 
-.artwork-description p {
-    font-size: 10.5px;
+        padding: 25px 24px 38px;
 
-    line-height: 1.48;
+        overflow: hidden;
+    }
 
-    margin-bottom: 9px;
-}
+    .artwork-description p {
+
+        font-size: 10.5px;
+
+        line-height: 1.48;
+
+        margin-bottom: 9px;
+    }
 
 
     .page-number {
@@ -934,16 +919,13 @@ body {
         font-size: 23px;
     }
 
-    .artwork-image {
-
-        height: 170px;
-    }
-
     .artwork-description p {
 
-        font-size: 10.5px;
+        font-size: 10px;
 
-        line-height: 1.5;
+        line-height: 1.45;
+
+        margin-bottom: 8px;
     }
 
 }
@@ -1162,118 +1144,1315 @@ body {
 
 
             <!-- =========================================
-     PAGE 04 — ARTWORK
-========================================== -->
+                 PAGE 04 — ARTWORK
+            ========================================== -->
 
-<section
-    class="page left-page artwork-page">
+            <section
+                class="page left-page artwork-page">
 
-    <div class="page-content">
+                <div class="page-content">
 
-        <div class="artwork-image">
+                    <div class="artwork-image">
 
-            <img
-                src="The%20space.jpeg"
-                alt="The Space — Jeeva Samanera"
-            >
+                        <img
+                            src="The%20space.jpeg"
+                            alt="The Space — Jeeva Samanera">
+
+                    </div>
+
+                    <div class="artwork-caption">
+
+                        <div>
+                            The Space
+                        </div>
+
+                        <div>
+                            © 2026 Jeeva Samanera
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="page-number">
+                    04
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 PAGE 05 — ARTWORK DESCRIPTION
+            ========================================== -->
+
+            <section
+                class="page right-page artwork-description">
+
+                <div class="page-content">
+
+                    <p>
+                        What happens out there, happens somewhere prior
+                        in a consciousness.
+           <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>REFLECTRE — Online Edition</title>
+
+<style>
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar {
+    height: 60px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    background: #000;
+    border-bottom: 1px solid #222;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    position: relative;
+    z-index: 50;
+}
+
+.topbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    opacity: 0.6;
+}
+
+
+/* =====================================================
+   BOOK AREA
+===================================================== */
+
+.book-area {
+    min-height: calc(100vh - 130px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px 75px;
+}
+
+
+/* =====================================================
+   BOOK STAGE
+===================================================== */
+
+.book-stage {
+    position: relative;
+
+    width: min(900px, 90vw);
+    height: 720px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   CLOSED COVER
+===================================================== */
+
+.closed-cover {
+    position: absolute;
+
+    z-index: 20;
+
+    width: min(380px, 70%);
+    height: 540px;
+
+    background: #000;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.85);
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.closed-cover img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   OPEN BOOK
+===================================================== */
+
+.book {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(0.97);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        visibility 0s linear 0.7s;
+}
+
+.book.open {
+    opacity: 1;
+    visibility: visible;
+
+    transform: scale(1);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        visibility 0s;
+}
+
+
+/* =====================================================
+   BOOK SPREADS
+===================================================== */
+
+.book-spread {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0s linear 0.5s;
+}
+
+.book-spread.active {
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0s;
+}
+
+
+/* =====================================================
+   PAGES
+===================================================== */
+
+.page {
+    position: relative;
+
+    width: 50%;
+    height: 100%;
+
+    background: #000;
+
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    overflow: hidden;
+}
+
+
+/* LEFT PAGE */
+
+.left-page {
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
+}
+
+
+/* RIGHT PAGE */
+
+.right-page {
+    border-right: 1px solid #222;
+}
+
+
+/* =====================================================
+   PAGE CONTENT
+===================================================== */
+
+.page-content {
+    width: 100%;
+    height: 100%;
+
+    padding: 70px 65px 65px;
+
+    overflow: hidden;
+}
+
+.section-label {
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+    letter-spacing: 5px;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.page h1 {
+    font-size: 34px;
+
+    font-weight: normal;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+}
+
+.page p {
+    color: #ccc;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   INTRODUCTION
+===================================================== */
+
+.introduction-page {
+    overflow: hidden;
+}
+
+.introduction-page p {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 19px;
+}
+
+.introduction-page h1 {
+    font-size: 32px;
+
+    margin-bottom: 27px;
+}
+
+.closing-line {
+    color: #fff !important;
+
+    margin-top: 25px;
+}
+
+
+/* =====================================================
+   ARTWORK PAGE
+===================================================== */
+
+.artwork-page {
+    text-align: center;
+}
+
+.artwork-page .page-content {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.artwork-image {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.artwork-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.artwork-caption {
+    position: absolute;
+
+    bottom: 28px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    letter-spacing: 1px;
+
+    color: #fff;
+
+    z-index: 5;
+}
+
+.artwork-caption div:first-child {
+    font-style: italic;
+}
+
+.artwork-caption div:last-child {
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #aaa;
+
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   ARTWORK DESCRIPTION
+===================================================== */
+
+.artwork-description {
+    overflow: hidden;
+}
+
+.artwork-description .page-content {
+    padding: 55px 55px 55px;
+
+    overflow: hidden;
+}
+
+.artwork-description p {
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    color: #ccc;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   PAGE NUMBERS
+===================================================== */
+
+.page-number {
+    position: absolute;
+
+    bottom: 22px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   CENTRE SPINE
+===================================================== */
+
+.spine {
+    position: absolute;
+
+    z-index: 10;
+
+    top: 0;
+    left: 50%;
+
+    width: 1px;
+    height: 100%;
+
+    background: #333;
+
+    transform: translateX(-50%);
+}
+
+
+/* =====================================================
+   OPEN BUTTON
+===================================================== */
+
+.open-button {
+    position: absolute;
+
+    z-index: 30;
+
+    bottom: -55px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 15px 36px;
+
+    background: #000;
+
+    color: #fff;
+
+    border: 1px solid #555;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.open-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* =====================================================
+   COVER WHEN OPEN
+===================================================== */
+
+.book-stage.is-open .closed-cover {
+    opacity: 0;
+
+    transform: scale(0.97);
+
+    pointer-events: none;
+}
+
+.book-stage.is-open .open-button {
+    display: none;
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.controls {
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    border-top: 1px solid #222;
+}
+
+.control-button {
+    padding: 12px 24px;
+
+    background: transparent;
+
+    color: #fff;
+
+    border: 1px solid #444;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.control-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.control-button:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.page-status {
+    min-width: 70px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) and (min-width: 601px) {
+
+    .book-stage {
+        width: 94vw;
+        height: 650px;
+    }
+
+    .page-content {
+        padding: 60px 45px 60px;
+    }
+
+    .page h1 {
+        font-size: 29px;
+    }
+
+    .page p {
+        font-size: 14px;
+    }
+
+    .introduction-page p {
+        font-size: 13px;
+        line-height: 1.75;
+        margin-bottom: 17px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: 55px;
+
+        padding: 0 15px;
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .book-area {
+        min-height: calc(100vh - 125px);
+
+        padding: 20px 10px 65px;
+
+        align-items: flex-start;
+    }
+
+
+    .book-stage {
+        width: 94vw;
+
+        height: 650px;
+
+        min-height: 650px;
+
+        margin-top: 5px;
+    }
+
+
+    .closed-cover {
+        width: 72vw;
+
+        height: auto;
+
+        aspect-ratio: 0.707 / 1;
+    }
+
+
+    .book {
+        display: block;
+
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    /* MOBILE SPREAD */
+
+    .book-spread {
+        display: block;
+
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    /* MOBILE PAGES */
+
+    .left-page,
+    .right-page {
+
+        width: 100%;
+
+        height: 50%;
+
+        border-left: 1px solid #222;
+
+        border-right: 1px solid #222;
+    }
+
+    .left-page {
+
+        display: flex;
+
+        border-bottom: none;
+    }
+
+    .right-page {
+
+        display: flex;
+
+        border-top: none;
+    }
+
+
+    /* MOBILE CONTENT */
+
+    .page-content {
+
+        height: 100%;
+
+        padding: 35px 28px 45px;
+
+        overflow: hidden;
+    }
+
+    .section-label {
+
+        font-size: 8px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 18px;
+    }
+
+    .page h1 {
+
+        font-size: 26px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 20px;
+    }
+
+    .page p {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* MOBILE INTRODUCTION */
+
+    .introduction-page {
+
+        overflow: hidden;
+    }
+
+    .introduction-page p {
+
+        font-size: 12.5px;
+
+        line-height: 1.65;
+
+        margin-bottom: 13px;
+    }
+
+    .introduction-page h1 {
+
+        font-size: 25px;
+
+        margin-bottom: 20px;
+    }
+
+    .closing-line {
+
+        margin-top: 18px;
+    }
+
+
+    /* MOBILE ARTWORK */
+
+    .artwork-page .page-content {
+
+        padding: 5px;
+    }
+
+    .artwork-image {
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .artwork-image img {
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+    }
+
+    .artwork-caption {
+
+        bottom: 20px;
+
+        font-size: 11px;
+    }
+
+    .artwork-caption div:last-child {
+
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* MOBILE DESCRIPTION */
+
+    .artwork-description .page-content {
+
+        padding: 25px 24px 38px;
+
+        overflow: hidden;
+    }
+
+    .artwork-description p {
+
+        font-size: 10.5px;
+
+        line-height: 1.48;
+
+        margin-bottom: 9px;
+    }
+
+
+    .page-number {
+
+        bottom: 14px;
+    }
+
+
+    .spine {
+
+        display: none;
+    }
+
+
+    .open-button {
+
+        bottom: -48px;
+
+        padding: 14px 28px;
+
+        font-size: 9px;
+    }
+
+
+    .controls {
+
+        height: 65px;
+
+        gap: 10px;
+    }
+
+    .control-button {
+
+        padding: 10px 13px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .page-status {
+
+        min-width: 45px;
+
+        font-size: 8px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .book-stage {
+
+        width: 94vw;
+
+        height: 620px;
+
+        min-height: 620px;
+    }
+
+    .page-content {
+
+        padding: 30px 23px 40px;
+    }
+
+    .introduction-page p {
+
+        font-size: 11.5px;
+
+        line-height: 1.6;
+
+        margin-bottom: 11px;
+    }
+
+    .introduction-page h1 {
+
+        font-size: 23px;
+    }
+
+    .artwork-description p {
+
+        font-size: 10px;
+
+        line-height: 1.45;
+
+        margin-bottom: 8px;
+    }
+
+}
+
+
+/* =====================================================
+   SHORT MOBILE SCREENS
+===================================================== */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+    .book-stage {
+
+        height: 600px;
+
+        min-height: 600px;
+    }
+
+    .page-content {
+
+        padding-top: 28px;
+
+        padding-bottom: 38px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP NAVIGATION
+===================================================== -->
+
+<header class="topbar">
+
+    <a href="reflectre.html">
+        ← BACK
+    </a>
+
+    <span>
+        REFLECTRE · ONLINE EDITION
+    </span>
+
+</header>
+
+
+
+<!-- =====================================================
+     BOOK AREA
+===================================================== -->
+
+<main class="book-area">
+
+<div
+    class="book-stage"
+    id="bookStage">
+
+
+    <!-- =================================================
+         CLOSED COVER
+    ================================================= -->
+
+    <div
+        class="closed-cover"
+        onclick="openReflectre()">
+
+        <img
+            src="Reflectre%20monochrome%20cover.png"
+            alt="REFLECTRE">
+
+    </div>
+
+
+
+    <!-- =================================================
+         OPEN BOOK
+    ================================================= -->
+
+    <div
+        class="book"
+        id="book">
+
+
+        <!-- =============================================
+             SPREAD 1 — PAGES 02–03
+             INTRODUCTION
+        ============================================== -->
+
+        <div
+            class="book-spread active"
+            id="introductionSpread">
+
+
+            <!-- =========================================
+                 PAGE 02
+            ========================================== -->
+
+            <section class="page left-page">
+
+                <div class="page-content introduction-page">
+
+                    <div class="section-label">
+                        INTRODUCTION
+                    </div>
+
+                    <h1>
+                        REFLECTRE
+                    </h1>
+
+                    <p>
+                        REFLECTRE is an ongoing exploration
+                        of consciousness, perception, and the
+                        relationship between the inner and
+                        outer worlds.
+                    </p>
+
+                    <p>
+                        Through charcoal, portraiture,
+                        symbolism, and atmospheric imagery,
+                        the series investigates memory,
+                        vulnerability, transformation, and
+                        spiritual experience.
+                    </p>
+
+                    <p>
+                        Each work emerges from an attempt
+                        to observe the invisible structures
+                        that shape how we experience ourselves
+                        and the world around us.
+                    </p>
+
+                    <p>
+                        Each work therefore invites the viewer
+                        to pause, observe, and recognise
+                        something of their own experience
+                        within the image.
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    02
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 PAGE 03
+            ========================================== -->
+
+            <section class="page right-page">
+
+                <div class="page-content introduction-page">
+
+                    <p>
+                        REFLECTRE does not seek to define
+                        consciousness or offer a singular
+                        interpretation of existence. Instead,
+                        it creates a space for contemplation —
+                        a place where perception can become
+                        uncertain, where memory can overlap
+                        with imagination, and where the boundary
+                        between the internal and external begins
+                        to dissolve.
+                    </p>
+
+                    <p>
+                        The works are fragments of a larger
+                        philosophical landscape. They explore
+                        the possibility that what we perceive
+                        is never entirely separate from the
+                        consciousness through which we perceive it.
+                    </p>
+
+                    <p>
+                        In this sense, reflection becomes more
+                        than the act of looking at an image.
+                        It becomes an encounter with oneself.
+                    </p>
+
+                    <p class="closing-line">
+                        <em>
+                            REFLECTRE is not a conclusion.<br>
+                            It is an invitation to look again.
+                        </em>
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    03
+                </div>
+
+            </section>
 
         </div>
 
-        <div class="artwork-caption">
 
-            <div>
-                The Space
-            </div>
 
-            <div>
-                © 2026 Jeeva Samanera
-            </div>
+        <!-- =============================================
+             SPREAD 2 — PAGES 04–05
+             ARTWORK 01 — THE SPACE
+        ============================================== -->
+
+        <div
+            class="book-spread"
+            id="spaceSpread">
+
+
+            <!-- =========================================
+                 PAGE 04 — ARTWORK
+            ========================================== -->
+
+            <section
+                class="page left-page artwork-page">
+
+                <div class="page-content">
+
+                    <div class="artwork-image">
+
+                        <img
+                            src="The%20space.jpeg"
+                            alt="The Space — Jeeva Samanera">
+
+                    </div>
+
+                    <div class="artwork-caption">
+
+                        <div>
+                            The Space
+                        </div>
+
+                        <div>
+                            © 2026 Jeeva Samanera
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="page-number">
+                    04
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 PAGE 05 — ARTWORK DESCRIPTION
+            ========================================== -->
+
+            <section
+                class="page right-page artwork-description">
+
+                <div class="page-content">
+
+                    <p>
+                        What happens out there, happens somewhere prior
+                        in a consciousness.
+                    </p>
+
+                    <p>
+                        The Space is a reflective field of awareness
+                        which reflects the human consciousness.
+                    </p>
+
+                    <p>
+                        Renaissance of it's holographic existence is
+                        indeed not a distant concept but an unfinished
+                        expression.
+                    </p>
+
+                    <p>
+                        The Space is a reflective field not in the sense
+                        of holographic in existence but in meaning.
+                    </p>
+
+                    <p>
+                        This idea of understanding the Universe, a
+                        projection of soulful consciousness is totally
+                        a new dimension of looking at the universe.
+                    </p>
+
+                    <p>
+                        It proposes that the universe is a construct
+                        of pure awareness of consciousness which leads
+                        to it's physical and non physical existence at
+                        the same time.
+                    </p>
+
+                    <p>
+                        However, the physical construct of the Space is
+                        merely a projection of awareness of consciousness.
+                    </p>
+
+                    <p>
+                        The active participants of the creation of
+                        Universe is somehow you yourself and your
+                        consciousness which triggers and captures the
+                        awareness through psychological process in Life.
+                    </p>
+
+                    <p>
+                        The universe's physical existence (appearance)
+                        is just a projection of the consciousness.
+                    </p>
+
+                    <p>
+                        Perhaps that's the reason behind it's phisycal
+                        expansion as human consciousness is also expanding.
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    05
+                </div>
+
+            </section>
 
         </div>
 
-    </div>
-
-    <div class="page-number">
-        04
-    </div>
-
-</section>
-
-
-
-            
-<!-- =========================================
-     PAGE 05 — ARTWORK DESCRIPTION
-========================================== -->
-
-<section
-    class="page right-page artwork-description">
-
-    <div class="page-content">
-
-        <p>
-            What happens out there, happens somewhere prior
-            in a consciousness.
-        </p>
-
-        <p>
-            The Space is a reflective field of awareness
-            which reflects the human consciousness.
-        </p>
-
-        <p>
-            Renaissance of it's holographic existence is
-            indeed not a distant concept but an unfinished
-            expression.
-        </p>
-
-        <p>
-            The Space is a reflective field not in the sense
-            of holographic in existence but in meaning.
-        </p>
-
-        <p>
-            This idea of understanding the Universe, a
-            projection of soulful consciousness is totally
-            a new dimension of looking at the universe.
-        </p>
-
-        <p>
-            It proposes that the universe is a construct
-            of pure awareness of consciousness which leads
-            to it's physical and non physical existence at
-            the same time.
-        </p>
-
-        <p>
-            However, the physical construct of the Space is
-            merely a projection of awareness of consciousness.
-        </p>
-
-        <p>
-            The active participants of the creation of
-            Universe is somehow you yourself and your
-            consciousness which triggers and captures the
-            awareness through psychological process in Life.
-        </p>
-
-        <p>
-            The universe's physical existence (appearance)
-            is just a projection of the consciousness.
-        </p>
-
-        <p>
-            Perhaps that's the reason behind it's phisycal
-            expansion as human consciousness is also expanding.
-        </p>
-
-    </div>
-
-    <div class="page-number">
-        05
-    </div>
-
-</section>
 
 
         <!-- =============================================
