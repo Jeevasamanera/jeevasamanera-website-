@@ -147,8 +147,6 @@ body {
     width: 100%;
     height: 100%;
 
-    display: flex;
-
     opacity: 0;
     visibility: hidden;
 
@@ -181,6 +179,9 @@ body {
     position: absolute;
 
     inset: 0;
+
+    width: 100%;
+    height: 100%;
 
     display: flex;
 
@@ -295,17 +296,21 @@ body {
 
 .introduction-page p {
     font-size: 14px;
+
     line-height: 1.8;
+
     margin-bottom: 19px;
 }
 
 .introduction-page h1 {
     font-size: 32px;
+
     margin-bottom: 27px;
 }
 
 .closing-line {
     color: #fff !important;
+
     margin-top: 25px;
 }
 
@@ -320,7 +325,9 @@ body {
 
 .artwork-page .page-content {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 }
 
@@ -330,6 +337,7 @@ body {
     font-family: Arial, sans-serif;
 
     font-size: 9px;
+
     letter-spacing: 5px;
 
     color: #666;
@@ -347,10 +355,13 @@ body {
 
 .artwork-image {
     width: 100%;
+
     height: 430px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     margin-top: 10px;
@@ -358,9 +369,11 @@ body {
 
 .artwork-image img {
     max-width: 100%;
+
     max-height: 100%;
 
     width: auto;
+
     height: auto;
 
     display: block;
@@ -374,6 +387,7 @@ body {
     font-family: Arial, sans-serif;
 
     font-size: 9px;
+
     letter-spacing: 3px;
 
     color: #555;
@@ -388,6 +402,7 @@ body {
     overflow-y: auto;
 
     scrollbar-width: thin;
+
     scrollbar-color: #333 #000;
 }
 
@@ -418,6 +433,7 @@ body {
     position: absolute;
 
     bottom: 22px;
+
     left: 50%;
 
     transform: translateX(-50%);
@@ -425,6 +441,7 @@ body {
     font-family: Arial, sans-serif;
 
     font-size: 8px;
+
     letter-spacing: 2px;
 
     color: #555;
@@ -441,9 +458,11 @@ body {
     z-index: 10;
 
     top: 0;
+
     left: 50%;
 
     width: 1px;
+
     height: 100%;
 
     background: #333;
@@ -462,6 +481,7 @@ body {
     z-index: 30;
 
     bottom: -55px;
+
     left: 50%;
 
     transform: translateX(-50%);
@@ -491,6 +511,7 @@ body {
 
 .open-button:hover {
     background: #fff;
+
     color: #000;
 }
 
@@ -501,7 +522,9 @@ body {
 
 .book-stage.is-open .closed-cover {
     opacity: 0;
+
     transform: scale(0.97);
+
     pointer-events: none;
 }
 
@@ -518,7 +541,9 @@ body {
     height: 70px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 25px;
@@ -548,11 +573,13 @@ body {
 
 .control-button:hover {
     background: #fff;
+
     color: #000;
 }
 
 .control-button:disabled {
     opacity: 0.25;
+
     cursor: default;
 }
 
@@ -579,6 +606,7 @@ body {
 
     .book-stage {
         width: 94vw;
+
         height: 650px;
     }
 
@@ -596,7 +624,9 @@ body {
 
     .introduction-page p {
         font-size: 13px;
+
         line-height: 1.75;
+
         margin-bottom: 17px;
     }
 
@@ -618,6 +648,7 @@ body {
         padding: 0 15px;
 
         font-size: 8px;
+
         letter-spacing: 2px;
     }
 
@@ -635,6 +666,7 @@ body {
         width: 94vw;
 
         height: 650px;
+
         min-height: 650px;
 
         margin-top: 5px;
@@ -654,6 +686,7 @@ body {
         display: block;
 
         width: 100%;
+
         height: 100%;
     }
 
@@ -664,6 +697,7 @@ body {
         display: block;
 
         width: 100%;
+
         height: 100%;
     }
 
@@ -672,20 +706,27 @@ body {
 
     .left-page,
     .right-page {
+
         width: 100%;
+
         height: 50%;
 
         border-left: 1px solid #222;
+
         border-right: 1px solid #222;
     }
 
     .left-page {
+
         display: flex;
+
         border-bottom: none;
     }
 
     .right-page {
+
         display: flex;
+
         border-top: none;
     }
 
@@ -693,6 +734,7 @@ body {
     /* MOBILE CONTENT */
 
     .page-content {
+
         height: 100%;
 
         padding: 35px 28px 45px;
@@ -701,13 +743,16 @@ body {
     }
 
     .section-label {
+
         font-size: 8px;
+
         letter-spacing: 4px;
 
         margin-bottom: 18px;
     }
 
     .page h1 {
+
         font-size: 26px;
 
         letter-spacing: 4px;
@@ -716,6 +761,7 @@ body {
     }
 
     .page p {
+
         font-size: 13px;
 
         line-height: 1.7;
@@ -727,10 +773,12 @@ body {
     /* MOBILE INTRODUCTION */
 
     .introduction-page {
+
         overflow: hidden;
     }
 
     .introduction-page p {
+
         font-size: 12.5px;
 
         line-height: 1.65;
@@ -739,12 +787,14 @@ body {
     }
 
     .introduction-page h1 {
+
         font-size: 25px;
 
         margin-bottom: 20px;
     }
 
     .closing-line {
+
         margin-top: 18px;
     }
 
@@ -752,22 +802,19 @@ body {
     /* MOBILE ARTWORK */
 
     .artwork-page .page-content {
+
         padding-top: 28px;
     }
 
     .artwork-page h1 {
+
         font-size: 23px;
 
         margin-bottom: 15px;
     }
 
-    .artwork-image {
-        height: 190px;
-
-        margin-top: 0;
-    }
-
     .artwork-label {
+
         font-size: 7px;
 
         letter-spacing: 3px;
@@ -775,7 +822,15 @@ body {
         margin-bottom: 12px;
     }
 
+    .artwork-image {
+
+        height: 190px;
+
+        margin-top: 0;
+    }
+
     .artwork-number {
+
         margin-top: 12px;
 
         font-size: 7px;
@@ -785,16 +840,19 @@ body {
     /* MOBILE DESCRIPTION */
 
     .artwork-description {
+
         overflow: hidden;
     }
 
     .artwork-description h1 {
+
         font-size: 23px;
 
         margin-bottom: 15px;
     }
 
     .artwork-description p {
+
         font-size: 11.5px;
 
         line-height: 1.55;
@@ -804,16 +862,19 @@ body {
 
 
     .page-number {
+
         bottom: 14px;
     }
 
 
     .spine {
+
         display: none;
     }
 
 
     .open-button {
+
         bottom: -48px;
 
         padding: 14px 28px;
@@ -823,12 +884,14 @@ body {
 
 
     .controls {
+
         height: 65px;
 
         gap: 10px;
     }
 
     .control-button {
+
         padding: 10px 13px;
 
         font-size: 8px;
@@ -837,6 +900,7 @@ body {
     }
 
     .page-status {
+
         min-width: 45px;
 
         font-size: 8px;
@@ -852,17 +916,21 @@ body {
 @media (max-width: 380px) {
 
     .book-stage {
+
         width: 94vw;
 
         height: 620px;
+
         min-height: 620px;
     }
 
     .page-content {
+
         padding: 30px 23px 40px;
     }
 
     .introduction-page p {
+
         font-size: 11.5px;
 
         line-height: 1.6;
@@ -871,15 +939,19 @@ body {
     }
 
     .introduction-page h1 {
+
         font-size: 23px;
     }
 
     .artwork-image {
+
         height: 170px;
     }
 
     .artwork-description p {
+
         font-size: 10.5px;
+
         line-height: 1.5;
     }
 
@@ -893,12 +965,16 @@ body {
 @media (max-width: 600px) and (max-height: 700px) {
 
     .book-stage {
+
         height: 600px;
+
         min-height: 600px;
     }
 
     .page-content {
+
         padding-top: 28px;
+
         padding-bottom: 38px;
     }
 
@@ -967,7 +1043,8 @@ body {
 
 
         <!-- =============================================
-             INTRODUCTION SPREAD — PAGES 02–03
+             SPREAD 1 — PAGES 02–03
+             INTRODUCTION
         ============================================== -->
 
         <div
@@ -975,7 +1052,9 @@ body {
             id="introductionSpread">
 
 
-            <!-- PAGE 02 -->
+            <!-- =========================================
+                 PAGE 02
+            ========================================== -->
 
             <section class="page left-page">
 
@@ -1028,7 +1107,9 @@ body {
 
 
 
-            <!-- PAGE 03 -->
+            <!-- =========================================
+                 PAGE 03
+            ========================================== -->
 
             <section class="page right-page">
 
@@ -1080,7 +1161,8 @@ body {
 
 
         <!-- =============================================
-             ARTWORK 01 — THE SPACE — PAGES 04–05
+             SPREAD 2 — PAGES 04–05
+             ARTWORK 01 — THE SPACE
         ============================================== -->
 
         <div
@@ -1088,9 +1170,12 @@ body {
             id="spaceSpread">
 
 
-            <!-- PAGE 04 — ARTWORK -->
+            <!-- =========================================
+                 PAGE 04 — ARTWORK
+            ========================================== -->
 
-            <section class="page left-page artwork-page">
+            <section
+                class="page left-page artwork-page">
 
                 <div class="page-content">
 
@@ -1125,9 +1210,12 @@ body {
 
 
 
-            <!-- PAGE 05 — DESCRIPTION -->
+            <!-- =========================================
+                 PAGE 05 — ARTWORK DESCRIPTION
+            ========================================== -->
 
-            <section class="page right-page artwork-description">
+            <section
+                class="page right-page artwork-description">
 
                 <div class="page-content">
 
@@ -1140,8 +1228,8 @@ body {
                     </h1>
 
                     <p>
-                        What happens out there, happens somewhere
-                        prior in a consciousness.
+                        What happens out there, happens somewhere prior
+                        in a consciousness.
                     </p>
 
                     <p>
@@ -1150,4 +1238,363 @@ body {
                     </p>
 
                     <p>
-                        Renaissance of it'
+                        Renaissance of it's holographic existence is
+                        indeed not a distant concept but an unfinished
+                        expression.
+                    </p>
+
+                    <p>
+                        The Space is a reflective field not in the sense
+                        of holographic in existence but in meaning.
+                    </p>
+
+                    <p>
+                        This idea of understanding the Universe, a
+                        projection of soulful consciousness is totally
+                        a new dimension of looking at the universe.
+                    </p>
+
+                    <p>
+                        It proposes that the universe is a construct
+                        of pure awareness of consciousness which leads
+                        to it's physical and non physical existence at
+                        the same time.
+                    </p>
+
+                    <p>
+                        However, the physical construct of the Space is
+                        merely a projection of awareness of consciousness.
+                    </p>
+
+                    <p>
+                        The active participants of the creation of
+                        Universe is somehow you yourself and your
+                        consciousness which triggers and captures the
+                        awareness through psychological process in Life.
+                    </p>
+
+                    <p>
+                        The universe's physical existence (appearance)
+                        is just a projection of the consciousness.
+                    </p>
+
+                    <p>
+                        Perhaps that's the reason behind it's phisycal
+                        expansion as human consciousness is also expanding.
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    05
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =============================================
+             CENTRE SPINE
+        ============================================== -->
+
+        <div class="spine"></div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         OPEN BUTTON
+    ================================================= -->
+
+    <button
+        class="open-button"
+        onclick="openReflectre()">
+
+        OPEN REFLECTRE
+
+    </button>
+
+</div>
+
+</main>
+
+
+
+<!-- =====================================================
+     CONTROLS
+===================================================== -->
+
+<div class="controls">
+
+    <button
+        class="control-button"
+        id="previousButton"
+        onclick="previousPage()"
+        disabled>
+
+        ← PREVIOUS
+
+    </button>
+
+
+    <div
+        class="page-status"
+        id="pageStatus">
+
+        COVER
+
+    </div>
+
+
+    <button
+        class="control-button"
+        id="nextButton"
+        onclick="nextPage()">
+
+        OPEN BOOK →
+
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   CURRENT SPREAD
+
+   0 = COVER
+   1 = INTRODUCTION 02–03
+   2 = THE SPACE 04–05
+===================================================== */
+
+let currentSpread = 0;
+
+
+/* =====================================================
+   SHOW SPREAD
+===================================================== */
+
+function showSpread(number) {
+
+    const spreads =
+        document.querySelectorAll(".book-spread");
+
+    spreads.forEach(function(spread) {
+
+        spread.classList.remove("active");
+
+    });
+
+
+    if (number === 1) {
+
+        document
+            .getElementById("introductionSpread")
+            .classList.add("active");
+
+    }
+
+
+    if (number === 2) {
+
+        document
+            .getElementById("spaceSpread")
+            .classList.add("active");
+
+    }
+
+
+    currentSpread = number;
+
+    updateControls();
+}
+
+
+/* =====================================================
+   OPEN REFLECTRE
+===================================================== */
+
+function openReflectre() {
+
+    const stage =
+        document.getElementById("bookStage");
+
+    const book =
+        document.getElementById("book");
+
+    stage.classList.add("is-open");
+
+    book.classList.add("open");
+
+    showSpread(1);
+}
+
+
+/* =====================================================
+   NEXT PAGE
+===================================================== */
+
+function nextPage() {
+
+    if (currentSpread === 0) {
+
+        openReflectre();
+
+        return;
+    }
+
+
+    if (currentSpread === 1) {
+
+        showSpread(2);
+
+        return;
+    }
+
+}
+
+
+/* =====================================================
+   PREVIOUS PAGE
+===================================================== */
+
+function previousPage() {
+
+    if (currentSpread === 2) {
+
+        showSpread(1);
+
+        return;
+    }
+
+
+    if (currentSpread === 1) {
+
+        closeReflectre();
+
+        return;
+    }
+
+}
+
+
+/* =====================================================
+   RETURN TO COVER
+===================================================== */
+
+function closeReflectre() {
+
+    const stage =
+        document.getElementById("bookStage");
+
+    const book =
+        document.getElementById("book");
+
+    stage.classList.remove("is-open");
+
+    book.classList.remove("open");
+
+    currentSpread = 0;
+
+    updateControls();
+}
+
+
+/* =====================================================
+   UPDATE CONTROLS
+===================================================== */
+
+function updateControls() {
+
+    const previousButton =
+        document.getElementById("previousButton");
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+    const pageStatus =
+        document.getElementById("pageStatus");
+
+
+    /* COVER */
+
+    if (currentSpread === 0) {
+
+        previousButton.disabled = true;
+
+        nextButton.textContent =
+            "OPEN BOOK →";
+
+        pageStatus.textContent =
+            "COVER";
+    }
+
+
+    /* INTRODUCTION */
+
+    if (currentSpread === 1) {
+
+        previousButton.disabled = false;
+
+        nextButton.textContent =
+            "NEXT →";
+
+        pageStatus.textContent =
+            "02–03";
+    }
+
+
+    /* THE SPACE */
+
+    if (currentSpread === 2) {
+
+        previousButton.disabled = false;
+
+        nextButton.textContent =
+            "NEXT →";
+
+        pageStatus.textContent =
+            "04–05";
+    }
+
+}
+
+
+/* =====================================================
+   KEYBOARD CONTROLS
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "ArrowRight") {
+
+            nextPage();
+
+        }
+
+        if (event.key === "ArrowLeft") {
+
+            previousPage();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
