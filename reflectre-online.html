@@ -174,6 +174,35 @@ body {
 
 
 /* =====================================================
+   BOOK SPREADS
+===================================================== */
+
+.book-spread {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0s linear 0.5s;
+}
+
+.book-spread.active {
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0s;
+}
+
+
+/* =====================================================
    PAGES
 ===================================================== */
 
@@ -278,6 +307,106 @@ body {
 .closing-line {
     color: #fff !important;
     margin-top: 25px;
+}
+
+
+/* =====================================================
+   ARTWORK PAGE
+===================================================== */
+
+.artwork-page {
+    text-align: center;
+}
+
+.artwork-page .page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artwork-label {
+    align-self: flex-start;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+    letter-spacing: 5px;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.artwork-page h1 {
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
+}
+
+.artwork-image {
+    width: 100%;
+    height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+}
+
+.artwork-image img {
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.artwork-number {
+    margin-top: 25px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   ARTWORK DESCRIPTION
+===================================================== */
+
+.artwork-description {
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #333 #000;
+}
+
+.artwork-description h1 {
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
+}
+
+.artwork-description p {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #ccc;
+
+    margin-bottom: 18px;
 }
 
 
@@ -470,6 +599,10 @@ body {
         line-height: 1.75;
         margin-bottom: 17px;
     }
+
+    .artwork-image {
+        height: 370px;
+    }
 }
 
 
@@ -518,6 +651,16 @@ body {
 
 
     .book {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* MOBILE SPREAD */
+
+    .book-spread {
         display: block;
 
         width: 100%;
@@ -606,6 +749,60 @@ body {
     }
 
 
+    /* MOBILE ARTWORK */
+
+    .artwork-page .page-content {
+        padding-top: 28px;
+    }
+
+    .artwork-page h1 {
+        font-size: 23px;
+
+        margin-bottom: 15px;
+    }
+
+    .artwork-image {
+        height: 190px;
+
+        margin-top: 0;
+    }
+
+    .artwork-label {
+        font-size: 7px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 12px;
+    }
+
+    .artwork-number {
+        margin-top: 12px;
+
+        font-size: 7px;
+    }
+
+
+    /* MOBILE DESCRIPTION */
+
+    .artwork-description {
+        overflow: hidden;
+    }
+
+    .artwork-description h1 {
+        font-size: 23px;
+
+        margin-bottom: 15px;
+    }
+
+    .artwork-description p {
+        font-size: 11.5px;
+
+        line-height: 1.55;
+
+        margin-bottom: 10px;
+    }
+
+
     .page-number {
         bottom: 14px;
     }
@@ -675,6 +872,15 @@ body {
 
     .introduction-page h1 {
         font-size: 23px;
+    }
+
+    .artwork-image {
+        height: 170px;
+    }
+
+    .artwork-description p {
+        font-size: 10.5px;
+        line-height: 1.5;
     }
 
 }
@@ -761,268 +967,187 @@ body {
 
 
         <!-- =============================================
-             PAGE 02 — INTRODUCTION BEGINS
+             INTRODUCTION SPREAD — PAGES 02–03
         ============================================== -->
 
-        <section class="page left-page">
+        <div
+            class="book-spread active"
+            id="introductionSpread">
 
-            <div class="page-content introduction-page">
 
-                <div class="section-label">
-                    INTRODUCTION
+            <!-- PAGE 02 -->
+
+            <section class="page left-page">
+
+                <div class="page-content introduction-page">
+
+                    <div class="section-label">
+                        INTRODUCTION
+                    </div>
+
+                    <h1>
+                        REFLECTRE
+                    </h1>
+
+                    <p>
+                        REFLECTRE is an ongoing exploration
+                        of consciousness, perception, and the
+                        relationship between the inner and
+                        outer worlds.
+                    </p>
+
+                    <p>
+                        Through charcoal, portraiture,
+                        symbolism, and atmospheric imagery,
+                        the series investigates memory,
+                        vulnerability, transformation, and
+                        spiritual experience.
+                    </p>
+
+                    <p>
+                        Each work emerges from an attempt
+                        to observe the invisible structures
+                        that shape how we experience ourselves
+                        and the world around us.
+                    </p>
+
+                    <p>
+                        Each work therefore invites the viewer
+                        to pause, observe, and recognise
+                        something of their own experience
+                        within the image.
+                    </p>
+
                 </div>
 
-                <h1>
-                    REFLECTRE
-                </h1>
+                <div class="page-number">
+                    02
+                </div>
 
-                <p>
-                    REFLECTRE is an ongoing exploration
-                    of consciousness, perception, and the
-                    relationship between the inner and
-                    outer worlds.
-                </p>
-
-                <p>
-                    Through charcoal, portraiture,
-                    symbolism, and atmospheric imagery,
-                    the series investigates memory,
-                    vulnerability, transformation, and
-                    spiritual experience.
-                </p>
-
-                <p>
-                    Each work emerges from an attempt
-                    to observe the invisible structures
-                    that shape how we experience ourselves
-                    and the world around us.
-                </p>
-
-                <!-- MOVED FROM PAGE 03 -->
-
-                <p>
-                    Each work therefore invites the viewer
-                    to pause, observe, and recognise
-                    something of their own experience
-                    within the image.
-                </p>
-
-            </div>
-
-            <div class="page-number">
-                02
-            </div>
-
-        </section>
+            </section>
 
 
 
-        <!-- =============================================
-             PAGE 03 — INTRODUCTION CONTINUES
-        ============================================== -->
+            <!-- PAGE 03 -->
 
-        <section class="page right-page">
+            <section class="page right-page">
 
-            <div class="page-content introduction-page">
+                <div class="page-content introduction-page">
 
-                <p>
-                    REFLECTRE does not seek to define
-                    consciousness or offer a singular
-                    interpretation of existence. Instead,
-                    it creates a space for contemplation —
-                    a place where perception can become
-                    uncertain, where memory can overlap
-                    with imagination, and where the boundary
-                    between the internal and external begins
-                    to dissolve.
-                </p>
+                    <p>
+                        REFLECTRE does not seek to define
+                        consciousness or offer a singular
+                        interpretation of existence. Instead,
+                        it creates a space for contemplation —
+                        a place where perception can become
+                        uncertain, where memory can overlap
+                        with imagination, and where the boundary
+                        between the internal and external begins
+                        to dissolve.
+                    </p>
 
-                <p>
-                    The works are fragments of a larger
-                    philosophical landscape. They explore
-                    the possibility that what we perceive
-                    is never entirely separate from the
-                    consciousness through which we perceive it.
-                </p>
+                    <p>
+                        The works are fragments of a larger
+                        philosophical landscape. They explore
+                        the possibility that what we perceive
+                        is never entirely separate from the
+                        consciousness through which we perceive it.
+                    </p>
 
-                <p>
-                    In this sense, reflection becomes more
-                    than the act of looking at an image.
-                    It becomes an encounter with oneself.
-                </p>
+                    <p>
+                        In this sense, reflection becomes more
+                        than the act of looking at an image.
+                        It becomes an encounter with oneself.
+                    </p>
 
-                <p class="closing-line">
-                    <em>
-                        REFLECTRE is not a conclusion.<br>
-                        It is an invitation to look again.
-                    </em>
-                </p>
+                    <p class="closing-line">
+                        <em>
+                            REFLECTRE is not a conclusion.<br>
+                            It is an invitation to look again.
+                        </em>
+                    </p>
 
-            </div>
+                </div>
 
-            <div class="page-number">
-                03
-            </div>
+                <div class="page-number">
+                    03
+                </div>
 
-        </section>
+            </section>
+
+        </div>
 
 
 
         <!-- =============================================
-             CENTRE SPINE
+             ARTWORK 01 — THE SPACE — PAGES 04–05
         ============================================== -->
 
-        <div class="spine"></div>
-
-    </div>
-
-
-
-    <!-- =================================================
-         OPEN BUTTON
-    ================================================= -->
-
-    <button
-        class="open-button"
-        onclick="openReflectre()">
-
-        OPEN REFLECTRE
-
-    </button>
-
-</div>
-
-</main>
+        <div
+            class="book-spread"
+            id="spaceSpread">
 
 
+            <!-- PAGE 04 — ARTWORK -->
 
-<!-- =====================================================
-     CONTROLS
-===================================================== -->
+            <section class="page left-page artwork-page">
 
-<div class="controls">
+                <div class="page-content">
 
-    <button
-        class="control-button"
-        id="previousButton"
-        onclick="closeReflectre()"
-        disabled>
+                    <div class="artwork-label">
+                        REFLECTRE · ARTWORK 01
+                    </div>
 
-        ← PREVIOUS
+                    <h1>
+                        THE SPACE
+                    </h1>
 
-    </button>
+                    <div class="artwork-image">
 
+                        <img
+                            src="The%20space.jpeg"
+                            alt="REFLECTRE — The Space"
+                        >
 
-    <div
-        class="page-status"
-        id="pageStatus">
+                    </div>
 
-        COVER
+                    <div class="artwork-number">
+                        THE SPACE · 2026
+                    </div>
 
-    </div>
+                </div>
 
+                <div class="page-number">
+                    04
+                </div>
 
-    <button
-        class="control-button"
-        id="nextButton"
-        onclick="openReflectre()">
-
-        OPEN BOOK →
-
-    </button>
-
-</div>
+            </section>
 
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+            <!-- PAGE 05 — DESCRIPTION -->
 
-<script>
+            <section class="page right-page artwork-description">
 
-/* =====================================================
-   OPEN REFLECTRE
-===================================================== */
+                <div class="page-content">
 
-function openReflectre() {
+                    <div class="section-label">
+                        ARTWORK 01
+                    </div>
 
-    const stage =
-        document.getElementById("bookStage");
+                    <h1>
+                        THE SPACE
+                    </h1>
 
-    const book =
-        document.getElementById("book");
+                    <p>
+                        What happens out there, happens somewhere
+                        prior in a consciousness.
+                    </p>
 
-    stage.classList.add("is-open");
+                    <p>
+                        The Space is a reflective field of awareness
+                        which reflects the human consciousness.
+                    </p>
 
-    book.classList.add("open");
-
-    document
-        .getElementById("previousButton")
-        .disabled = false;
-
-    document
-        .getElementById("nextButton")
-        .textContent = "NEXT →";
-
-    document
-        .getElementById("pageStatus")
-        .textContent = "02–03";
-}
-
-
-/* =====================================================
-   RETURN TO COVER
-===================================================== */
-
-function closeReflectre() {
-
-    const stage =
-        document.getElementById("bookStage");
-
-    const book =
-        document.getElementById("book");
-
-    stage.classList.remove("is-open");
-
-    book.classList.remove("open");
-
-    document
-        .getElementById("previousButton")
-        .disabled = true;
-
-    document
-        .getElementById("nextButton")
-        .textContent = "OPEN BOOK →";
-
-    document
-        .getElementById("pageStatus")
-        .textContent = "COVER";
-}
-
-
-/* =====================================================
-   KEYBOARD CONTROLS
-===================================================== */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "ArrowRight") {
-            openReflectre();
-        }
-
-        if (event.key === "ArrowLeft") {
-            closeReflectre();
-        }
-
-    }
-);
-
-</script>
-
-
-</body>
-
-</html>
+                    <p>
+                        Renaissance of it'
