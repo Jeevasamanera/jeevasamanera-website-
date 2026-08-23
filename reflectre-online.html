@@ -1427,6 +1427,117 @@ body {
     </section>
 
 </div>
+<!-- =============================================
+     SPREAD 10–11
+     ARTWORK 04 — CONTRAST OF BEING
+============================================= -->
+
+<div
+    class="spread"
+    id="spread-5">
+
+
+    <!-- PAGE 10 — ARTWORK -->
+
+    <section class="page left-page artwork-page">
+
+        <div class="artwork-label">
+            ARTWORK 04
+        </div>
+
+
+        <div class="artwork-main-image">
+
+            <img
+                src="Contrast of being.jpeg"
+                alt="Contrast of being — REFLECTRE">
+
+        </div>
+
+
+        <div class="artwork-caption">
+
+            <strong>
+                Contrast of being 
+            </strong>
+
+            © 2026 Jeeva Samanera
+
+        </div>
+
+
+        <div class="page-number">
+            10
+        </div>
+
+    </section>
+
+
+
+    <!-- PAGE 11 — DESCRIPTION -->
+
+    <section class="page right-page description-page">
+
+        <div class="description-heading">
+            Contrast Of Being
+        </div>
+
+
+        <div class="description-text">
+
+            <p>
+                Contrast of Being explores the tension between 
+                presence and absence, visibility and disappearance,
+                the self and the space surrounding it.
+            </p>
+
+
+            <p>
+                The figure appears caught between two conditions 
+                of existence. One side dissolves into darkness and
+                texture, while the other opens into an almost empty
+                field of light. The contrast suggests that being is 
+                never experienced as a singular state. We become 
+                conscious of ourselves through what surrounds us,
+                through what is present as much as through what 
+                is absent.The dark form can be understood as the 
+                accumulated layers of identity, memory, experience, 
+                and perception. The empty space, meanwhile, 
+                represents the unknown — the space before identity 
+                takes form, where consciousness remains open and
+                undefined
+            </p>
+
+
+            <p>
+                The small human presence within the composition
+                becomes almost insignificant against these opposing
+                fields. Yet its very presence creates the contrast 
+                through which both darkness and light become 
+                perceptible. Perhaps being is not simply existing,
+                but existing between opposites — between what we 
+                know and what we cannot know, between form and 
+                formlessness, between the self we recognise and 
+                the self that remains hidden.
+            </p>
+
+
+            <p>
+                Contrast of Being invites us to observe the space
+                between these opposites, and to ask: where does 
+                the self truly begin?
+            </p>
+
+        </div>
+
+
+        <div class="page-number">
+            11
+        </div>
+
+    </section>
+
+</div>
 
         <!-- =============================================
              CENTRE SPINE
@@ -1515,6 +1626,7 @@ let currentSpread = 0;
    2 = PAGES 04–05
    3 = PAGES 06–07
    4 = PAGES 08-09
+   5 = PAGES 10-11
 */
 
 
@@ -1537,7 +1649,7 @@ function openReflectre() {
 
 function nextPage() {
 
-    if (currentSpread < 4) {
+    if (currentSpread < 5) {
 
         currentSpread++;
 
@@ -1702,6 +1814,19 @@ if (currentSpread === 4) {
 
     }
 
+/* ---------------------------------------------
+   SPREAD 10–11
+--------------------------------------------- */
+
+if (currentSpread === 5) {
+
+    pageStatus.textContent =
+        "10–11";
+
+    nextButton.textContent =
+        "NEXT →";
+
+}
 /* =====================================================
    KEYBOARD CONTROLS
 ===================================================== */
