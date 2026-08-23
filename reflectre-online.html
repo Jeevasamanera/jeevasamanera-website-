@@ -1,5 +1,4 @@
-         
-                    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -323,20 +322,28 @@ body {
 }
 
 
-/* Artwork image */
+/* =====================================================
+   ARTWORK IMAGE
+===================================================== */
 
 .artwork-main-image {
     width: 100%;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    padding-top: 45px;
+
+    padding-top: 60px;
+
     overflow: hidden;
 }
 
 .artwork-main-image img {
-    width: 100%;
+    width: 108%;
     height: auto;
+
+    max-width: none;
 
     object-fit: contain;
 
@@ -346,6 +353,9 @@ body {
 }
 
 
+/* =====================================================
+   ARTWORK CAPTION
+===================================================== */
 
 .artwork-caption {
     width: 100%;
@@ -381,6 +391,7 @@ body {
 /* =====================================================
    ARTWORK DESCRIPTION PAGE
 ===================================================== */
+
 .description-heading {
     font-size: 24px;
     font-weight: normal;
@@ -388,6 +399,7 @@ body {
     color: #fff;
     margin-bottom: 28px;
 }
+
 .description-page {
     padding: 48px 50px 48px;
 
@@ -396,6 +408,7 @@ body {
 
     justify-content: flex-start;
 }
+
 .description-heading {
     font-size: 24px;
     font-weight: normal;
@@ -403,6 +416,7 @@ body {
     color: #fff;
     margin-bottom: 28px;
 }
+
 .description-page p {
     font-size: 12.4px;
 
@@ -621,6 +635,14 @@ body {
     .artwork-page {
         padding: 18px 28px 38px;
     }
+
+    .artwork-main-image {
+        padding-top: 55px;
+    }
+
+    .artwork-main-image img {
+        width: 108%;
+    }
 }
 
 
@@ -766,7 +788,15 @@ body {
     .artwork-main-image {
         flex: 1;
         min-height: 0;
+
         align-items: flex-start;
+
+        padding-top: 35px;
+    }
+
+    .artwork-main-image img {
+        width: 108%;
+        max-width: none;
     }
 
     .artwork-caption {
@@ -1085,9 +1115,7 @@ body {
             id="spread-2">
 
 
-            <!-- =========================================
-                 PAGE 04 — ARTWORK
-            ========================================== -->
+            <!-- PAGE 04 — ARTWORK -->
 
             <section class="page left-page artwork-page">
 
@@ -1098,15 +1126,12 @@ body {
 
                 <div class="artwork-main-image">
 
-
-                         
                     <img
                         src="The%20space.jpeg"
                         alt="The Space — REFLECTRE">
 
-
-                         
                 </div>
+
 
                 <div class="artwork-caption">
 
@@ -1127,17 +1152,16 @@ body {
 
 
 
-            <!-- =========================================
-                 PAGE 05 — DESCRIPTION
-            ========================================== -->
+            <!-- PAGE 05 — DESCRIPTION -->
 
             <section class="page right-page description-page">
 
-    <div class="description-heading">
-        THE SPACE
-    </div>
+                <div class="description-heading">
+                    THE SPACE
+                </div>
 
-    <div class="description-text">
+                <div class="description-text">
+
                     <p>
                         What happens out there, happens somewhere
                         prior in a consciousness.
@@ -1147,6 +1171,7 @@ body {
                         is indeed not a distant concept but an
                         unfinished expression.
                     </p>
+
                     <p>
                         The Space is a reflective field not in the
                         sense of holographic in existence but in meaning.
@@ -1159,13 +1184,14 @@ body {
                         at the same time.
                         However, the physical construct of the Space
                         is merely a projection of awareness of
-                        consciousness.    
+                        consciousness.
                         The active participants of the creation of
                         Universe is somehow you yourself and your
                         consciousness which triggers and captures
                         the awareness through psychological process
                         in Life.
                     </p>
+
                     <p>
                         The universe's physical existence (appearance)
                         is just a projection of the consciousness.
@@ -1463,4 +1489,4 @@ updateBook();
 
 </body>
 
-</html>  
+</html>
