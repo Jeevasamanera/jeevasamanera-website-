@@ -428,7 +428,10 @@ body {
 }
 
 .description-page .description-text {
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    padding-right: 8px;
 }
 
 
@@ -959,55 +962,43 @@ body {
     margin-bottom: 0;
 }
       /* =====================================================
-   PAGE 11 — MOBILE FINAL FIT
+   SCROLLABLE DESCRIPTION PAGES
 ===================================================== */
 
-@media (max-width: 600px) {
+.description-page .description-text {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    padding-right: 8px;
 
-    #spread-5 .description-page {
-        padding: 18px 22px 28px;
-    }
+    scrollbar-width: thin;
+    scrollbar-color: #444 transparent;
+}
 
-    #spread-5 .description-heading {
-        font-size: 19px;
-        letter-spacing: 3px;
-        margin-bottom: 14px;
-    }
+.description-page .description-text::-webkit-scrollbar {
+    width: 4px;
+}
 
-    #spread-5 .description-text {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
+.description-page .description-text::-webkit-scrollbar-track {
+    background: transparent;
+}
 
-    #spread-5 .description-page p {
-        font-size: 8.7px;
-        line-height: 1.32;
-        margin-bottom: 0;
-    }
-
+.description-page .description-text::-webkit-scrollbar-thumb {
+    background: #444;
 }
 
 
-/* =====================================================
-   PAGE 11 — VERY SMALL PHONES
-===================================================== */
+/* MOBILE */
 
-@media (max-width: 380px) {
+@media (max-width: 600px) {
 
-    #spread-5 .description-page {
-        padding: 16px 19px 25px;
-    }
+    .description-page .description-text {
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex: 1;
+        padding-right: 6px;
 
-    #spread-5 .description-heading {
-        font-size: 17px;
-        letter-spacing: 2.5px;
-        margin-bottom: 12px;
-    }
-
-    #spread-5 .description-page p {
-        font-size: 8px;
-        line-height: 1.28;
+        -webkit-overflow-scrolling: touch;
     }
 
 }
