@@ -1207,96 +1207,120 @@ body {
                 </div>
 
             </section>
-              
 
-<!-- =============================================
-     PAGE 06 — ARTWORK 02
-     NASCORA
-============================================== -->
-<section class="page left-page artwork-page">
-
-    <div class="artwork-label">
-        ARTWORK 02
-    </div>
-
-
-    <div class="artwork-main-image">
-
-        <img
-            src="Nascora.jpeg"
-            alt="Nascora — REFLECTRE">
-
-    </div>
-
-
-    <div class="artwork-caption">
-
-        <strong>
-            Nascora
-        </strong>
-
-        © 2026 Jeeva Samanera
-
-    </div>
-
-
-    <div class="page-number">
-        06
-    </div>
-
-</section>
         </div>
 
-<!-- =============================================
-     PAGE 07 — DESCRIPTION
-============================================== -->
-
-<section class="page right-page description-page">
-
-    <div class="description-heading">
-        NASCORA
-    </div>
-
-    <div class="description-text">
-
-        <p>
-            Every time a conscious mind experiences the
-            Kairolume moment of pure awareness, it leads
-            to a creation moment within the vast cosmos.
-            which means your pure awareness can shift the 
-            way cosmos appears.
-        </p>
-
-        <p>
-            Awareness that has a significant impact on the
-            cosmos might always find a way to come to the
-            surface of reality itself, through cosmic laws 
-            of entanglement. Nascora is the moment where
-            awareness finds a way to emerge in consciousness.
-            As the rest is all cosmic entanglement coming into
-            play, awareness transcending into a creation moment.
-            Hence, every moment of pure awareness can become
-            a creation moment within the vast cosmos which 
-            eventually, gives birth to life itself. 
-        </p>
-
-        <p>
-            Therefore, Nascora invites us to take responsibility
-            of becoming our own creator in this feild of reflection.
-            indeed Nascora is that moment when consciousness 
-            recognises pure authenticity in fragmented reality which
-            can be identified as the origin moment, the momemnt of 
-            creation.
-        </p>
-
-    </div>
 
 
-    <div class="page-number">
-        07
-    </div>
+        <!-- =============================================
+             SPREAD 06–07
+             ARTWORK 02 — NASCORA
+        ============================================== -->
 
-</section>
+        <div
+            class="spread"
+            id="spread-3">
+
+
+            <!-- PAGE 06 — ARTWORK -->
+
+            <section class="page left-page artwork-page">
+
+                <div class="artwork-label">
+                    ARTWORK 02
+                </div>
+
+
+                <div class="artwork-main-image">
+
+                    <img
+                        src="Nascora.jpeg"
+                        alt="Nascora — REFLECTRE">
+
+                </div>
+
+
+                <div class="artwork-caption">
+
+                    <strong>
+                        Nascora
+                    </strong>
+
+                    © 2026 Jeeva Samanera
+
+                </div>
+
+
+                <div class="page-number">
+                    06
+                </div>
+
+            </section>
+
+
+
+            <!-- PAGE 07 — DESCRIPTION -->
+
+            <section class="page right-page description-page">
+
+                <div class="description-heading">
+                    NASCORA
+                </div>
+
+
+                <div class="description-text">
+
+                    <p>
+                        Every time a conscious mind experiences the
+                        Kairolume moment of pure awareness, it leads
+                        to a creation moment within the vast cosmos,
+                        which means your pure awareness can shift the
+                        way the cosmos appears.
+                    </p>
+
+
+                    <p>
+                        Awareness that has a significant impact on the
+                        cosmos might always find a way to come to the
+                        surface of reality itself, through cosmic laws
+                        of entanglement. Nascora is the moment where
+                        awareness finds a way to emerge in consciousness.
+                        As the rest is all cosmic entanglement coming
+                        into play, awareness transcends into a creation
+                        moment.
+                    </p>
+
+
+                    <p>
+                        Hence, every moment of pure awareness can become
+                        a creation moment within the vast cosmos which,
+                        eventually, gives birth to life itself.
+                    </p>
+
+
+                    <p>
+                        Therefore, Nascora invites us to take responsibility
+                        for becoming our own creator in this field of
+                        reflection. Indeed, Nascora is that moment when
+                        consciousness recognises pure authenticity within
+                        fragmented reality, which can be identified as
+                        the origin moment — the moment of creation.
+                    </p>
+
+                </div>
+
+
+                <div class="page-number">
+                    07
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+
         <!-- =============================================
              CENTRE SPINE
         ============================================== -->
@@ -1382,6 +1406,7 @@ let currentSpread = 0;
    0 = COVER
    1 = PAGES 02–03
    2 = PAGES 04–05
+   3 = PAGES 06–07
 */
 
 
@@ -1404,7 +1429,7 @@ function openReflectre() {
 
 function nextPage() {
 
-    if (currentSpread < 2) {
+    if (currentSpread < 3) {
 
         currentSpread++;
 
@@ -1536,20 +1561,23 @@ function updateBook() {
 
     }
 
+
+    /* ---------------------------------------------
+       SPREAD 06–07
+    --------------------------------------------- */
+
+    if (currentSpread === 3) {
+
+        pageStatus.textContent =
+            "06–07";
+
+        nextButton.textContent =
+            "NEXT →";
+
+    }
+
 }
-              /* ---------------------------------------------
-   SPREAD 06–07
---------------------------------------------- */
 
-if (currentSpread === 3) {
-
-    pageStatus.textContent =
-        "06–07";
-
-    nextButton.textContent =
-        "NEXT →";
-
-}
 
 /* =====================================================
    KEYBOARD CONTROLS
