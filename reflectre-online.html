@@ -1609,7 +1609,108 @@ body {
     </section>
 
 </div>
+<!-- =============================================
+             SPREAD 12–13
+             ARTWORK 05 — INFINITE CHASE 
+        ============================================== -->
 
+        <div
+            class="spread"
+            id="spread-6">
+
+
+            <!-- PAGE 12 — ARTWORK -->
+
+            <section class="page left-page artwork-page">
+
+                <div class="artwork-label">
+                    ARTWORK 05
+                </div>
+
+
+                <div class="artwork-main-image">
+
+                    <img
+                        src="Infinite Chase.jpeg"
+                        alt="Infinite Chase— REFLECTRE">
+
+                </div>
+
+
+                <div class="artwork-caption">
+
+                    <strong>
+                        Infinite Chase 
+                    </strong>
+
+                    © 2026 Jeeva Samanera
+
+                </div>
+
+
+                <div class="page-number">
+                    12
+                </div>
+
+            </section>
+                  <!-- PAGE 13 — DESCRIPTION -->
+
+    <section class="page right-page description-page">
+
+        <div class="description-heading">
+            Infinite Chase
+        </div>
+
+
+        <div class="description-text">
+
+            <p>
+                Most of the time, Achievements becomes an 
+                obsession that makes one to losse control 
+                over the Chase which is Infinite in nature 
+                and finds itself in the trap of Infinite 
+                Chase which is going to meet for a small 
+                period of time. As new chase starts to bloom
+                with in you to accomplish back again and so on.
+            </p>
+
+
+            <p>
+                Where as, human acts vulnerable to understand
+                a simple law of the nature as the Chase becomes
+                Infinite we tend to get distorted with the
+                physical fulfillment and drag ourselves down to 
+                the swamp of vulnerability. And with 8n the 
+                process of Chase you lose the authencity of your 
+                soul as your infinite chase will become the source 
+                of your Spiritual Decay. 
+
+            </p>
+
+
+            <p>
+                This phenomena of Infinite Chase creates a loop
+                for the soul. As only your Will makes the difference
+                and sparks the light  because the Space is Dark with 
+                out your Reflection as a spark for evolution.
+            
+
+
+
+                
+            </p>
+
+        </div>
+
+
+        <div class="page-number">
+            13
+        </div>
+
+    </section>
+
+        </div>
+              
         <!-- =============================================
              CENTRE SPINE
         ============================================== -->
@@ -1698,6 +1799,7 @@ let currentSpread = 0;
    3 = PAGES 06–07
    4 = PAGES 08-09
    5 = PAGES 10-11
+   6 = PAGES 12-13
 */
 
 
@@ -1720,7 +1822,7 @@ function openReflectre() {
 
 function nextPage() {
 
-    if (currentSpread < 5) {
+    if (currentSpread < 6) {
 
         currentSpread++;
 
@@ -1893,6 +1995,20 @@ if (currentSpread === 5) {
 
     pageStatus.textContent =
         "10–11";
+
+    nextButton.textContent =
+        "NEXT →";
+
+}
+      
+/* ---------------------------------------------
+   SPREAD 12–13
+--------------------------------------------- */
+
+if (currentSpread === 6) {
+
+    pageStatus.textContent =
+        "12–13";
 
     nextButton.textContent =
         "NEXT →";
