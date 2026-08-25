@@ -2108,7 +2108,124 @@ body {
     </section>
 
 </div>
-          
+          <!-- =============================================
+     SPREAD 20–21
+     ARTWORK 09 — WITH YOU 
+============================================= -->
+
+<div
+    class="spread"
+    id="spread-10">
+
+
+    <!-- PAGE 20 — ARTWORK -->
+
+    <section class="page left-page artwork-page">
+
+        <div class="artwork-label">
+            ARTWORK 09
+        </div>
+
+
+        <div class="artwork-main-image">
+
+            <img
+                src="With you.jpeg"
+                alt="With you — REFLECTRE">
+
+        </div>
+
+
+        <div class="artwork-caption">
+
+            <strong>
+                With You 
+            </strong>
+
+            © 2026 Jeeva Samanera
+
+        </div>
+
+
+        <div class="page-number">
+            20
+        </div>
+
+    </section>
+    <!-- PAGE 21 — DESCRIPTION -->
+
+    <section class="page right-page description-page">
+
+        <div class="description-heading">
+            With You 
+        </div>
+        
+          <div class="description-text">
+                
+            <p>
+                 
+                 One of the deepest fears of human beings is the fear of 
+                 being left behind—to be abandoned, forgotten, and ultimately
+                 left alone.
+            </p>
+                <p>
+                 Yet With You proposes a contradiction to this fear:
+
+                 You are never truly alone.
+
+                 You are always accompanied by yourself—not merely by the self
+                 you recognize, but by a higher self existing beyond the 
+                 limitations of your present perception.Your higher self is
+                 the dimension of you that sees beyond the immediate moment. 
+                 It is the unseen intelligence that can guide you through 
+                 possibilities you cannot yet perceive, opening paths where 
+                 none seemed to exist and, at times, bending the very reality 
+                 around you toward what you are becoming.
+                </p>
+                <p>
+
+                 What first appears to be coincidence gradually reveals itself
+                 as something more profound.
+                 Coincidence becomes synchronicity.
+                 Synchronicity becomes serendipity.
+                 Serendipity begins to resemble fate.
+                 And fate, when consciously lived, can become destiny.
+
+                 Perhaps this is the kairolume moment—the moment in which you
+                 recognize that fate is not simply something that happens to 
+                 you.
+
+                 It is also something you participate in creating.
+                 It is you who chooses.
+                 It is you who responds.
+                 It is you who walks through the doors when they appear.
+                </p>
+                <p>
+
+                 Your higher self does not necessarily remove the uncertainty 
+                 of life; it accompanies you through it. It becomes the silent 
+                 guardian within you, continually opening doors toward infinite
+                 possibilities.
+
+                 The guardian angel you have been searching for may not be 
+                 somewhere above you.
+
+                 It may have been you, all along.
+                 It is You, always with You.
+                 
+              
+            </p>
+
+        </div>
+
+
+        <div class="page-number">
+            21
+        </div>
+
+    </section>
+
+</div>
         <!-- =============================================
              CENTRE SPINE
         ============================================== -->
@@ -2201,6 +2318,7 @@ let currentSpread = 0;
    7 = PAGES 14-15
    8 = PAGES 16-17
    9 = PAGES 18-19
+   10 = PAGES 20-21
 */
 
 
@@ -2223,7 +2341,7 @@ function openReflectre() {
 
 function nextPage() {
 
-    if (currentSpread < 9) {
+    if (currentSpread < 10) {
 
         currentSpread++;
 
@@ -2450,6 +2568,19 @@ if (currentSpread === 9) {
 
     pageStatus.textContent =
         "18–19";
+
+    nextButton.textContent =
+        "NEXT →";
+
+}
+      /* ---------------------------------------------
+   SPREAD 20–21
+--------------------------------------------- */
+
+if (currentSpread === 10) {
+
+    pageStatus.textContent =
+        "20–21";
 
     nextButton.textContent =
         "NEXT →";
