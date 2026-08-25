@@ -1800,7 +1800,7 @@ body {
 
 <!-- =============================================
      SPREAD 14–15
-     ARTWORK 06 — CONTRAST OF BEING
+     ARTWORK 06 — SACRED DELAY
 ============================================= -->
 
 <div
@@ -1905,7 +1905,7 @@ body {
 </div>
 <!-- =============================================
      SPREAD 16–17
-     ARTWORK 07 — CONTRAST OF BEING
+     ARTWORK 07 — LOCUS 
 ============================================= -->
 
 <div
@@ -2004,7 +2004,107 @@ body {
     </section>
 
 </div>
+<!-- =============================================
+     SPREAD 18–19
+     ARTWORK 08 — CHRONOVERGENCE 
+============================================= -->
 
+<div
+    class="spread"
+    id="spread-9">
+
+
+    <!-- PAGE 18 — ARTWORK -->
+
+    <section class="page left-page artwork-page">
+
+        <div class="artwork-label">
+            ARTWORK 08
+        </div>
+
+
+        <div class="artwork-main-image">
+
+            <img
+                src="Chronovergence.jpeg"
+                alt="Chronovergence — REFLECTRE">
+
+        </div>
+
+
+        <div class="artwork-caption">
+
+            <strong>
+                Chronovergence 
+            </strong>
+
+            © 2026 Jeeva Samanera
+
+        </div>
+
+
+        <div class="page-number">
+            18
+        </div>
+
+    </section>
+    <!-- PAGE 19 — DESCRIPTION -->
+
+    <section class="page right-page description-page">
+
+        <div class="description-heading">
+            Chronovergence  
+        </div>
+        
+          <div class="description-text">
+                
+            <p>
+                Locus is the unique position—the unique point of being—
+                from which perception, awareness, and action arise. In 
+                a more practical sense, a person’s Locus is not simply
+                where they stand in physical space, but where they 
+                stand in awareness.
+                  </p>
+     
+      <p>
+                It can be understood even more simply as the state of
+                consciousness from which a person is experiencing the 
+                present moment. Understanding one’s own Locus becomes
+                crucial to the consciousness, to the soul, because 
+                action arises from awareness. Before we act,
+                we perceive; before we perceive, we stand somewhere
+                within our own consciousness. That position influences
+                how we interpret what we encounter, how we respond to
+                it, and ultimately, how we move through life. 
+            </p>
+       
+        <p>
+                Locus therefore becomes equally important in navigating
+                the complexity of daily life. It invites us to recognise
+                where we ourselves stand in awareness—and, with 
+                discernment, to recognise the Locus from which the people
+                around us perceive and act.
+
+              </p>
+       
+        <p>
+                At last, concept of Locus is not merely to ask,
+                "Where am I?"
+                It is to realise and be aware of what and how am i
+                experiencing.
+              
+            </p>
+
+        </div>
+
+
+        <div class="page-number">
+            19
+        </div>
+
+    </section>
+
+</div>
           
         <!-- =============================================
              CENTRE SPINE
@@ -2097,6 +2197,7 @@ let currentSpread = 0;
    6 = PAGES 12-13
    7 = PAGES 14-15
    8 = PAGES 16-17
+   9 = PAGES 18-19
 */
 
 
@@ -2119,7 +2220,7 @@ function openReflectre() {
 
 function nextPage() {
 
-    if (currentSpread < 8) {
+    if (currentSpread < 9) {
 
         currentSpread++;
 
@@ -2338,6 +2439,19 @@ if (currentSpread === 8) {
         "NEXT →";
 
       }
+      /* ---------------------------------------------
+   SPREAD 18–19
+--------------------------------------------- */
+
+if (currentSpread === 9) {
+
+    pageStatus.textContent =
+        "18–19";
+
+    nextButton.textContent =
+        "NEXT →";
+
+}
 /* =====================================================
    KEYBOARD CONTROLS
 ===================================================== */
