@@ -331,8 +331,9 @@ body {
 }
 
 
+    
 /* =====================================================
-   ARTWORK PAGE
+   ARTWORK PAGE — LARGE IMAGE + VISIBLE TITLE
 ===================================================== */
 
 .artwork-page {
@@ -345,7 +346,13 @@ body {
     justify-content: flex-start;
 
     min-height: 0;
+    overflow: hidden;
 }
+
+
+/* =====================================================
+   ARTWORK LABEL
+===================================================== */
 
 .artwork-label {
     width: 100%;
@@ -365,23 +372,26 @@ body {
 
 
 /* =====================================================
-   ARTWORK IMAGE — LARGE CONSISTENT SIZE
+   ARTWORK IMAGE
 ===================================================== */
 
 .artwork-main-image {
     width: 100%;
-    height: 620px;
+
+    flex: 1;
+
+    min-height: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    padding-top: 10px;
+    padding: 10px 0;
 
     overflow: hidden;
-
-    flex-shrink: 0;
 }
+
 
 .artwork-main-image img {
     width: 100%;
@@ -395,6 +405,8 @@ body {
 
     display: block;
 }
+
+
 /* =====================================================
    ARTWORK CAPTION
 ===================================================== */
@@ -419,6 +431,7 @@ body {
     flex-shrink: 0;
 }
 
+
 .artwork-caption strong {
     display: block;
 
@@ -430,7 +443,6 @@ body {
 
     letter-spacing: 1px;
 }
-
 
 /* =====================================================
    DESCRIPTION PAGES
@@ -925,55 +937,60 @@ body {
    MOBILE ARTWORK
 --------------------------------------------- */
 
-.artwork-page {
-    padding: 12px 20px 28px;
+@media (max-width: 600px) {
+
+    .artwork-page {
+        padding: 12px 20px 28px;
+    }
+
+    .artwork-label {
+        font-size: 7px;
+        letter-spacing: 3px;
+        margin-bottom: 5px;
+    }
+
+    .artwork-main-image {
+        flex: 1;
+
+        min-height: 0;
+
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 8px 0;
+
+        overflow: hidden;
+    }
+
+    .artwork-main-image img {
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: contain;
+        object-position: center center;
+
+        display: block;
+    }
+
+    .artwork-caption {
+        margin-top: 5px;
+
+        font-size: 7px;
+
+        line-height: 1.25;
+    }
+
+    .artwork-caption strong {
+        font-size: 9px;
+    }
 }
-
-.artwork-label {
-    font-size: 7px;
-    letter-spacing: 3px;
-    margin-bottom: 5px;
-}
-
-.artwork-main-image {
-    width: 100%;
-    height: 600px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding-top: 10px;
-
-    overflow: hidden;
-
-    flex-shrink: 0;
-}
-
-.artwork-main-image img {
-    width: 100%;
-    height: 100%;
-
-    max-width: 100%;
-    max-height: 100%;
-
-    object-fit: contain;
-    object-position: center center;
-
-    display: block;
-}
-
-.artwork-caption {
-    margin-top: 5px;
-
-    font-size: 7px;
-    line-height: 1.25;
-}
-
-.artwork-caption strong {
-    font-size: 9px;
-}
-
 
     /* ---------------------------------------------
        MOBILE DESCRIPTION PAGE
