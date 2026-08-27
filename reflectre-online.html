@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+      <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -212,6 +213,8 @@ body {
     justify-content: flex-start;
 
     overflow: hidden;
+
+    min-height: 0;
 }
 
 .left-page {
@@ -235,12 +238,20 @@ body {
     padding: 70px 65px 65px;
 
     overflow: hidden;
+
+    min-height: 0;
 }
+
+
+/* =====================================================
+   SECTION LABEL
+===================================================== */
 
 .section-label {
     font-family: Arial, sans-serif;
 
     font-size: 9px;
+
     letter-spacing: 5px;
 
     color: #666;
@@ -248,24 +259,42 @@ body {
     margin-bottom: 25px;
 }
 
+
+/* =====================================================
+   MAIN HEADINGS
+===================================================== */
+
 .page h1 {
-    font-size: 34px;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
 
     font-weight: normal;
 
+    line-height: 1.2;
+
     letter-spacing: 5px;
 
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
+
+/* =====================================================
+   STANDARD BODY TEXT
+===================================================== */
+
 .page p {
+    font-family: Georgia, "Times New Roman", serif;
+
     color: #ccc;
 
-    font-size: 15px;
+    font-size: 13px;
 
-    line-height: 1.9;
+    font-weight: normal;
 
-    margin-bottom: 22px;
+    line-height: 1.65;
+
+    margin-bottom: 18px;
 }
 
 
@@ -275,22 +304,30 @@ body {
 
 .introduction-page {
     overflow: hidden;
+
+    min-height: 0;
 }
 
 .introduction-page p {
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 19px;
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    margin-bottom: 18px;
 }
 
 .introduction-page h1 {
     font-size: 32px;
-    margin-bottom: 27px;
+
+    line-height: 1.2;
+
+    margin-bottom: 28px;
 }
 
 .closing-line {
     color: #fff !important;
-    margin-top: 25px;
+
+    margin-top: 22px;
 }
 
 
@@ -306,6 +343,8 @@ body {
 
     align-items: center;
     justify-content: flex-start;
+
+    min-height: 0;
 }
 
 .artwork-label {
@@ -314,11 +353,14 @@ body {
     font-family: Arial, sans-serif;
 
     font-size: 9px;
+
     letter-spacing: 5px;
 
     color: #666;
 
     margin-bottom: 8px;
+
+    flex-shrink: 0;
 }
 
 
@@ -337,10 +379,13 @@ body {
     padding-top: 60px;
 
     overflow: hidden;
+
+    min-height: 0;
 }
 
 .artwork-main-image img {
     width: 108%;
+
     height: auto;
 
     max-width: none;
@@ -373,6 +418,8 @@ body {
     letter-spacing: 0.5px;
 
     color: #777;
+
+    flex-shrink: 0;
 }
 
 .artwork-caption strong {
@@ -389,49 +436,99 @@ body {
 
 
 /* =====================================================
-   ARTWORK DESCRIPTION PAGE
+   DESCRIPTION PAGES
 ===================================================== */
-
-.description-heading {
-    font-size: 24px;
-    font-weight: normal;
-    letter-spacing: 4px;
-    color: #fff;
-    margin-bottom: 28px;
-}
 
 .description-page {
     padding: 48px 50px 48px;
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: flex-start;
+
+    min-height: 0;
 }
+
+
+/* =====================================================
+   DESCRIPTION HEADING
+===================================================== */
 
 .description-heading {
+    flex-shrink: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
     font-size: 24px;
+
     font-weight: normal;
+
+    line-height: 1.2;
+
     letter-spacing: 4px;
+
     color: #fff;
-    margin-bottom: 28px;
+
+    margin-bottom: 24px;
 }
 
-.description-page p {
-    font-size: 12.4px;
 
-    line-height: 1.55;
+/* =====================================================
+   SCROLLABLE DESCRIPTION TEXT
+===================================================== */
+
+.description-page .description-text {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding-right: 8px;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+    scrollbar-color: #444 transparent;
+}
+
+
+/* =====================================================
+   DESCRIPTION BODY TEXT
+===================================================== */
+
+.description-page .description-text p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    line-height: 1.6;
 
     color: #ccc;
 
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
-.description-page .description-text {
-    overflow-y: auto;
-    overflow-x: hidden;
-    flex: 1;
-    padding-right: 8px;
+
+/* =====================================================
+   DESCRIPTION SCROLLBAR
+===================================================== */
+
+.description-page .description-text::-webkit-scrollbar {
+    width: 4px;
+}
+
+.description-page .description-text::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.description-page .description-text::-webkit-scrollbar-thumb {
+    background: #444;
 }
 
 
@@ -450,6 +547,7 @@ body {
     font-family: Arial, sans-serif;
 
     font-size: 8px;
+
     letter-spacing: 2px;
 
     color: #555;
@@ -526,7 +624,9 @@ body {
 
 .book-stage.is-open .closed-cover {
     opacity: 0;
+
     transform: scale(0.97);
+
     pointer-events: none;
 }
 
@@ -543,6 +643,7 @@ body {
     height: 70px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -578,6 +679,7 @@ body {
 
 .control-button:disabled {
     opacity: 0.25;
+
     cursor: default;
 }
 
@@ -604,6 +706,7 @@ body {
 
     .book-stage {
         width: 94vw;
+
         height: 650px;
     }
 
@@ -615,24 +718,16 @@ body {
         font-size: 29px;
     }
 
-    .page p {
-        font-size: 14px;
-    }
-
-    .introduction-page p {
+    .page p,
+    .introduction-page p,
+    .description-page .description-text p {
         font-size: 13px;
-        line-height: 1.75;
-        margin-bottom: 17px;
+
+        line-height: 1.6;
     }
 
     .description-page {
         padding: 40px 38px 45px;
-    }
-
-    .description-page p {
-        font-size: 11.5px;
-        line-height: 1.52;
-        margin-bottom: 10px;
     }
 
     .artwork-page {
@@ -655,15 +750,24 @@ body {
 
 @media (max-width: 600px) {
 
+    /* ---------------------------------------------
+       TOP BAR
+    --------------------------------------------- */
+
     .topbar {
         height: 55px;
 
         padding: 0 15px;
 
         font-size: 8px;
+
         letter-spacing: 2px;
     }
 
+
+    /* ---------------------------------------------
+       BOOK AREA
+    --------------------------------------------- */
 
     .book-area {
         min-height: calc(100vh - 125px);
@@ -674,15 +778,24 @@ body {
     }
 
 
+    /* ---------------------------------------------
+       BOOK STAGE
+    --------------------------------------------- */
+
     .book-stage {
         width: 94vw;
 
         height: 650px;
+
         min-height: 650px;
 
         margin-top: 5px;
     }
 
+
+    /* ---------------------------------------------
+       COVER
+    --------------------------------------------- */
 
     .closed-cover {
         width: 72vw;
@@ -693,6 +806,10 @@ body {
     }
 
 
+    /* ---------------------------------------------
+       MOBILE SPREAD
+    --------------------------------------------- */
+
     .spread {
         display: none;
     }
@@ -702,14 +819,20 @@ body {
     }
 
 
-    /* MOBILE PAGES */
+    /* ---------------------------------------------
+       MOBILE PAGES
+    --------------------------------------------- */
 
     .page {
         width: 100%;
+
         height: 50%;
 
         border-left: 1px solid #222;
+
         border-right: 1px solid #222;
+
+        min-height: 0;
     }
 
     .left-page {
@@ -721,7 +844,9 @@ body {
     }
 
 
-    /* MOBILE CONTENT */
+    /* ---------------------------------------------
+       MOBILE CONTENT
+    --------------------------------------------- */
 
     .page-content {
         height: 100%;
@@ -729,41 +854,58 @@ body {
         padding: 35px 28px 45px;
 
         overflow: hidden;
+
+        min-height: 0;
     }
+
+
+    /* ---------------------------------------------
+       MOBILE SECTION LABEL
+    --------------------------------------------- */
 
     .section-label {
         font-size: 8px;
+
         letter-spacing: 4px;
 
         margin-bottom: 18px;
     }
 
+
+    /* ---------------------------------------------
+       MOBILE MAIN HEADING
+    --------------------------------------------- */
+
     .page h1 {
         font-size: 26px;
+
+        line-height: 1.2;
 
         letter-spacing: 4px;
 
         margin-bottom: 20px;
     }
 
-    .page p {
-        font-size: 13px;
 
-        line-height: 1.7;
+    /* ---------------------------------------------
+       MOBILE BODY TEXT
+    --------------------------------------------- */
 
-        margin-bottom: 15px;
+    .page p,
+    .introduction-page p,
+    .description-page .description-text p {
+
+        font-size: 12px;
+
+        line-height: 1.6;
+
+        margin-bottom: 14px;
     }
 
 
-    /* MOBILE INTRODUCTION */
-
-    .introduction-page p {
-        font-size: 12.5px;
-
-        line-height: 1.65;
-
-        margin-bottom: 13px;
-    }
+    /* ---------------------------------------------
+       MOBILE INTRODUCTION
+    --------------------------------------------- */
 
     .introduction-page h1 {
         font-size: 25px;
@@ -776,7 +918,9 @@ body {
     }
 
 
-    /* MOBILE ARTWORK */
+    /* ---------------------------------------------
+       MOBILE ARTWORK
+    --------------------------------------------- */
 
     .artwork-page {
         padding: 12px 20px 28px;
@@ -784,12 +928,15 @@ body {
 
     .artwork-label {
         font-size: 7px;
+
         letter-spacing: 3px;
+
         margin-bottom: 5px;
     }
 
     .artwork-main-image {
         flex: 1;
+
         min-height: 0;
 
         align-items: flex-start;
@@ -799,12 +946,15 @@ body {
 
     .artwork-main-image img {
         width: 108%;
+
         max-width: none;
     }
 
     .artwork-caption {
         margin-top: 5px;
+
         font-size: 7px;
+
         line-height: 1.25;
     }
 
@@ -813,32 +963,62 @@ body {
     }
 
 
-    /* MOBILE DESCRIPTION */
+    /* ---------------------------------------------
+       MOBILE DESCRIPTION PAGE
+    --------------------------------------------- */
 
-
-}
     .description-page {
         padding: 22px 24px 30px;
+
+        min-height: 0;
     }
 
-    .description-page p {
-        font-size: 10px;
+    .description-heading {
+        font-size: 21px;
 
-        line-height: 1.45;
+        line-height: 1.2;
 
-        margin-bottom: 8px;
+        letter-spacing: 3px;
+
+        margin-bottom: 18px;
     }
 
+    .description-page .description-text {
+        flex: 1;
+
+        min-height: 0;
+
+        overflow-y: auto;
+
+        overflow-x: hidden;
+
+        padding-right: 6px;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /* ---------------------------------------------
+       MOBILE PAGE NUMBER
+    --------------------------------------------- */
 
     .page-number {
         bottom: 14px;
     }
 
 
+    /* ---------------------------------------------
+       MOBILE SPINE
+    --------------------------------------------- */
+
     .spine {
         display: none;
     }
 
+
+    /* ---------------------------------------------
+       MOBILE OPEN BUTTON
+    --------------------------------------------- */
 
     .open-button {
         bottom: -48px;
@@ -848,6 +1028,10 @@ body {
         font-size: 9px;
     }
 
+
+    /* ---------------------------------------------
+       MOBILE CONTROLS
+    --------------------------------------------- */
 
     .controls {
         height: 65px;
@@ -868,7 +1052,6 @@ body {
 
         font-size: 8px;
     }
-
 }
 
 
@@ -882,6 +1065,7 @@ body {
         width: 94vw;
 
         height: 620px;
+
         min-height: 620px;
     }
 
@@ -889,12 +1073,15 @@ body {
         padding: 30px 23px 40px;
     }
 
-    .introduction-page p {
+    .page p,
+    .introduction-page p,
+    .description-page .description-text p {
+
         font-size: 11.5px;
 
-        line-height: 1.6;
+        line-height: 1.55;
 
-        margin-bottom: 11px;
+        margin-bottom: 12px;
     }
 
     .introduction-page h1 {
@@ -905,12 +1092,11 @@ body {
         padding: 19px 20px 28px;
     }
 
-    .description-page p {
-        font-size: 9.4px;
-        line-height: 1.42;
-        margin-bottom: 7px;
-    }
+    .description-heading {
+        font-size: 20px;
 
+        letter-spacing: 2.5px;
+    }
 }
 
 
@@ -922,15 +1108,18 @@ body {
 
     .book-stage {
         height: 600px;
+
         min-height: 600px;
     }
 
     .page-content {
         padding-top: 28px;
+
         padding-bottom: 38px;
     }
-
 }
+
+
 /* =====================================================
    PAGE 11 — CONTRAST OF BEING
 ===================================================== */
@@ -943,52 +1132,40 @@ body {
     margin-bottom: 22px;
 }
 
-#spread-5 .description-page p {
-    font-size: 11.4px;
-    line-height: 1.45;
-    margin-bottom: 0;
+#spread-5 .description-page .description-text p {
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 14px;
 }
-      /* =====================================================
-   SCROLLABLE DESCRIPTION PAGES
+
+
+/* =====================================================
+   PAGE 11 — MOBILE
 ===================================================== */
-
-.description-page .description-text {
-    overflow-y: auto;
-    overflow-x: hidden;
-    flex: 1;
-    padding-right: 8px;
-
-    scrollbar-width: thin;
-    scrollbar-color: #444 transparent;
-}
-
-.description-page .description-text::-webkit-scrollbar {
-    width: 4px;
-}
-
-.description-page .description-text::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.description-page .description-text::-webkit-scrollbar-thumb {
-    background: #444;
-}
-
-
-/* MOBILE */
 
 @media (max-width: 600px) {
 
-    .description-page .description-text {
-        overflow-y: auto;
-        overflow-x: hidden;
-        flex: 1;
-        padding-right: 6px;
+    #spread-5 .description-page {
+        padding: 22px 24px 30px;
+    }
 
-        -webkit-overflow-scrolling: touch;
+    #spread-5 .description-page .description-text p {
+        font-size: 12px;
+
+        line-height: 1.6;
+
+        margin-bottom: 14px;
     }
 
 }
+
+
+/* =====================================================
+   END CSS
+===================================================== */
+
 </style>
 
 </head>
@@ -1177,14 +1354,13 @@ body {
             id="spread-2">
 
 
-            <!-- PAGE 04 — ARTWORK -->
+            <!-- PAGE 04 -->
 
             <section class="page left-page artwork-page">
 
                 <div class="artwork-label">
                     ARTWORK 01
                 </div>
-
 
                 <div class="artwork-main-image">
 
@@ -1193,7 +1369,6 @@ body {
                         alt="The Space — REFLECTRE">
 
                 </div>
-
 
                 <div class="artwork-caption">
 
@@ -1205,7 +1380,6 @@ body {
 
                 </div>
 
-
                 <div class="page-number">
                     04
                 </div>
@@ -1214,7 +1388,7 @@ body {
 
 
 
-            <!-- PAGE 05 — DESCRIPTION -->
+            <!-- PAGE 05 -->
 
             <section class="page right-page description-page">
 
@@ -1263,7 +1437,6 @@ body {
 
                 </div>
 
-
                 <div class="page-number">
                     05
                 </div>
@@ -1284,14 +1457,13 @@ body {
             id="spread-3">
 
 
-            <!-- PAGE 06 — ARTWORK -->
+            <!-- PAGE 06 -->
 
             <section class="page left-page artwork-page">
 
                 <div class="artwork-label">
                     ARTWORK 02
                 </div>
-
 
                 <div class="artwork-main-image">
 
@@ -1300,7 +1472,6 @@ body {
                         alt="Nascora — REFLECTRE">
 
                 </div>
-
 
                 <div class="artwork-caption">
 
@@ -1312,7 +1483,6 @@ body {
 
                 </div>
 
-
                 <div class="page-number">
                     06
                 </div>
@@ -1321,14 +1491,13 @@ body {
 
 
 
-            <!-- PAGE 07 — DESCRIPTION -->
+            <!-- PAGE 07 -->
 
             <section class="page right-page description-page">
 
                 <div class="description-heading">
                     NASCORA
                 </div>
-
 
                 <div class="description-text">
 
@@ -1339,7 +1508,6 @@ body {
                         which means your pure awareness can shift the
                         way the cosmos appears.
                     </p>
-
 
                     <p>
                         Awareness that has a significant impact on the
@@ -1352,13 +1520,11 @@ body {
                         moment.
                     </p>
 
-
                     <p>
                         Hence, every moment of pure awareness can become
                         a creation moment within the vast cosmos which,
                         eventually, gives birth to life itself.
                     </p>
-
 
                     <p>
                         Therefore, Nascora invites us to take responsibility
@@ -1371,234 +1537,228 @@ body {
 
                 </div>
 
-
                 <div class="page-number">
                     07
                 </div>
 
             </section>
 
-
-        </div>
-
-<!-- =============================================
-     SPREAD 08–09
-     ARTWORK 03 — MULTIPLICITY
-============================================= -->
-
-<div
-    class="spread"
-    id="spread-4">
-
-
-    <!-- PAGE 08 — ARTWORK -->
-
-    <section class="page left-page artwork-page">
-
-        <div class="artwork-label">
-            ARTWORK 03
         </div>
 
 
-        <div class="artwork-main-image">
 
-            <img
-                src="Multiplicity.jpeg"
-                alt="Multiplicity — REFLECTRE">
+        <!-- =============================================
+             SPREAD 08–09
+             ARTWORK 03 — MULTIPLICITY
+        ============================================== -->
 
-        </div>
-
-
-        <div class="artwork-caption">
-
-            <strong>
-                Multiplicity
-            </strong>
-
-            © 2026 Jeeva Samanera
-
-        </div>
+        <div
+            class="spread"
+            id="spread-4">
 
 
-        <div class="page-number">
-            08
-        </div>
+            <!-- PAGE 08 -->
 
-    </section>
+            <section class="page left-page artwork-page">
 
+                <div class="artwork-label">
+                    ARTWORK 03
+                </div>
 
+                <div class="artwork-main-image">
 
-    <!-- PAGE 09 — DESCRIPTION -->
+                    <img
+                        src="Multiplicity.jpeg"
+                        alt="Multiplicity — REFLECTRE">
 
-    <section class="page right-page description-page">
+                </div>
 
-        <div class="description-heading">
-            MULTIPLICITY
-        </div>
+                <div class="artwork-caption">
 
+                    <strong>
+                        Multiplicity
+                    </strong>
 
-        <div class="description-text">
+                    © 2026 Jeeva Samanera
 
-            <p>
-                Multiplicity is an invitation to discover more
-                of what you have always been.
-                Human beings are conditioned to think of
-                ourselves as one — one name, one story,
-                one body, one timeline.
-                But this linear, singular self is a functional
-                illusion, useful for survival but too narrow
-                to contain the full depth of who we are.
-            </p>
+                </div>
 
+                <div class="page-number">
+                    08
+                </div>
 
-            <p>
-                The self is not a linear straight line.
-                It is a dynamic constellation, a shifting
-                pattern of possible versions.
-                The concept of Multiplicity is not a fantasy,
-                but a real psychological, existential, and
-                spiritual architecture of identity.
-            </p>
+            </section>
 
 
-            <p>
-                It proposes that you are not a single fixed
-                self, but a field of selves including:
-                the remembered self, the performed self,
-                the suppressed self, the imagined self,
-                the cosmic self, and many others.
-            </p>
 
+            <!-- PAGE 09 -->
 
-            <p>
-                The intention is not to collapse the many
-                into one single identity.
-                It is to become aware of the many selves
-                within one self, and to learn to navigate
-                these different versions with clarity,
-                compassion, and awareness.
-            </p>
+            <section class="page right-page description-page">
 
-        </div>
+                <div class="description-heading">
+                    MULTIPLICITY
+                </div>
 
+                <div class="description-text">
 
-        <div class="page-number">
-            09
-        </div>
+                    <p>
+                        Multiplicity is an invitation to discover more
+                        of what you have always been.
+                        Human beings are conditioned to think of
+                        ourselves as one — one name, one story,
+                        one body, one timeline.
+                        But this linear, singular self is a functional
+                        illusion, useful for survival but too narrow
+                        to contain the full depth of who we are.
+                    </p>
 
-    </section>
+                    <p>
+                        The self is not a linear straight line.
+                        It is a dynamic constellation, a shifting
+                        pattern of possible versions.
+                        The concept of Multiplicity is not a fantasy,
+                        but a real psychological, existential, and
+                        spiritual architecture of identity.
+                    </p>
 
-</div>
-<!-- =============================================
-     SPREAD 10–11
-     ARTWORK 04 — CONTRAST OF BEING
-============================================= -->
+                    <p>
+                        It proposes that you are not a single fixed
+                        self, but a field of selves including:
+                        the remembered self, the performed self,
+                        the suppressed self, the imagined self,
+                        the cosmic self, and many others.
+                    </p>
 
-<div
-    class="spread"
-    id="spread-5">
+                    <p>
+                        The intention is not to collapse the many
+                        into one single identity.
+                        It is to become aware of the many selves
+                        within one self, and to learn to navigate
+                        these different versions with clarity,
+                        compassion, and awareness.
+                    </p>
 
+                </div>
 
-    <!-- PAGE 10 — ARTWORK -->
+                <div class="page-number">
+                    09
+                </div>
 
-    <section class="page left-page artwork-page">
-
-        <div class="artwork-label">
-            ARTWORK 04
-        </div>
-
-
-        <div class="artwork-main-image">
-
-            <img
-                src="Contrast of being.jpeg"
-                alt="Contrast of being — REFLECTRE">
+            </section>
 
         </div>
 
 
-        <div class="artwork-caption">
 
-            <strong>
-                Contrast of being 
-            </strong>
+        <!-- =============================================
+             SPREAD 10–11
+             ARTWORK 04 — CONTRAST OF BEING
+        ============================================== -->
 
-            © 2026 Jeeva Samanera
+        <div
+            class="spread"
+            id="spread-5">
+
+
+            <!-- PAGE 10 -->
+
+            <section class="page left-page artwork-page">
+
+                <div class="artwork-label">
+                    ARTWORK 04
+                </div>
+
+                <div class="artwork-main-image">
+
+                    <img
+                        src="Contrast of being.jpeg"
+                        alt="Contrast of being — REFLECTRE">
+
+                </div>
+
+                <div class="artwork-caption">
+
+                    <strong>
+                        Contrast of being
+                    </strong>
+
+                    © 2026 Jeeva Samanera
+
+                </div>
+
+                <div class="page-number">
+                    10
+                </div>
+
+            </section>
+
+
+
+            <!-- PAGE 11 -->
+
+            <section class="page right-page description-page">
+
+                <div class="description-heading">
+                    Contrast Of Being
+                </div>
+
+                <div class="description-text">
+
+                    <p>
+                        Contrast of Being explores the choas between
+                        presence and absence, visibility and disappearance,
+                        the self and the space surrounding it. we usually
+                        get caught between two conditions of existence.
+
+                        One side dissolves into darkness and texture, while
+                        the other opens into an almost empty field of light.
+                        The contrast suggests that being is never experienced
+                        as a singular state.
+                    </p>
+
+                    <p>
+                        We become conscious of ourselves through what
+                        surrounds us,through what is present as much as
+                        through what is absent.The dark form can be under-
+                        stood as the accumulated layers of identity, memory,
+                        experience, and perception. The empty space,
+                        meanwhile, represents the unknown — the space before
+                        identity takes form, where consciousness remains
+                        open and undefined.
+                    </p>
+
+                    <p>
+                        The human presence within the composition becomes almost
+                        insignificant against these opposing fields. Yet its very
+                        presence creates the contrast through which both darkness
+                        and light become perceptible.
+
+                        Perhaps being is not simply
+                        existing, but existing between what we know and what we
+                        dont or cannot know, between form and formlessness,
+                        between the self we recognise and the self that remains
+                        hidden.
+
+                        Contrast of Being invites us to observe the space
+                        between these opposites, and question yourself; where do
+                        you truly begin?
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    11
+                </div>
+
+            </section>
 
         </div>
 
 
-        <div class="page-number">
-            10
-        </div>
 
-    </section>
-
-
-
-    <!-- PAGE 11 — DESCRIPTION -->
-
-    <section class="page right-page description-page">
-
-        <div class="description-heading">
-            Contrast Of Being
-        </div>
-        
-          <div class="description-text">
-                
-            <p>
-                Contrast of Being explores the choas between 
-                presence and absence, visibility and disappearance,
-                the self and the space surrounding it. we usually 
-                get caught between two conditions of existence.
-                  
-                One side dissolves into darkness and texture, while 
-                the other opens into an almost empty field of light. 
-                The contrast suggests that being is never experienced
-                as a singular state. 
-            </p>
-     
-      <p>
-                We become conscious of ourselves through what
-                surrounds us,through what is present as much as 
-                through what is absent.The dark form can be under-
-                stood as the accumulated layers of identity, memory, 
-                experience, and perception. The empty space, 
-                meanwhile, represents the unknown — the space before
-                identity takes form, where consciousness remains 
-                open and undefined.
-            </p>
-       
-        <p>
-                The human presence within the composition becomes almost
-                insignificant against these opposing fields. Yet its very
-                presence creates the contrast through which both darkness 
-                and light become perceptible. 
-              
-                Perhaps being is not simply 
-                existing, but existing between what we know and what we 
-                dont or cannot know, between form and formlessness, 
-                between the self we recognise and the self that remains 
-                hidden. 
-              
-                Contrast of Being invites us to observe the space
-                between these opposites, and question yourself; where do 
-                you truly begin?
-            </p>
-
-        </div>
-
-
-        <div class="page-number">
-            11
-        </div>
-
-    </section>
-
-</div>
-<!-- =============================================
+        <!-- =============================================
              SPREAD 12–13
-             ARTWORK 05 — INFINITE CHASE 
+             ARTWORK 05 — INFINITE CHASE
         ============================================== -->
 
         <div
@@ -1606,7 +1766,7 @@ body {
             id="spread-6">
 
 
-            <!-- PAGE 12 — ARTWORK -->
+            <!-- PAGE 12 -->
 
             <section class="page left-page artwork-page">
 
@@ -1614,884 +1774,889 @@ body {
                     ARTWORK 05
                 </div>
 
-
                 <div class="artwork-main-image">
 
                     <img
                         src="Infinite Chase.jpeg"
-                        alt="Infinite Chase— REFLECTRE">
+                        alt="Infinite Chase — REFLECTRE">
 
                 </div>
-
 
                 <div class="artwork-caption">
 
                     <strong>
-                        Infinite Chase 
+                        Infinite Chase
                     </strong>
 
                     © 2026 Jeeva Samanera
 
                 </div>
 
-
                 <div class="page-number">
                     12
                 </div>
 
             </section>
-                  <!-- PAGE 13 — DESCRIPTION -->
-
-    <section class="page right-page description-page">
-
-        <div class="description-heading">
-            Infinite Chase
-        </div>
-
-
-        <div class="description-text">
-
-            <p>
-                Most of the time, achievement begins as an 
-                expression of human will—a desire to move beyond
-                what already exists, to transform an idea into 
-                reality, and to experience the satisfaction of 
-                becoming. Yet, somewhere within this movement, 
-                achievement can transform into obsession. What 
-                begins as a conscious pursuit gradually becomes 
-                a mechanism that pursues us. And so the cycle
-                continues. We accomplish, experience fulfilment for
-                a brief moment, and then begin to Chase again. The
-                human being becomes caught within what may be called 
-                the Infinite Chase—a continuous movement toward 
-                something that always appears to exist slightly beyond
-                the present moment. We move forward believing that the 
-                next achievement will finally provide completion, 
-                while completion itself keeps moving further away.
-                </p>
-
-
-            <p>
-                In this process, we become vulnerable to confusing 
-                physical fulfilment with existential fulfilment.
-                The body receives the reward.
-                The mind receives recognition.
-                The ego receives confirmation.
-                But the soul may remain untouched. This is where the
-                Infinite Chase begins to distort us. Instead of using
-                achievement as a means of expressing our existence, we
-                begin using existence as a means of producing achievement.
-                Our value becomes attached to what we have accomplished 
-                rather than to what we are. Gradually, the Chase begins
-                to define the individual who is doing the Chasing. And 
-                when the Chase becomes the source of identity, we begin 
-                to lose the authenticity of the soul. The tragedy is not 
-                that we desire more. Desire itself is not the problem. 
-                Evolution requires movement, curiosity, creation and
-                transformation. The problem emerges when movement loses 
-                awareness of its origin.
-            </p>
-
-
-            <p>
-                We forget why we began to move.
-                The Infinite Chase then becomes a loop for the soul.
-                We Chase because we believe achievement will complete us.
-                We achieve, but completion is temporary.
-                The temporary fulfilment produces another desire.
-                The new desire creates another Chase. And the Chase creates
-                another version of ourselves that must be fulfilled. The loop
-                continues. Eventually, what was once an expression of our Will 
-                becomes a force that consumes it.
-                This is the beginning of Spiritual Decay.
-                Spiritual decay does not necessarily appear as destruction. It 
-                can appear as success. It can appear as productivity, ambition, 
-                recognition and endless movement. A person may appear to be 
-                progressing externally while becoming increasingly disconnected
-                internally. The greater the distance between what we are becoming
-                and what our soul actually recognizes as authentic, the deeper 
-                the distortion becomes.
-                  
-                  </p>
-
-
-            <p>
-                Nature, however, does not demand that everything be accumulated. 
-                Nature operates through cycles, transformation, disappearance and
-                renewal. Nothing exists merely to remain in a permanent state of 
-                completion. The seed does not become a tree so that it can 
-                endlessly become something else. It becomes a tree because that is 
-                the movement inherent within it. Perhaps the human being must learn 
-                the same distinction:
-                There is a difference between evolving and endlessly chasing.
-                Evolution emerges from within. The Chase often emerges from the 
-                belief that something outside ourselves is missing. This is why
-                Will becomes fundamental. Will is not simply the force that makes 
-                us achieve. Will is the ability to consciously choose the direction 
-                of our movement. It is the moment in which we stop being carried by
-                the Infinite Chase and become aware of the one who is Chasing. The 
-                Will creates the possibility of interruption. It allows us to ask:
-                What am I pursuing?
-                Why am I pursuing it?
-                Who am I becoming through this pursuit?
-                And, if I finally reach it, what remains?
-                These questions create a space between desire and action. Within 
-                that space, awareness appears. And awareness becomes the
-                possibility of returning to authenticity. The universe may appear
-                dark when there is no reflection of consciousness within it.
-                Yet the darkness itself is not necessarily empty. It is a space
-                waiting for a spark. hYour Will becomes that spark. Your Reflection
-                becomes the means through which that spark becomes visible. Without
-                Reflection, the Chase remains unconscious. We move, but we do not
-                know why. We accumulate experiences, achievements and identities
-                without recognizing the pattern that connects them. But when 
-                Reflection enters the process, the Chase becomes visible. And once 
-                the Chase is visible, we are no longer completely trapped within it.
-                The purpose, therefore, is not to destroy ambition or abandon 
-                achievement. 
-
-                  </p>
-
-
-            <p>
-                It is to transform our relationship with them. 
-                Achievement can become an expression rather than an addiction.
-                Movement can become evolution rather than escape. Desire can become 
-                creation rather than consumption. And the Infinite Chase can become
-                a path of awareness rather than a prison for the soul. Perhaps the 
-                greatest achievement is not reaching the end of the Chase. Perhaps 
-                it is realizing that there was never an end to reach. The true 
-                evolution begins when the individual stops asking,
-                  “What must I achieve next?” and begins asking, “What must I 
-                become aware of now?” In that moment, the direction of movement
-                changes. The Chase no longer pulls the soul forward.
-                The soul begins to illuminate the Chase. And within that
-                illumination, the Infinite is no longer something we desperately
-                pursue. It becomes the space through which we learn to exist.
 
 
 
-                
-            </p>
+            <!-- PAGE 13 -->
 
-        </div>
+            <section class="page right-page description-page">
 
+                <div class="description-heading">
+                    Infinite Chase
+                </div>
 
-        <div class="page-number">
-            13
-        </div>
+                <div class="description-text">
 
-    </section>
+                    <p>
+                        Most of the time, achievement begins as an
+                        expression of human will—a desire to move beyond
+                        what already exists, to transform an idea into
+                        reality, and to experience the satisfaction of
+                        becoming. Yet, somewhere within this movement,
+                        achievement can transform into obsession. What
+                        begins as a conscious pursuit gradually becomes
+                        a mechanism that pursues us. And so the cycle
+                        continues. We accomplish, experience fulfilment for
+                        a brief moment, and then begin to Chase again. The
+                        human being becomes caught within what may be called
+                        the Infinite Chase—a continuous movement toward
+                        something that always appears to exist slightly beyond
+                        the present moment. We move forward believing that the
+                        next achievement will finally provide completion,
+                        while completion itself keeps moving further away.
+                    </p>
 
-        </div>
+                    <p>
+                        In this process, we become vulnerable to confusing
+                        physical fulfilment with existential fulfilment.
+                        The body receives the reward.
+                        The mind receives recognition.
+                        The ego receives confirmation.
+                        But the soul may remain untouched. This is where the
+                        Infinite Chase begins to distort us. Instead of using
+                        achievement as a means of expressing our existence, we
+                        begin using existence as a means of producing achievement.
+                        Our value becomes attached to what we have accomplished
+                        rather than to what we are. Gradually, the Chase begins
+                        to define the individual who is doing the Chasing. And
+                        when the Chase becomes the source of identity, we begin
+                        to lose the authenticity of the soul. The tragedy is not
+                        that we desire more. Desire itself is not the problem.
+                        Evolution requires movement, curiosity, creation and
+                        transformation. The problem emerges when movement loses
+                        awareness of its origin.
+                    </p>
 
-<!-- =============================================
-     SPREAD 14–15
-     ARTWORK 06 — SACRED DELAY
-============================================= -->
+                    <p>
+                        We forget why we began to move.
+                        The Infinite Chase then becomes a loop for the soul.
+                        We Chase because we believe achievement will complete us.
+                        We achieve, but completion is temporary.
+                        The temporary fulfilment produces another desire.
+                        The new desire creates another Chase. And the Chase creates
+                        another version of ourselves that must be fulfilled. The loop
+                        continues. Eventually, what was once an expression of our Will
+                        becomes a force that consumes it.
+                        This is the beginning of Spiritual Decay.
+                        Spiritual decay does not necessarily appear as destruction. It
+                        can appear as success. It can appear as productivity, ambition,
+                        recognition and endless movement. A person may appear to be
+                        progressing externally while becoming increasingly disconnected
+                        internally. The greater the distance between what we are becoming
+                        and what our soul actually recognizes as authentic, the deeper
+                        the distortion becomes.
+                    </p>
 
-<div
-    class="spread"
-    id="spread-7">
+                    <p>
+                        Nature, however, does not demand that everything be accumulated.
+                        Nature operates through cycles, transformation, disappearance and
+                        renewal. Nothing exists merely to remain in a permanent state of
+                        completion. The seed does not become a tree so that it can
+                        endlessly become something else. It becomes a tree because that is
+                        the movement inherent within it. Perhaps the human being must learn
+                        the same distinction:
 
+                        There is a difference between evolving and endlessly chasing.
 
-    <!-- PAGE 14 — ARTWORK -->
+                        Evolution emerges from within. The Chase often emerges from the
+                        belief that something outside ourselves is missing. This is why
+                        Will becomes fundamental. Will is not simply the force that makes
+                        us achieve. Will is the ability to consciously choose the direction
+                        of our movement. It is the moment in which we stop being carried by
+                        the Infinite Chase and become aware of the one who is Chasing. The
+                        Will creates the possibility of interruption. It allows us to ask:
 
-    <section class="page left-page artwork-page">
+                        What am I pursuing?
+                        Why am I pursuing it?
+                        Who am I becoming through this pursuit?
+                        And, if I finally reach it, what remains?
 
-        <div class="artwork-label">
-            ARTWORK 06
-        </div>
+                        These questions create a space between desire and action. Within
+                        that space, awareness appears. And awareness becomes the
+                        possibility of returning to authenticity. The universe may appear
+                        dark when there is no reflection of consciousness within it.
+                        Yet the darkness itself is not necessarily empty. It is a space
+                        waiting for a spark. hYour Will becomes that spark. Your Reflection
+                        becomes the means through which that spark becomes visible. Without
+                        Reflection, the Chase remains unconscious. We move, but we do not
+                        know why. We accumulate experiences, achievements and identities
+                        without recognizing the pattern that connects them. But when
+                        Reflection enters the process, the Chase becomes visible. And once
+                        the Chase is visible, we are no longer completely trapped within it.
+                        The purpose, therefore, is not to destroy ambition or abandon
+                        achievement.
+                    </p>
 
+                    <p>
+                        It is to transform our relationship with them.
+                        Achievement can become an expression rather than an addiction.
+                        Movement can become evolution rather than escape. Desire can become
+                        creation rather than consumption. And the Infinite Chase can become
+                        a path of awareness rather than a prison for the soul. Perhaps the
+                        greatest achievement is not reaching the end of the Chase. Perhaps
+                        it is realizing that there was never an end to reach. The true
+                        evolution begins when the individual stops asking,
+                        “What must I achieve next?” and begins asking, “What must I
+                        become aware of now?” In that moment, the direction of movement
+                        changes. The Chase no longer pulls the soul forward.
+                        The soul begins to illuminate the Chase. And within that
+                        illumination, the Infinite is no longer something we desperately
+                        pursue. It becomes the space through which we learn to exist.
+                    </p>
 
-        <div class="artwork-main-image">
+                </div>
 
-            <img
-                src="Sacred Delay.jpeg"
-                alt="Sacred Delay — REFLECTRE">
+                <div class="page-number">
+                    13
+                </div>
+
+            </section>
 
         </div>
 
 
-        <div class="artwork-caption">
 
-            <strong>
-                Sacred Delay 
-            </strong>
-
-            © 2026 Jeeva Samanera
-
-        </div>
-
-
-        <div class="page-number">
-            14
-        </div>
-
-    </section>
-    <!-- PAGE 15 — DESCRIPTION -->
-
-    <section class="page right-page description-page">
-
-        <div class="description-heading">
-            Sacred Delay 
-        </div>
-        
-          <div class="description-text">
-                
-            <p>
-                Every time we try to move toward something. There
-                are moments when the path seems to slow us down.
-                plans are intrupted, opportunities disappears,
-                answers take longer and what we desire refuses to 
-                arrive.
-                within these delays, frustration arises. Rage, 
-                impatience, doubt, and even anger begin to surface
-                and question arise; why the path is resisting.
-                but perhaps the delay is not resistance.
-
-                  The Delay is sacred preparation.
-            </p>
-     
-      <p>
-                The Sacred Delay exists as a space between intentions
-                and menifestations - A karmic interval in which something 
-                within us is being prepared before what we seek can fully
-                enter our lives.
-                Light doesn't simply arrive because we asked for it. One 
-                must be capable of recieving and embracing it.
-            </p>
-       
-        <p>
-                Sometimes, what we perceive as being held back is life 
-                giving us moment to become aware, to learn, to strengthen
-                your will, or to make you realise what you are really asking
-                for.
-                The delay becomes sacred when we stop fighting against its 
-                existence and begin observing what it is revealing.
-                It asks us to remain present.
-                To listen.
-                because when the Light finally arrives, we must not to only
-                be able to see it but we must also be ready to embrace it 
-                without being blinded by the brightness of it.
-                Sacred Delay is therefore not an absence of movements. It
-                is movement occurring beneath your awareness because what 
-                appears to be waiting may, in fact, preparation of the soul.
-              
-            </p>
-
-        </div>
-
-
-        <div class="page-number">
-            15
-        </div>
-
-    </section>
-
-</div>
-<!-- =============================================
-     SPREAD 16–17
-     ARTWORK 07 — LOCUS 
-============================================= -->
-
-<div
-    class="spread"
-    id="spread-8">
-
-
-    <!-- PAGE 16 — ARTWORK -->
-
-    <section class="page left-page artwork-page">
-
-        <div class="artwork-label">
-            ARTWORK 07
-        </div>
-
-
-        <div class="artwork-main-image">
-
-            <img
-                src="Locus.jpeg"
-                alt="Locus — REFLECTRE">
-
-        </div>
-
-
-        <div class="artwork-caption">
-
-            <strong>
-                Locus 
-            </strong>
-
-            © 2026 Jeeva Samanera
-
-        </div>
-
-
-        <div class="page-number">
-            16
-        </div>
-
-    </section>
-    <!-- PAGE 17 — DESCRIPTION -->
-
-    <section class="page right-page description-page">
-
-        <div class="description-heading">
-            Locus  
-        </div>
-        
-          <div class="description-text">
-                
-            <p>
-                Locus is the unique position—the unique point of being—
-                from which perception, awareness, and action arise. In 
-                a more practical sense, a person’s Locus is not simply
-                where they stand in physical space, but where they 
-                stand in awareness.
-                  </p>
-     
-      <p>
-                It can be understood even more simply as the state of
-                consciousness from which a person is experiencing the 
-                present moment. Understanding one’s own Locus becomes
-                crucial to the consciousness, to the soul, because 
-                action arises from awareness. Before we act,
-                we perceive; before we perceive, we stand somewhere
-                within our own consciousness. That position influences
-                how we interpret what we encounter, how we respond to
-                it, and ultimately, how we move through life. 
-            </p>
-       
-        <p>
-                Locus therefore becomes equally important in navigating
-                the complexity of daily life. It invites us to recognise
-                where we ourselves stand in awareness—and, with 
-                discernment, to recognise the Locus from which the people
-                around us perceive and act.
-
-              </p>
-       
-        <p>
-                At last, concept of Locus is not merely to ask,
-                "Where am I?"
-                It is to realise and be aware of what and how am i
-                experiencing.
-              
-            </p>
-
-        </div>
-
-
-        <div class="page-number">
-            17
-        </div>
-
-    </section>
-
-</div>
-<!-- =============================================
-     SPREAD 18–19
-     ARTWORK 08 — CHRONOVERGENCE 
-============================================= -->
-
-<div
-    class="spread"
-    id="spread-9">
-
-
-    <!-- PAGE 18 — ARTWORK -->
-
-    <section class="page left-page artwork-page">
-
-        <div class="artwork-label">
-            ARTWORK 08
-        </div>
-
-
-        <div class="artwork-main-image">
-
-            <img
-                src="Chronovergence.jpeg"
-                alt="Chronovergence — REFLECTRE">
-
-        </div>
-
-
-        <div class="artwork-caption">
-
-            <strong>
-                Chronovergence 
-            </strong>
-
-            © 2026 Jeeva Samanera
-
-        </div>
-
-
-        <div class="page-number">
-            18
-        </div>
-
-    </section>
-    <!-- PAGE 19 — DESCRIPTION -->
-
-    <section class="page right-page description-page">
-
-        <div class="description-heading">
-            Chronovergence  
-        </div>
-        
-          <div class="description-text">
-                
-            <p>
-                 Chronovergence is the convergence of time within 
-                 consciousness—the moment when the past, present, and 
-                 future cease to exist as separate directions and meet
-                 within a single experience.
-            </p>
-
-                <p>
-                 Every moment we inhabit carries traces of what has 
-                 already been and possibilities of what is yet to come.
-                 Memory shapes perception, experience reshapes memory, 
-                 and anticipation gives direction to action. What we call 
-                 the present is therefore never entirely present; it is a
-                 meeting point where different dimensions of time 
-                 continuously influence one another.
-                </p>
-
-                <p>
-                 The lines in Chronovergence emerge and diverge, yet remain
-                 connected through a shared field. They resemble the movement 
-                 of time through consciousness—multiple paths, memories, 
-                 possibilities, and experiences gathering into moments of 
-                 convergence before separating again.
-                 Chronovergence invites us to recognise that we do not
-                 experience time merely by moving through it. We experience 
-                 it by carrying it.
-                 The past is carried within awareness.
-                 The future is carried within possibility.
-                 And the present is where they meet.
-                </p>
-                <p>
-                 In this convergence, a moment becomes more than a point in 
-                 time. It becomes a threshold—a place where what has been, 
-                 what is, and what may become participate in the formation 
-                 of being.
-                 Chronovergence is therefore not the movement of consciousness
-                 through time, but the meeting of time within consciousness.
-              
-            </p>
-
-        </div>
-
-
-        <div class="page-number">
-            19
-        </div>
-
-    </section>
-
-</div>
-          <!-- =============================================
-     SPREAD 20–21
-     ARTWORK 09 — WITH YOU 
-============================================= -->
-
-<div
-    class="spread"
-    id="spread-10">
-
-
-    <!-- PAGE 20 — ARTWORK -->
-
-    <section class="page left-page artwork-page">
-
-        <div class="artwork-label">
-            ARTWORK 09
-        </div>
-
-
-        <div class="artwork-main-image">
-
-            <img
-                src="With you.jpeg"
-                alt="With you — REFLECTRE">
-
-        </div>
-
-
-        <div class="artwork-caption">
-
-            <strong>
-                With You 
-            </strong>
-
-            © 2026 Jeeva Samanera
-
-        </div>
-
-
-        <div class="page-number">
-            20
-        </div>
-
-    </section>
-    <!-- PAGE 21 — DESCRIPTION -->
-
-    <section class="page right-page description-page">
-
-        <div class="description-heading">
-            With You 
-        </div>
-        
-          <div class="description-text">
-                
-            <p>
-                 
-                 One of the deepest fears of human beings is the fear of 
-                 being left behind—to be abandoned, forgotten, and ultimately
-                 left alone.
-            </p>
-                <p>
-                 Yet With You proposes a contradiction to this fear:
-                      </p>
-                <p>
-                 You are never truly alone.
-
-                 You are always accompanied by yourself—not merely by the self
-                 you recognize, but by a higher self existing beyond the 
-                 limitations of your present perception.Your higher self is
-                 the dimension of you that sees beyond the immediate moment. 
-                 It is the unseen intelligence that can guide you through 
-                 possibilities you cannot yet perceive, opening paths where 
-                 none seemed to exist and, at times, bending the very reality 
-                 around you toward what you are becoming.
-                </p>
-                <p>
-
-                 What first appears to be coincidence gradually reveals itself
-                 as something more profound.
-                      </p>
-                <p>
-                 Coincidence becomes synchronicity.
-                      </p>
-                <p>
-                 Synchronicity becomes serendipity.
-                      </p>
-                <p>
-                 Serendipity begins to resemble fate.
-                      
-                 And fate, when consciously lived, can become destiny.
-                 </p>
-                <p>
-
-                 Perhaps this is the kairolume moment—the moment in which you
-                 recognize that fate is not simply something that happens to 
-                 you.
-
-                 It is also something you participate in creating.
-                      </p>
-                <p>
-                 It is you who chooses.
-                      </p>
-                <p>
-                 It is you who responds.
-                     </p>
-                <p> 
-                 It is you who walks through the doors when they appear.
-                </p>
-                <p>
-
-                 Your higher self does not necessarily remove the uncertainty 
-                 of life; it accompanies you through it. It becomes the silent 
-                 guardian within you, continually opening doors toward infinite
-                 possibilities.
-                 </p>
-                <p>
-
-                 The guardian angel you have been searching for may not be 
-                 somewhere above you.
-                  </p>
-                <p>
-                 It have been you, all along.
-                      </p>
-                <p>
-                 It is You, always with You.
-                 
-              
-            </p>
-
-        </div>
-
-
-        <div class="page-number">
-            21
-        </div>
-
-    </section>
-
-</div>
-          <!-- =============================================
-     SPREAD 22–23
-     ARTWORK 10 — ENTANGLEMENT 
-============================================= -->
-
-<div
-    class="spread"
-    id="spread-11">
-
-
-    <!-- PAGE 22 — ARTWORK -->
-
-    <section class="page left-page artwork-page">
-
-        <div class="artwork-label">
-            ARTWORK 11
-        </div>
-
-
-        <div class="artwork-main-image">
-
-            <img
-                src="Entanglement.jpeg"
-                alt="Entanglement — REFLECTRE">
-
-        </div>
-
-
-        <div class="artwork-caption">
-
-            <strong>
-                Entanglement 
-            </strong>
-
-            © 2026 Jeeva Samanera
-
-        </div>
-
-
-        <div class="page-number">
-            22
-        </div>
-
-    </section>
-    <!-- PAGE 23 — DESCRIPTION -->
-
-    <section class="page right-page description-page">
-
-        <div class="description-heading">
-            Entanglement 
-        </div>
-        
-          <div class="description-text">
-                
-            <p>
-                 Entanglement explores the invisible threads that bind one 
-                 existence to another. Within its movements, forms appear to
-                 emerge, dissolve, and return. Suggesting that 
-                 nothing truly exists in isolation.
-            </p>
-                <p>
-                 Every thought touches another thought. Every action leaves an
-                 imprint. Every experience becomes part of something larger 
-                 than itself.
-                            </p>
-                <p>  
-                 The central form becomes a passage through this
-                 invisible network. A point where energies converge, intertwine,
-                 and transform. The surrounding spirals evoke thoughts, memories, 
-                 relationships, choices, and consequences continuously moving 
-                 through consciousness, like ripples travelling through an 
-                 unseen ocean.
-                      
-                </p>
-                <p>
-
-                 In this sense, entanglement is the hidden architecture of karma. 
-                 Every action sends a movement into the field, and that movement 
-                 eventually finds its way back, not always as a direct consequence,
-                 but through unexpected encounters, repeating patterns, unlikely
-                 coin-ci-dences, and moments that seem to arrive precisely when 
-                 they are needed. These are the moments when entanglement rises 
-                 to the surface as Kairolume, when the invisible relationships 
-                 between past actions, present awareness, and unfolding 
-                 circumstance briefly become luminous and perceptible.
-                      </p>
-                <p>
-                 A meeting with a person happens at the right moment that feels
-                 strangely inevitable.
-                      </p>
-                <p>
-                 
-                      </p>
-                <p>
-                 A forgotten memory returns through an unexpected encounter.
-                      
-                 </p>
-                <p>
-
-                 A coincidence carries the weight ofsomething that feels
-                 strangely inevitable.
-                      </p>
-                <p>
-                 Entanglement is the visible emergence of the invisible
-                 knots in the fabric of the reality, which is the karmic 
-                 movements travelling through consciousness and converging
-                 within a particular mommentor experience.
-
-                 </p>
-                <p>
-
-                 what we call may simply be entanglement revealing a 
-                 connection we were previously unable to see.
-                      Karma is its movements.
-                      Kairolume is the moment it becomes visible.
-                 
-              
-            </p>
-
-        </div>
-
-
-        <div class="page-number">
-            23
-        </div>
-
-    </section>
-
-</div>
- <!-- =============================================
-     SPREAD 24–25
-     ARTWORK 11 — LUMINESCENCE 
-============================================= -->
-
-<div
-    class="spread"
-    id="spread-12">
-
-
-    <!-- PAGE 24 — ARTWORK -->
-
-    <section class="page left-page artwork-page">
-
-        <div class="artwork-label">
-            ARTWORK 12
-        </div>
-
-
-        <div class="artwork-main-image">
-
-            <img
-                src="Luminescence.jpeg"
-                alt="Luminescence — REFLECTRE">
-
-        </div>
-
-
-        <div class="artwork-caption">
-
-            <strong>
-                Luminescence 
-            </strong>
-
-            © 2026 Jeeva Samanera
-
-        </div>
-
-
-        <div class="page-number">
-            24
-        </div>
-
-    </section>
-    <!-- PAGE 25 — DESCRIPTION -->
-
-    <section class="page right-page description-page">
-
-        <div class="description-heading">
-            Luminescence 
-        </div>
-        
-          <div class="description-text">
-                
-            <p>
-                 Every person carries an aura that is more than what the eye
-                 can see.
-            </p>
-                <p>
-                 There are moments when someone seems to become luminous. Not
-                 because their appearance changes, but because their presence 
-                 does. Their being feels clearer, deeper, almost as if 
-                 something within them has begun to radiate outward.
-                            </p>
-                <p>  
-                 Luminescence is this radiance of an awakened Locus.
-                      
-                </p>
-                <p>
-
-                 The person becomes conscious of where they stand within 
-                 themselves, they begin to understand the shifting layers of 
-                 their Multiplicity and the opposing forces that shape their 
-                 Contrast of Being. With this understanding, the fragments of 
-                 the self slowly begin to align. And when this alignment
-                 reaches toward the Higher Selves, perception changes.
-                      </p>
-                <p>
-                 This alignment creates a different kind of presence. It is as 
-                 if the person starts carrying a certain frequency that can be 
-                 felt beyond what is physically visible. Their thoughts, actions, 
-                 choices and surroundings begin to correspond with one another 
-                 in ways that feel increasingly meaningful.
-                      
-                      </p>
-                <p>
-                 This is where synchronicity begins to reveal itself. What 
-                 first appears as coincidence may gradually become synchronicity.
-                 Synchronicity may then open into serendipity, where unexpected 
-                 events begin to arrive with an almost precise relevance to 
-                 one's path. The person does not necessarily create these events. 
-                 They simply become clear enough to recognise them.
-
-                      
-                      </p>
-                <p>
-                 Luminescence is therefore not about becoming brighter than 
-                 others. It is about becoming more aligned with oneself. The
-                 clearer the Locus becomes, the more the Multiplicity is
-                 understood, the more the Contrast of Being is embraced, and 
-                 the closer one moves toward the Higher Selves, the more 
-                 reality begins to reflect that alignment.
-
-                      </p>
-                <p>
-                 
-                 Luminescence is the visible aura of an invisible alignment.
-                      
-                 </p>
-                <p>
-
-                 A coincidence carries the weight ofsomething that feels
-                 strangely inevitable.
-                      </p>
-
-        </div>
-
-
-        <div class="page-number">
-            25
-        </div>
-
-    </section>
-
-</div>
-          
         <!-- =============================================
-             CENTRE SPINE
+             SPREAD 14–15
+             ARTWORK 06 — SACRED DELAY
         ============================================== -->
+
+        <div
+            class="spread"
+            id="spread-7">
+
+
+            <!-- PAGE 14 -->
+
+            <section class="page left-page artwork-page">
+
+                <div class="artwork-label">
+                    ARTWORK 06
+                </div>
+
+                <div class="artwork-main-image">
+
+                    <img
+                        src="Sacred Delay.jpeg"
+                        alt="Sacred Delay — REFLECTRE">
+
+                </div>
+
+                <div class="artwork-caption">
+
+                    <strong>
+                        Sacred Delay
+                    </strong>
+
+                    © 2026 Jeeva Samanera
+
+                </div>
+
+                <div class="page-number">
+                    14
+                </div>
+
+            </section>
+
+
+
+            <!-- PAGE 15 -->
+
+            <section class="page right-page description-page">
+
+                <div class="description-heading">
+                    Sacred Delay
+                </div>
+
+                <div class="description-text">
+
+                    <p>
+                        Every time we try to move toward something. There
+                        are moments when the path seems to slow us down.
+                        plans are intrupted, opportunities disappears,
+                        answers take longer and what we desire refuses to
+                        arrive.
+                        within these delays, frustration arises. Rage,
+                        impatience, doubt, and even anger begin to surface
+                        and question arise; why the path is resisting.
+                        but perhaps the delay is not resistance.
+
+                        The Delay is sacred preparation.
+                    </p>
+
+                    <p>
+                        The Sacred Delay exists as a space between intentions
+                        and menifestations - A karmic interval in which something
+                        within us is being prepared before what we seek can fully
+                        enter our lives.
+                        Light doesn't simply arrive because we asked for it. One
+                        must be capable of recieving and embracing it.
+                    </p>
+
+                    <p>
+                        Sometimes, what we perceive as being held back is life
+                        giving us moment to become aware, to learn, to strengthen
+                        your will, or to make you realise what you are really asking
+                        for.
+                        The delay becomes sacred when we stop fighting against its
+                        existence and begin observing what it is revealing.
+                        It asks us to remain present.
+                        To listen.
+                        because when the Light finally arrives, we must not to only
+                        be able to see it but we must also be ready to embrace it
+                        without being blinded by the brightness of it.
+                        Sacred Delay is therefore not an absence of movements. It
+                        is movement occurring beneath your awareness because what
+                        appears to be waiting may, in fact, preparation of the soul.
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    15
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =============================================
+             SPREAD 16–17
+             ARTWORK 07 — LOCUS
+        ============================================== -->
+
+        <div
+            class="spread"
+            id="spread-8">
+
+
+            <!-- PAGE 16 -->
+
+            <section class="page left-page artwork-page">
+
+                <div class="artwork-label">
+                    ARTWORK 07
+                </div>
+
+                <div class="artwork-main-image">
+
+                    <img
+                        src="Locus.jpeg"
+                        alt="Locus — REFLECTRE">
+
+                </div>
+
+                <div class="artwork-caption">
+
+                    <strong>
+                        Locus
+                    </strong>
+
+                    © 2026 Jeeva Samanera
+
+                </div>
+
+                <div class="page-number">
+                    16
+                </div>
+
+            </section>
+
+
+
+            <!-- PAGE 17 -->
+
+            <section class="page right-page description-page">
+
+                <div class="description-heading">
+                    Locus
+                </div>
+
+                <div class="description-text">
+
+                    <p>
+                        Locus is the unique position—the unique point of being—
+                        from which perception, awareness, and action arise. In
+                        a more practical sense, a person’s Locus is not simply
+                        where they stand in physical space, but where they
+                        stand in awareness.
+                    </p>
+
+                    <p>
+                        It can be understood even more simply as the state of
+                        consciousness from which a person is experiencing the
+                        present moment. Understanding one’s own Locus becomes
+                        crucial to the consciousness, to the soul, because
+                        action arises from awareness. Before we act,
+                        we perceive; before we perceive, we stand somewhere
+                        within our own consciousness. That position influences
+                        how we interpret what we encounter, how we respond to
+                        it, and ultimately, how we move through life.
+                    </p>
+
+                    <p>
+                        Locus therefore becomes equally important in navigating
+                        the complexity of daily life. It invites us to recognise
+                        where we ourselves stand in awareness—and, with
+                        discernment, to recognise the Locus from which the people
+                        around us perceive and act.
+                    </p>
+
+                    <p>
+                        At last, concept of Locus is not merely to ask,
+                        "Where am I?"
+                        It is to realise and be aware of what and how am i
+                        experiencing.
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    17
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =============================================
+             SPREAD 18–19
+             ARTWORK 08 — CHRONOVERGENCE
+        ============================================== -->
+
+        <div
+            class="spread"
+            id="spread-9">
+
+
+            <!-- PAGE 18 -->
+
+            <section class="page left-page artwork-page">
+
+                <div class="artwork-label">
+                    ARTWORK 08
+                </div>
+
+                <div class="artwork-main-image">
+
+                    <img
+                        src="Chronovergence.jpeg"
+                        alt="Chronovergence — REFLECTRE">
+
+                </div>
+
+                <div class="artwork-caption">
+
+                    <strong>
+                        Chronovergence
+                    </strong>
+
+                    © 2026 Jeeva Samanera
+
+                </div>
+
+                <div class="page-number">
+                    18
+                </div>
+
+            </section>
+
+
+
+            <!-- PAGE 19 -->
+
+            <section class="page right-page description-page">
+
+                <div class="description-heading">
+                    Chronovergence
+                </div>
+
+                <div class="description-text">
+
+                    <p>
+                        Chronovergence is the convergence of time within
+                        consciousness—the moment when the past, present, and
+                        future cease to exist as separate directions and meet
+                        within a single experience.
+                    </p>
+
+                    <p>
+                        Every moment we inhabit carries traces of what has
+                        already been and possibilities of what is yet to come.
+                        Memory shapes perception, experience reshapes memory,
+                        and anticipation gives direction to action. What we call
+                        the present is therefore never entirely present; it is a
+                        meeting point where different dimensions of time
+                        continuously influence one another.
+                    </p>
+
+                    <p>
+                        The lines in Chronovergence emerge and diverge, yet remain
+                        connected through a shared field. They resemble the movement
+                        of time through consciousness—multiple paths, memories,
+                        possibilities, and experiences gathering into moments of
+                        convergence before separating again.
+                        Chronovergence invites us to recognise that we do not
+                        experience time merely by moving through it. We experience
+                        it by carrying it.
+                        The past is carried within awareness.
+                        The future is carried within possibility.
+                        And the present is where they meet.
+                    </p>
+
+                    <p>
+                        In this convergence, a moment becomes more than a point in
+                        time. It becomes a threshold—a place where what has been,
+                        what is, and what may become participate in the formation
+                        of being.
+                        Chronovergence is therefore not the movement of consciousness
+                        through time, but the meeting of time within consciousness.
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    19
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =============================================
+             SPREAD 20–21
+             ARTWORK 09 — WITH YOU
+        ============================================== -->
+
+        <div
+            class="spread"
+            id="spread-10">
+
+
+            <!-- PAGE 20 -->
+
+            <section class="page left-page artwork-page">
+
+                <div class="artwork-label">
+                    ARTWORK 09
+                </div>
+
+                <div class="artwork-main-image">
+
+                    <img
+                        src="With you.jpeg"
+                        alt="With you — REFLECTRE">
+
+                </div>
+
+                <div class="artwork-caption">
+
+                    <strong>
+                        With You
+                    </strong>
+
+                    © 2026 Jeeva Samanera
+
+                </div>
+
+                <div class="page-number">
+                    20
+                </div>
+
+            </section>
+
+
+
+            <!-- PAGE 21 -->
+
+            <section class="page right-page description-page">
+
+                <div class="description-heading">
+                    With You
+                </div>
+
+                <div class="description-text">
+
+                    <p>
+                        One of the deepest fears of human beings is the fear of
+                        being left behind—to be abandoned, forgotten, and ultimately
+                        left alone.
+                    </p>
+
+                    <p>
+                        Yet With You proposes a contradiction to this fear:
+                    </p>
+
+                    <p>
+                        You are never truly alone.
+
+                        You are always accompanied by yourself—not merely by the self
+                        you recognize, but by a higher self existing beyond the
+                        limitations of your present perception.Your higher self is
+                        the dimension of you that sees beyond the immediate moment.
+                        It is the unseen intelligence that can guide you through
+                        possibilities you cannot yet perceive, opening paths where
+                        none seemed to exist and, at times, bending the very reality
+                        around you toward what you are becoming.
+                    </p>
+
+                    <p>
+                        What first appears to be coincidence gradually reveals itself
+                        as something more profound.
+                    </p>
+
+                    <p>
+                        Coincidence becomes synchronicity.
+                    </p>
+
+                    <p>
+                        Synchronicity becomes serendipity.
+                    </p>
+
+                    <p>
+                        Serendipity begins to resemble fate.
+
+                        And fate, when consciously lived, can become destiny.
+                    </p>
+
+                    <p>
+                        Perhaps this is the kairolume moment—the moment in which you
+                        recognize that fate is not simply something that happens to
+                        you.
+
+                        It is also something you participate in creating.
+                    </p>
+
+                    <p>
+                        It is you who chooses.
+                    </p>
+
+                    <p>
+                        It is you who responds.
+                    </p>
+
+                    <p>
+                        It is you who walks through the doors when they appear.
+                    </p>
+
+                    <p>
+                        Your higher self does not necessarily remove the uncertainty
+                        of life; it accompanies you through it. It becomes the silent
+                        guardian within you, continually opening doors toward infinite
+                        possibilities.
+                    </p>
+
+                    <p>
+                        The guardian angel you have been searching for may not be
+                        somewhere above you.
+                    </p>
+
+                    <p>
+                        It have been you, all along.
+                    </p>
+
+                    <p>
+                        It is You, always with You.
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    21
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =============================================
+             SPREAD 22–23
+             ARTWORK 10 — ENTANGLEMENT
+        ============================================== -->
+
+        <div
+            class="spread"
+            id="spread-11">
+
+
+            <!-- PAGE 22 -->
+
+            <section class="page left-page artwork-page">
+
+                <div class="artwork-label">
+                    ARTWORK 10
+                </div>
+
+                <div class="artwork-main-image">
+
+                    <img
+                        src="Entanglement.jpeg"
+                        alt="Entanglement — REFLECTRE">
+
+                </div>
+
+                <div class="artwork-caption">
+
+                    <strong>
+                        Entanglement
+                    </strong>
+
+                    © 2026 Jeeva Samanera
+
+                </div>
+
+                <div class="page-number">
+                    22
+                </div>
+
+            </section>
+
+
+
+            <!-- PAGE 23 -->
+
+            <section class="page right-page description-page">
+
+                <div class="description-heading">
+                    Entanglement
+                </div>
+
+                <div class="description-text">
+
+                    <p>
+                        Entanglement explores the invisible threads that bind one
+                        existence to another. Within its movements, forms appear to
+                        emerge, dissolve, and return. Suggesting that
+                        nothing truly exists in isolation.
+                    </p>
+
+                    <p>
+                        Every thought touches another thought. Every action leaves an
+                        imprint. Every experience becomes part of something larger
+                        than itself.
+                    </p>
+
+                    <p>
+                        The central form becomes a passage through this
+                        invisible network. A point where energies converge, intertwine,
+                        and transform. The surrounding spirals evoke thoughts, memories,
+                        relationships, choices, and consequences continuously moving
+                        through consciousness, like ripples travelling through an
+                        unseen ocean.
+                    </p>
+
+                    <p>
+                        In this sense, entanglement is the hidden architecture of karma.
+                        Every action sends a movement into the field, and that movement
+                        eventually finds its way back, not always as a direct consequence,
+                        but through unexpected encounters, repeating patterns, unlikely
+                        coin-ci-dences, and moments that seem to arrive precisely when
+                        they are needed. These are the moments when entanglement rises
+                        to the surface as Kairolume, when the invisible relationships
+                        between past actions, present awareness, and unfolding
+                        circumstance briefly become luminous and perceptible.
+                    </p>
+
+                    <p>
+                        A meeting with a person happens at the right moment that feels
+                        strangely inevitable.
+                    </p>
+
+                    <p>
+                        A forgotten memory returns through an unexpected encounter.
+                    </p>
+
+                    <p>
+                        A coincidence carries the weight ofsomething that feels
+                        strangely inevitable.
+                    </p>
+
+                    <p>
+                        Entanglement is the visible emergence of the invisible
+                        knots in the fabric of the reality, which is the karmic
+                        movements travelling through consciousness and converging
+                        within a particular mommentor experience.
+                    </p>
+
+                    <p>
+                        what we call may simply be entanglement revealing a
+                        connection we were previously unable to see.
+                        Karma is its movements.
+                        Kairolume is the moment it becomes visible.
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    23
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =============================================
+             SPREAD 24–25
+             ARTWORK 11 — LUMINESCENCE
+        ============================================== -->
+
+        <div
+            class="spread"
+            id="spread-12">
+
+
+            <!-- PAGE 24 -->
+
+            <section class="page left-page artwork-page">
+
+                <div class="artwork-label">
+                    ARTWORK 11
+                </div>
+
+                <div class="artwork-main-image">
+
+                    <img
+                        src="Luminescence.jpeg"
+                        alt="Luminescence — REFLECTRE">
+
+                </div>
+
+                <div class="artwork-caption">
+
+                    <strong>
+                        Luminescence
+                    </strong>
+
+                    © 2026 Jeeva Samanera
+
+                </div>
+
+                <div class="page-number">
+                    24
+                </div>
+
+            </section>
+
+
+
+            <!-- PAGE 25 -->
+
+            <section class="page right-page description-page">
+
+                <div class="description-heading">
+                    Luminescence
+                </div>
+
+                <div class="description-text">
+
+                    <p>
+                        Every person carries an aura that is more than what the eye
+                        can see.
+                    </p>
+
+                    <p>
+                        There are moments when someone seems to become luminous. Not
+                        because their appearance changes, but because their presence
+                        does. Their being feels clearer, deeper, almost as if
+                        something within them has begun to radiate outward.
+                    </p>
+
+                    <p>
+                        Luminescence is this radiance of an awakened Locus.
+                    </p>
+
+                    <p>
+                        The person becomes conscious of where they stand within
+                        themselves, they begin to understand the shifting layers of
+                        their Multiplicity and the opposing forces that shape their
+                        Contrast of Being. With this understanding, the fragments of
+                        the self slowly begin to align. And when this alignment
+                        reaches toward the Higher Selves, perception changes.
+                    </p>
+
+                    <p>
+                        This alignment creates a different kind of presence. It is as
+                        if the person starts carrying a certain frequency that can be
+                        felt beyond what is physically visible. Their thoughts, actions,
+                        choices and surroundings begin to correspond with one another
+                        in ways that feel increasingly meaningful.
+                    </p>
+
+                    <p>
+                        This is where synchronicity begins to reveal itself. What
+                        first appears as coincidence may gradually become synchronicity.
+                        Synchronicity may then open into serendipity, where unexpected
+                        events begin to arrive with an almost precise relevance to
+                        one's path. The person does not necessarily create these events.
+                        They simply become clear enough to recognise them.
+                    </p>
+
+                    <p>
+                        Luminescence is therefore not about becoming brighter than
+                        others. It is about becoming more aligned with oneself. The
+                        clearer the Locus becomes, the more the Multiplicity is
+                        understood, the more the Contrast of Being is embraced, and
+                        the closer one moves toward the Higher Selves, the more
+                        reality begins to reflect that alignment.
+                    </p>
+
+                    <p>
+                        Luminescence is the visible aura of an invisible alignment.
+                    </p>
+
+                    <p>
+                        A coincidence carries the weight ofsomething that feels
+                        strangely inevitable.
+                    </p>
+
+                </div>
+
+                <div class="page-number">
+                    25
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CENTRE SPINE
+        ================================================== -->
 
         <div class="spine"></div>
 
@@ -2562,7 +2727,6 @@ body {
 
 <script>
 
-
 /* =====================================================
    BOOK STATE
 ===================================================== */
@@ -2571,20 +2735,42 @@ let currentSpread = 0;
 
 
 /*
-   0 = COVER
-   1 = PAGES 02–03
-   2 = PAGES 04–05
-   3 = PAGES 06–07
-   4 = PAGES 08-09
-   5 = PAGES 10-11
-   6 = PAGES 12-13
-   7 = PAGES 14-15
-   8 = PAGES 16-17
-   9 = PAGES 18-19
-   10 = PAGES 20-21
-   11 = PAGES 22-23
-   12 = PAGES 24-25
+   0  = COVER
+   1  = PAGES 02–03
+   2  = PAGES 04–05
+   3  = PAGES 06–07
+   4  = PAGES 08–09
+   5  = PAGES 10–11
+   6  = PAGES 12–13
+   7  = PAGES 14–15
+   8  = PAGES 16–17
+   9  = PAGES 18–19
+   10 = PAGES 20–21
+   11 = PAGES 22–23
+   12 = PAGES 24–25
 */
+
+
+/* =====================================================
+   SPREAD STATUS
+===================================================== */
+
+const spreadStatus = {
+
+    1: "02–03",
+    2: "04–05",
+    3: "06–07",
+    4: "08–09",
+    5: "10–11",
+    6: "12–13",
+    7: "14–15",
+    8: "16–17",
+    9: "18–19",
+    10: "20–21",
+    11: "22–23",
+    12: "24–25"
+
+};
 
 
 /* =====================================================
@@ -2690,7 +2876,7 @@ function updateBook() {
 
 
     /* ---------------------------------------------
-       SHOW CORRECT SPREAD
+       HIDE ALL SPREADS
     --------------------------------------------- */
 
     document
@@ -2702,183 +2888,54 @@ function updateBook() {
         });
 
 
-    document
-        .getElementById(
+    /* ---------------------------------------------
+       SHOW CURRENT SPREAD
+    --------------------------------------------- */
+
+    const currentElement =
+        document.getElementById(
             "spread-" + currentSpread
-        )
-        .classList.add("active");
+        );
 
 
-    /* ---------------------------------------------
-       SPREAD 02–03
-    --------------------------------------------- */
+    if (currentElement) {
 
-    if (currentSpread === 1) {
-
-        pageStatus.textContent =
-            "02–03";
-
-        nextButton.textContent =
-            "NEXT →";
+        currentElement.classList.add("active");
 
     }
 
 
     /* ---------------------------------------------
-       SPREAD 04–05
+       PAGE STATUS
     --------------------------------------------- */
 
-    if (currentSpread === 2) {
-
-        pageStatus.textContent =
-            "04–05";
-
-        nextButton.textContent =
-            "NEXT →";
-
-    }
+    pageStatus.textContent =
+        spreadStatus[currentSpread] || "";
 
 
     /* ---------------------------------------------
-       SPREAD 06–07
+       NEXT BUTTON
     --------------------------------------------- */
 
-    if (currentSpread === 3) {
+    if (currentSpread >= 12) {
 
-        pageStatus.textContent =
-            "06–07";
+        nextButton.textContent =
+            "END";
+
+        nextButton.disabled = true;
+
+    } else {
 
         nextButton.textContent =
             "NEXT →";
 
-    }
-}
-
-
-
-
-/* ---------------------------------------------
-   SPREAD 08–09
---------------------------------------------- */
-
-if (currentSpread === 4) {
-
-    pageStatus.textContent =
-        "08–09";
-
-    nextButton.textContent =
-        "NEXT →";
+        nextButton.disabled = false;
 
     }
 
-/* ---------------------------------------------
-   SPREAD 10–11
---------------------------------------------- */
-
-if (currentSpread === 5) {
-
-    pageStatus.textContent =
-        "10–11";
-
-    nextButton.textContent =
-        "NEXT →";
-
 }
-      
-/* ---------------------------------------------
-   SPREAD 12–13
---------------------------------------------- */
 
-if (currentSpread === 6) {
 
-    pageStatus.textContent =
-        "12–13";
-
-    nextButton.textContent =
-        "NEXT →";
-
-}
-      
-/* ---------------------------------------------
-   SPREAD 14–15
---------------------------------------------- */
-
-if (currentSpread === 7) {
-
-    pageStatus.textContent =
-        "14–15";
-
-    nextButton.textContent =
-        "NEXT →";
-
-}
-/* ---------------------------------------------
-   SPREAD 16–17
---------------------------------------------- */
-
-if (currentSpread === 8) {
-
-    pageStatus.textContent =
-        "16–17";
-
-    nextButton.textContent =
-        "NEXT →";
-
-      }
-      /* ---------------------------------------------
-   SPREAD 18–19
---------------------------------------------- */
-
-if (currentSpread === 9) {
-
-    pageStatus.textContent =
-        "18–19";
-
-    nextButton.textContent =
-        "NEXT →";
-
-}
-      /* ---------------------------------------------
-   SPREAD 20–21
---------------------------------------------- */
-
-if (currentSpread === 10) {
-
-    pageStatus.textContent =
-        "20–21";
-
-    nextButton.textContent =
-        "NEXT →";
-
-}
-     
-/* ---------------------------------------------
-   SPREAD 22–23
---------------------------------------------- */
-
-if (currentSpread === 11) {
-
-    pageStatus.textContent =
-        "22–23";
-
-    nextButton.textContent =
-        "NEXT →";
-
-}
-/* ---------------------------------------------
-   SPREAD 24–25
---------------------------------------------- */
-
-if (currentSpread === 12) {
-
-    pageStatus.textContent =
-        "24–25";
-
-    nextButton.textContent =
-        "NEXT →";
-
-}
-      
 /* =====================================================
    KEYBOARD CONTROLS
 ===================================================== */
