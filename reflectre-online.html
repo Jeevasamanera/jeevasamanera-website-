@@ -3907,6 +3907,138 @@ body {
         </div>
 
           <!-- =====================================================
+     FINAL SPREAD — ARTISTIC / CURATORIAL CONCEPT
+===================================================== -->
+
+<div class="spread" id="spread-22">
+
+    <!-- =================================================
+         LEFT PAGE — ARTISTIC CONCEPT
+    ================================================== -->
+
+    <div class="page artistic-concept-page">
+
+        <div class="concept-content">
+
+            <div class="concept-label">
+                ARTISTIC / CURATORIAL CONCEPT
+            </div>
+
+            <h1>REFLECTRE</h1>
+
+            <div class="concept-divider"></div>
+
+            <div class="concept-text">
+
+                <p>
+                    Jeeva Samanera is an artist, philosopher and creator
+                    exploring consciousness, spirituality, human identity,
+                    symbolism and transformation through visual art.
+                </p>
+
+                <p>
+                    I use charcoal as both a medium and a metaphor to explore
+                    the fragile space between human vulnerability and
+                    transformation; between light and its shadow, between
+                    presence and disappearance, between positive and negative
+                    space.
+                </p>
+
+                <p>
+                    The monochromatic language of charcoal allows me to strip
+                    away distraction and reveal essential emotional and
+                    psychological landscapes. Through this language, I
+                    investigate the emotional and symbolic dimensions of
+                    human consciousness and spirituality.
+                </p>
+
+                <p>
+                    In my recent works, this inquiry has evolved into a more
+                    focused examination of traces — what remains after an
+                    encounter, an experience, a transformation or a moment
+                    has passed. As an artist and curator, I am interested in
+                    creating encounters that invite contemplation rather than
+                    certainty.
+                </p>
+
+                <p>
+                    My practice seeks to transform fleeting spiritual
+                    experiences into a lasting essence of humanity through
+                    structural visual experiences of sequential philosophical
+                    insights, contrasts of recurring patterns and tonal depth.
+                    Through portraiture, symbolism and atmospheric imagery,
+                    the work invites viewers to reflect upon their own stories
+                    of loss, resilience, belonging and renewal.
+                </p>
+
+                <p class="kairolume">
+                    At the centre of this inquiry is
+                    <span>kairolume</span> —
+                    a moment when purpose and clarity converge.
+                </p>
+
+            </div>
+
+            <div class="concept-footer">
+
+                <div class="concept-line"></div>
+
+                <p>REFLECTRE — JEEVA SAMANERA</p>
+
+                <p class="copyright">
+                    © 2026 Jeeva Samanera
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         RIGHT PAGE — CLOSING PAGE
+    ================================================== -->
+
+    <div class="page final-closing-page">
+
+        <div class="closing-content">
+
+            <div class="closing-mark">
+                REFLECTRE
+            </div>
+
+            <div class="closing-divider"></div>
+
+            <p class="closing-text">
+                The reflection does not end here.
+            </p>
+
+            <p class="closing-subtext">
+                It continues within the one who observes.
+            </p>
+
+            <div class="closing-kairolume">
+                <span>kairolume</span>
+            </div>
+
+            <p class="closing-definition">
+                where purpose and clarity converge
+            </p>
+
+            <div class="closing-footer">
+                © 2026 Jeeva Samanera
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<style>
+<!-- =====================================================
      FINAL PAGE — ARTISTIC / CURATORIAL CONCEPT
 ===================================================== -->
 
@@ -3989,12 +4121,14 @@ body {
 
 <style>
 
+
+
 /* =====================================================
    ARTISTIC / CURATORIAL CONCEPT
 ===================================================== */
 
 .artistic-concept-page {
-    width: 100%;
+    width: 50%;
     height: 100%;
     background: #f5f3ee;
     color: #171717;
@@ -4096,19 +4230,96 @@ body {
 
 
 /* =====================================================
+   FINAL CLOSING PAGE
+===================================================== */
+
+.final-closing-page {
+    width: 50%;
+    height: 100%;
+    background: #f5f3ee;
+    color: #171717;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.closing-content {
+    width: 78%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.closing-mark {
+    font-size: 28px;
+    letter-spacing: 7px;
+    font-weight: 400;
+}
+
+.closing-divider {
+    width: 42px;
+    height: 1px;
+    background: #171717;
+    opacity: 0.55;
+    margin: 28px 0 42px;
+}
+
+.closing-text {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.closing-subtext {
+    font-size: 13px;
+    line-height: 1.7;
+    opacity: 0.62;
+    font-style: italic;
+}
+
+.closing-kairolume {
+    margin-top: 55px;
+    font-size: 19px;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.closing-definition {
+    margin-top: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.45;
+}
+
+.closing-footer {
+    margin-top: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+}
+
+
+/* =====================================================
    MOBILE
 ===================================================== */
 
 @media (max-width: 600px) {
 
-    .artistic-concept-page {
-        align-items: flex-start;
+    .artistic-concept-page,
+    .final-closing-page {
+        width: 50%;
     }
 
     .concept-content {
         width: 84%;
         height: 90%;
-        margin-top: 5%;
     }
 
     .concept-label {
@@ -4118,41 +4329,86 @@ body {
     }
 
     .concept-content h1 {
-        font-size: 27px;
-        letter-spacing: 4px;
+        font-size: 23px;
+        letter-spacing: 3px;
     }
 
     .concept-divider {
-        margin: 19px 0 22px 0;
+        margin: 17px 0 20px;
     }
 
     .concept-text {
-        padding-right: 7px;
+        padding-right: 6px;
     }
 
     .concept-text p {
-        font-size: 12px;
-        line-height: 1.62;
-        margin-bottom: 16px;
+        font-size: 10px;
+        line-height: 1.55;
+        margin-bottom: 13px;
     }
 
     .concept-text .kairolume {
-        font-size: 13px;
-        margin-top: 22px;
-    }
-
-    .concept-footer {
+        font-size: 11px;
         margin-top: 18px;
     }
 
+    .concept-footer {
+        margin-top: 15px;
+    }
+
     .concept-footer p {
-        font-size: 6px;
-        letter-spacing: 1.5px;
+        font-size: 5px;
+        letter-spacing: 1.2px;
+    }
+
+    .concept-footer .copyright {
+        font-size: 5px;
+    }
+
+
+    .closing-content {
+        width: 82%;
+    }
+
+    .closing-mark {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+
+    .closing-divider {
+        margin: 20px 0 28px;
+        width: 30px;
+    }
+
+    .closing-text {
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+    .closing-subtext {
+        font-size: 9px;
+        line-height: 1.6;
+    }
+
+    .closing-kairolume {
+        margin-top: 35px;
+        font-size: 13px;
+    }
+
+    .closing-definition {
+        font-size: 5px;
+        letter-spacing: 1.2px;
+    }
+
+    .closing-footer {
+        margin-top: 40px;
+        font-size: 5px;
     }
 
 }
 
 </style>
+
           
 
 
