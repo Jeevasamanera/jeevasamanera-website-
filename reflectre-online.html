@@ -4749,6 +4749,387 @@ function updateBook() {
     previousButton.disabled = false;
 
 
+<script>
+
+/* =====================================================
+   REFLECTRE BOOK NAVIGATION
+===================================================== */
+
+let currentSpread = 0;
+let currentMobilePage = -1;
+
+
+/* =====================================================
+   MOBILE DETECTION
+===================================================== */
+
+function isMobile() {
+    return window.innerWidth <= 768;
+}
+
+
+/* =====================================================
+   OPEN BOOK
+===================================================== */
+
+function openReflectre() {
+
+    if (isMobile()) {
+
+        currentMobilePage = 0;
+
+    } else {
+
+        currentSpread = 1;
+
+    }
+
+    updateBook();
+}
+
+
+/* =====================================================
+   NEXT PAGE
+===================================================== */
+
+function nextPage() {
+
+    /* ---------------------------------------------
+       MOBILE
+       One physical page at a time
+    --------------------------------------------- */
+
+    if (isMobile()) {
+
+        const pages =
+            document.querySelectorAll(".spread .page");
+
+        if (
+            currentMobilePage <
+            pages.length - 1
+        ) {
+
+            currentMobilePage++;
+
+            updateBook();
+
+        }
+
+        return;
+    }
+
+
+    /* ---------------------------------------------
+       DESKTOP
+       Keep spread-by-spread navigation
+    --------------------------------------------- */
+
+    const totalSpreads =
+        document.querySelectorAll(".spread").length;
+
+    if (currentSpread < totalSpreads) {
+
+        currentSpread++;
+
+        updateBook();
+
+    }
+
+}
+
+
+/* =====================================================
+   PREVIOUS PAGE
+===================================================== */
+
+function previousPage() {
+
+    /* ---------------------------------------------
+       MOBILE
+    --------------------------------------------- */
+
+    if (isMobile()) {
+
+        if (currentMobilePage > 0) {
+
+            currentMobilePage--;
+
+            updateBook();
+
+        } else if (currentMobilePage === 0) {
+
+            /*
+             * Return to the closed cover
+             */
+
+            currentMobilePage = -1;
+
+            updateBook();
+
+        }
+
+        return;
+    }
+
+
+    /* ---------------------------------------------
+       DESKTOP
+    --------------------------------------------- */
+
+    if (currentSpread > 0) {
+
+        currentSpread--;
+
+        updateBook();
+
+    }
+
+}
+
+
+/* =====================================================
+   UPDATE BOOK
+===================================================== */
+
+function updateBook() {
+
+    const stage =
+        document.getElementById("bookStage");
+
+    const book =
+        document.getElementById("book");
+
+    const previousButton =
+        document.getElementById("previousButton");
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+    const pageStatus =
+        document.getElementById("pageStatus");
+
+
+    /* =================================================
+       MOBILE MODE
+    ================================================= */
+
+    if (isMobile()) {
+
+        const spreads =
+            document.querySelectorAll(".spread");
+
+        const pages =
+            document.querySelectorAll(".spread .page");
+
+
+        /* ---------------------------------------------
+           COVER
+        --------------------------------------------- */
+
+        if (currentMobilePage === -1) {
+
+            stage.classList.remove("is-open");
+
+            book.classList.remove("open");
+
+
+            spreads.forEach(function(spread) {
+
+                spread.classList.remove("active");
+
+            });
+
+
+            pages.forEach(function(page) {
+
+                page.style.display = "";
+
+            });
+
+
+            previousButton.disabled = true;
+
+            nextButton.disabled = false;
+
+            nextButton.textContent =
+                "OPEN BOOK →";
+
+            pageStatus.textContent =
+                "COVER";
+
+            return;
+
+        }
+
+
+        /* ---------------------------------------------
+           OPEN BOOK
+        --------------------------------------------- */
+
+        stage.classList.add("is-open");
+
+        book.classList.add("open");
+
+
+        /* ---------------------------------------------
+           HIDE ALL SPREADS
+        --------------------------------------------- */
+
+        spreads.forEach(function(spread) {
+
+            spread.classList.remove("active");
+
+        });
+
+
+        /* ---------------------------------------------
+           HIDE ALL INDIVIDUAL PAGES
+        --------------------------------------------- */
+
+        pages.forEach(function(page) {
+
+            page.style.display = "none";
+
+        });
+
+
+        /* ---------------------------------------------
+           GET CURRENT MOBILE PAGE
+        --------------------------------------------- */
+
+        const activePage =
+            pages[currentMobilePage];
+
+
+        if (activePage) {
+
+            const parentSpread =
+                activePage.closest(".spread");
+
+
+            /* -----------------------------------------
+               SHOW THE SPREAD CONTAINING THE PAGE
+            ----------------------------------------- */
+
+            if (parentSpread) {
+
+                parentSpread.classList.add("active");
+
+            }
+
+
+            /* -----------------------------------------
+               SHOW ONLY THIS PAGE
+            ----------------------------------------- */
+
+            activePage.style.display = "flex";
+
+
+            /* -----------------------------------------
+               PAGE NUMBER
+            ----------------------------------------- */
+
+            const number =
+                activePage.querySelector(".page-number");
+
+
+            if (number) {
+
+                pageStatus.textContent =
+                    number.textContent.trim();
+
+            } else {
+
+                pageStatus.textContent =
+                    String(
+                        currentMobilePage + 1
+                    ).padStart(2, "0");
+
+            }
+
+        }
+
+
+        /* ---------------------------------------------
+           PREVIOUS BUTTON
+        --------------------------------------------- */
+
+        previousButton.disabled = false;
+
+
+        /* ---------------------------------------------
+           NEXT BUTTON
+        --------------------------------------------- */
+
+        if (
+            currentMobilePage >=
+            pages.length - 1
+        ) {
+
+            nextButton.disabled = true;
+
+            nextButton.textContent =
+                "END";
+
+        } else {
+
+            nextButton.disabled = false;
+
+            nextButton.textContent =
+                "NEXT →";
+
+        }
+
+
+        return;
+    }
+
+
+    /* =================================================
+       DESKTOP MODE
+       ORIGINAL SPREAD BEHAVIOUR
+    ================================================= */
+
+    const totalSpreads =
+        document.querySelectorAll(".spread").length;
+
+
+    /* ---------------------------------------------
+       COVER
+    --------------------------------------------- */
+
+    if (currentSpread === 0) {
+
+        stage.classList.remove("is-open");
+
+        book.classList.remove("open");
+
+        previousButton.disabled = true;
+
+        nextButton.disabled = false;
+
+        nextButton.textContent =
+            "OPEN BOOK →";
+
+        pageStatus.textContent =
+            "COVER";
+
+        return;
+
+    }
+
+
+    /* ---------------------------------------------
+       OPEN BOOK
+    --------------------------------------------- */
+
+    stage.classList.add("is-open");
+
+    book.classList.add("open");
+
+    previousButton.disabled = false;
+
+
     /* ---------------------------------------------
        HIDE ALL SPREADS
     --------------------------------------------- */
@@ -4784,11 +5165,10 @@ function updateBook() {
     --------------------------------------------- */
 
     const leftPage =
-        (currentSpread * 2);
+        currentSpread * 2;
 
     const rightPage =
         leftPage + 1;
-
 
     pageStatus.textContent =
         String(leftPage).padStart(2, "0")
@@ -4838,6 +5218,20 @@ document.addEventListener(
             previousPage();
 
         }
+
+    }
+);
+
+
+/* =====================================================
+   RESPONSIVE RESIZE
+===================================================== */
+
+window.addEventListener(
+    "resize",
+    function() {
+
+        updateBook();
 
     }
 );
