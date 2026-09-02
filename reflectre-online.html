@@ -4725,22 +4725,35 @@ function updateBook() {
   
     }  
   
-  
-    /* ---------------------------------------------  
-       PAGE NUMBERS  
-    --------------------------------------------- */  
-  
-    const leftPage =  
-        (currentSpread * 2);  
-  
-    const rightPage =  
-        leftPage + 1;  
-  
-  
-    pageStatus.textContent =  
-        String(leftPage).padStart(2, "0")  
-        + "–"  
-        + String(rightPage).padStart(2, "0");  
+/* ---------------------------------------------
+   PAGE NUMBERS
+--------------------------------------------- */
+
+const activePages =
+    activeSpread.querySelectorAll(".page-number");
+
+if (activePages.length === 2) {
+
+    const leftPage =
+        activePages[0].textContent.trim();
+
+    const rightPage =
+        activePages[1].textContent.trim();
+
+    pageStatus.textContent =
+        leftPage + "–" + rightPage;
+
+} else if (activePages.length === 1) {
+
+    pageStatus.textContent =
+        activePages[0].textContent.trim();
+
+} else {
+
+    pageStatus.textContent =
+        "";
+
+}
   
   
     /* ---------------------------------------------  
