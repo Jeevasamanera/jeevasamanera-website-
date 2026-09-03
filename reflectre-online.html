@@ -4399,15 +4399,60 @@ body {
 ===================================================== --> 
       <script>  
   
+ /* =====================================================
+   REFLECTRE BOOK NAVIGATION
+===================================================== */
+
 let currentSpread = 0;
+let currentMobilePage = 0;
+
+function isMobileView() {
+    return window.matchMedia("(max-width: 600px)").matches;
+}
+
 
 function openReflectre() {
+
     currentSpread = 1;
+    currentMobilePage = 0;
+
     updateBook();
 }
 
+
 function nextPage() {
-    const spreads = document.querySelectorAll(".spread");
+
+    /* =========================================
+       MOBILE — ONE PAGE AT A TIME
+    ========================================= */
+
+    if (isMobileView()) {
+
+        const pages =
+            Array.from(document.querySelectorAll(".book .page"));
+
+        if (currentSpread === 0) {
+            currentSpread = 1;
+            currentMobilePage = 0;
+            updateBook();
+            return;
+        }
+
+        if (currentMobilePage < pages.length - 1) {
+            currentMobilePage++;
+            updateBook();
+        }
+
+        return;
+    }
+
+
+    /* =========================================
+       DESKTOP / TABLET — SPREAD BY SPREAD
+    ========================================= */
+
+    const spreads =
+        document.querySelectorAll(".spread");
 
     if (currentSpread < spreads.length) {
         currentSpread++;
@@ -4415,17 +4460,45 @@ function nextPage() {
     }
 }
 
+
 function previousPage() {
+
+    /* =========================================
+       MOBILE — ONE PAGE AT A TIME
+    ========================================= */
+
+    if (isMobileView()) {
+
+        if (currentMobilePage > 0) {
+            currentMobilePage--;
+            updateBook();
+            return;
+        }
+
+        currentSpread = 0;
+        updateBook();
+        return;
+    }
+
+
+    /* =========================================
+       DESKTOP / TABLET — SPREAD BY SPREAD
+    ========================================= */
+
     if (currentSpread > 0) {
         currentSpread--;
         updateBook();
     }
 }
 
+
 function updateBook() {
 
-    const stage = document.getElementById("bookStage");
-    const book = document.getElementById("book");
+    const stage =
+        document.getElementById("bookStage");
+
+    const book =
+        document.getElementById("book");
 
     const previousButton =
         document.getElementById("previousButton");
@@ -4436,9 +4509,151 @@ function updateBook() {
     const pageStatus =
         document.getElementById("pageStatus");
 
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    if (isMobileView()) {
+
+        const pages =
+            Array.from(document.querySelectorAll(".book .page"));
+
+
+        if (currentSpread === 0) {
+
+            stage.classList.remove("is-open");
+            book.classList.remove("open");
+
+            previousButton.disabled = true;
+            nextButton.disabled = false;
+
+            nextButton.textContent = "OPEN BOOK →";
+            pageStatus.textContent = "COVER";
+
+            return;
+        }
+
+
+        stage.classList.add("is-open");
+        book.classList.add("open");
+
+
+        /*
+         * Make sure the correct spread is active.
+         * Each mobile page still belongs to its
+         * original spread.
+         */
+
+        document
+            .querySelectorAll(".spread")
+            .forEach(function(spread) {
+
+                spread.classList.remove("active");
+
+            });
+
+
+        /*
+         * Find the spread containing the
+         * current individual page.
+         */
+
+        const activePage =
+            pages[currentMobilePage];
+
+
+        if (!activePage) {
+            return;
+        }
+
+
+        const containingSpread =
+            activePage.closest(".spread");
+
+
+        if (containingSpread) {
+            containingSpread.classList.add("active");
+        }
+
+
+        /*
+         * Hide both pages.
+         */
+
+        pages.forEach(function(page) {
+            page.classList.remove("mobile-visible");
+        });
+
+
+        /*
+         * Show ONLY the current page.
+         */
+
+        activePage.classList.add("mobile-visible");
+
+
+        /*
+         * Page number.
+         */
+
+        const number =
+            activePage.querySelector(".page-number");
+
+
+        if (number) {
+
+            pageStatus.textContent =
+                number.textContent.trim();
+
+        } else {
+
+            pageStatus.textContent = "";
+
+        }
+
+
+        /*
+         * Previous.
+         */
+
+        previousButton.disabled =
+            currentMobilePage === 0;
+
+
+        /*
+         * Next.
+         */
+
+        if (
+            currentMobilePage >=
+            pages.length - 1
+        ) {
+
+            nextButton.disabled = true;
+            nextButton.textContent = "END";
+
+        } else {
+
+            nextButton.disabled = false;
+            nextButton.textContent = "NEXT →";
+
+        }
+
+
+        return;
+    }
+
+
+    /* =========================================
+       DESKTOP / TABLET
+    ========================================= */
+
     const spreads =
         document.querySelectorAll(".spread");
 
+
+    /* COVER */
 
     if (currentSpread === 0) {
 
@@ -4455,14 +4670,22 @@ function updateBook() {
     }
 
 
+    /* OPEN */
+
     stage.classList.add("is-open");
     book.classList.add("open");
 
 
+    /* Hide all spreads */
+
     spreads.forEach(function(spread) {
+
         spread.classList.remove("active");
+
     });
 
+
+    /* Show current spread */
 
     const activeSpread =
         document.getElementById(
@@ -4476,7 +4699,9 @@ function updateBook() {
 
 
         const pageNumbers =
-            activeSpread.querySelectorAll(".page-number");
+            activeSpread.querySelectorAll(
+                ".page-number"
+            );
 
 
         if (pageNumbers.length === 2) {
@@ -4516,6 +4741,10 @@ function updateBook() {
 }
 
 
+/* =====================================================
+   KEYBOARD NAVIGATION
+===================================================== */
+
 document.addEventListener("keydown", function(event) {
 
     if (event.key === "ArrowRight") {
@@ -4529,8 +4758,11 @@ document.addEventListener("keydown", function(event) {
 });
 
 
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
 updateBook();
-        
         
         
   
