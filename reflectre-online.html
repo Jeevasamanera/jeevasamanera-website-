@@ -756,439 +756,262 @@ body {
    MOBILE  
 ===================================================== */  
   
-@media (max-width: 600px) {  
   
-    /* ---------------------------------------------  
-       TOP BAR  
-    --------------------------------------------- */  
-  
-    .topbar {  
-        height: 55px;  
-  
-        padding: 0 15px;  
-  
-        font-size: 8px;  
-  
-        letter-spacing: 2px;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       BOOK AREA  
-    --------------------------------------------- */  
-  
-    .book-area {  
-        min-height: calc(100vh - 125px);  
-  
-        padding: 20px 10px 65px;  
-  
-        align-items: flex-start;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       BOOK STAGE  
-    --------------------------------------------- */  
-  
-    .book-stage {  
-        width: 94vw;  
-  
-        height: 650px;  
-  
-        min-height: 650px;  
-  
-        margin-top: 5px;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       COVER  
-    --------------------------------------------- */  
-  
-    .closed-cover {  
-        width: 72vw;  
-  
-        height: auto;  
-  
-        aspect-ratio: 0.707 / 1;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE SPREAD  
-    --------------------------------------------- */  
-  
-    .spread {  
-        display: none;  
-    }  
-  
-    .spread.active {  
-        display: block;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE PAGES  
-    --------------------------------------------- */  
-  
-    .page {  
-        width: 100%;  
-  
-        height: 50%;  
-  
-        border-left: 1px solid #222;  
-  
-        border-right: 1px solid #222;  
-  
-        min-height: 0;  
-    }  
-  
-    .left-page {  
-        border-bottom: none;  
-    }  
-  
-    .right-page {  
-        border-top: none;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE CONTENT  
-    --------------------------------------------- */  
-  
-    .page-content {  
-        height: 100%;  
-  
-        padding: 35px 28px 45px;  
-  
-        overflow: hidden;  
-  
-        min-height: 0;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE SECTION LABEL  
-    --------------------------------------------- */  
-  
-    .section-label {  
-        font-size: 8px;  
-  
-        letter-spacing: 4px;  
-  
-        margin-bottom: 18px;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE MAIN HEADING  
-    --------------------------------------------- */  
-  
-    .page h1 {  
-        font-size: 26px;  
-  
-        line-height: 1.2;  
-  
-        letter-spacing: 4px;  
-  
-        margin-bottom: 20px;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE BODY TEXT  
-    --------------------------------------------- */  
-  
-    .page p,  
-    .introduction-page p,  
-    .description-page .description-text p {  
-  
-        font-size: 12px;  
-  
-        line-height: 1.6;  
-  
-        margin-bottom: 14px;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE INTRODUCTION  
-    --------------------------------------------- */  
-  
-    .introduction-page h1 {  
-        font-size: 25px;  
-  
-        margin-bottom: 20px;  
-    }  
-  
-    .closing-line {  
-        margin-top: 18px;  
-    }  
-  
-/* ---------------------------------------------  
-   MOBILE ARTWORK  
---------------------------------------------- */  
-  
-@media (max-width: 600px) {  
-  
-    .artwork-page {  
-        padding: 12px 20px 28px;  
-    }  
-  
-    .artwork-label {  
-        font-size: 7px;  
-        letter-spacing: 3px;  
-        margin-bottom: 5px;  
-    }  
-  
-    .artwork-main-image {  
-        flex: 1;  
-  
-        min-height: 0;  
-  
-        width: 100%;  
-  
-        display: flex;  
-  
-        align-items: center;  
-        justify-content: center;  
-  
-        padding: 8px 0;  
-  
-        overflow: hidden;  
-    }  
-  
-    .artwork-main-image img {  
-        width: 100%;  
-        height: 100%;  
-  
-        max-width: 100%;  
-        max-height: 100%;  
-  
-        object-fit: contain;  
-        object-position: center center;  
-  
-        display: block;  
-    }  
-  
-    .artwork-caption {  
-  
-    margin-top: 5px;
-    margin-bottom: 20px;
 
-    font-size: 7px; 
-  
-        line-height: 1.25;  
-    }  
-  
-    .artwork-caption strong {  
-        font-size: 9px;  
-    }  
-}  
-  
-    /* ---------------------------------------------  
-       MOBILE DESCRIPTION PAGE  
-    --------------------------------------------- */  
-  
-    .description-page {  
-        padding: 22px 24px 30px;  
-  
-        min-height: 0;  
-    }  
-  
-    .description-heading {  
-        font-size: 21px;  
-  
-        line-height: 1.2;  
-  
-        letter-spacing: 3px;  
-  
-        margin-bottom: 18px;  
-    }  
-  
-    .description-page .description-text {  
-        flex: 1;  
-  
-        min-height: 0;  
-  
-        overflow-y: auto;  
-  
-        overflow-x: hidden;  
-  
-        padding-right: 6px;  
-  
-        -webkit-overflow-scrolling: touch;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE PAGE NUMBER  
-    --------------------------------------------- */  
-  
-    .page-number {  
-        bottom: 14px;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE SPINE  
-    --------------------------------------------- */  
-  
-    .spine {  
-        display: none;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE OPEN BUTTON  
-    --------------------------------------------- */  
-  
-    .open-button {  
-        bottom: -48px;  
-  
-        padding: 14px 28px;  
-  
-        font-size: 9px;  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       MOBILE CONTROLS  
-    --------------------------------------------- */  
-  
-    .controls {  
-        height: 65px;  
-  
-        gap: 10px;  
-    }  
-  
-    .control-button {  
-        padding: 10px 13px;  
-  
-        font-size: 8px;  
-  
-        letter-spacing: 1.5px;  
-    }  
-  
-    .page-status {  
-        min-width: 45px;  
-  
-        font-size: 8px;  
-    }  
-}  
-  
-  
-/* =====================================================  
-   SMALL PHONES  
-===================================================== */  
-  
-@media (max-width: 380px) {  
-  
-    .book-stage {  
-        width: 94vw;  
-  
-        height: 620px;  
-  
-        min-height: 620px;  
-    }  
-  
-    .page-content {  
-        padding: 30px 23px 40px;  
-    }  
-  
-    .page p,  
-    .introduction-page p,  
-    .description-page .description-text p {  
-  
-        font-size: 11.5px;  
-  
-        line-height: 1.55;  
-  
-        margin-bottom: 12px;  
-    }  
-  
-    .introduction-page h1 {  
-        font-size: 23px;  
-    }  
-  
-    .description-page {  
-        padding: 19px 20px 28px;  
-    }  
-  
-    .description-heading {  
-        font-size: 20px;  
-  
-        letter-spacing: 2.5px;  
-    }  
-}  
-  
-  
-/* =====================================================  
-   SHORT MOBILE SCREENS  
-===================================================== */  
-  
-@media (max-width: 600px) and (max-height: 700px) {  
-  
-    .book-stage {  
-        height: 600px;  
-  
-        min-height: 600px;  
-    }  
-  
-    .page-content {  
-        padding-top: 28px;  
-  
-        padding-bottom: 38px;  
-    }  
-}  
-  
-  
-/* =====================================================  
-   PAGE 11 — CONTRAST OF BEING  
-===================================================== */  
-  
-#spread-5 .description-page {  
-    padding: 42px 50px 42px;  
-}  
-  
-#spread-5 .description-heading {  
-    margin-bottom: 22px;  
-}  
-  
-#spread-5 .description-page .description-text p {  
-    font-size: 13px;  
-  
-    line-height: 1.6;  
-  
-    margin-bottom: 14px;  
-}  
-  
-  
-/* =====================================================  
-   PAGE 11 — MOBILE  
-===================================================== */  
-  
-@media (max-width: 600px) {  
-  
-    #spread-5 .description-page {  
-        padding: 22px 24px 30px;  
-    }  
-  
-    #spread-5 .description-page .description-text p {  
-        font-size: 12px;  
-  
-        line-height: 1.6;  
-  
-        margin-bottom: 14px;  
-    }  
-  
-}  
-  
-  
-/* =====================================================  
-   END CSS  
-===================================================== */  
-  
+/* =====================================================
+   MOBILE — SINGLE PAGE DISPLAY
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .book-area {
+        min-height: calc(100vh - 120px);
+        padding: 15px 0 65px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .book-stage {
+        width: 100vw;
+        height: calc(100vh - 145px);
+        min-height: 500px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .book {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Hide every spread */
+    .spread {
+        display: none !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Show only the active spread container */
+    .spread.active {
+        display: block !important;
+    }
+
+    /* Hide both pages inside the active spread */
+    .spread.active .page {
+        display: none !important;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        min-height: 0;
+    }
+
+    /* JavaScript will show ONE page */
+    .spread.active .page.mobile-visible {
+        display: flex !important;
+    }
+
+    /* Remove centre spine on mobile */
+    .spine {
+        display: none !important;
+    }
+
+    /* Full-screen page */
+    .page-content {
+        width: 100%;
+        height: 100%;
+        padding: 35px 25px 45px;
+        overflow: hidden;
+        min-height: 0;
+    }
+
+    /* Artwork page */
+    .artwork-page {
+        width: 100% !important;
+        height: 100% !important;
+
+        padding: 12px 18px 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        overflow: hidden;
+    }
+
+    .artwork-main-image {
+        width: 100%;
+        flex: 1;
+        min-height: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 8px 0;
+        overflow: hidden;
+    }
+
+    .artwork-main-image img {
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: contain;
+        object-position: center center;
+
+        display: block;
+    }
+
+    .artwork-caption {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 20px;
+
+        font-size: 7px;
+        line-height: 1.25;
+        text-align: center;
+
+        flex-shrink: 0;
+    }
+
+    .artwork-caption strong {
+        font-size: 9px;
+    }
+
+    /* Description page */
+    .description-page {
+        width: 100% !important;
+        height: 100% !important;
+
+        padding: 25px 24px 35px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .description-page .description-text {
+        flex: 1;
+        min-height: 0;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        padding-right: 6px;
+
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    .description-page .description-text p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 14px;
+    }
+
+    /* Page number */
+    .page-number {
+        bottom: 14px;
+        font-size: 8px;
+        z-index: 10;
+    }
+
+    /* Mobile controls */
+    .controls {
+        height: 65px;
+        gap: 10px;
+        padding: 0 8px;
+    }
+
+    .control-button {
+        padding: 10px 13px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .page-status {
+        min-width: 45px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .book-stage {
+        height: calc(100vh - 140px);
+        min-height: 480px;
+    }
+
+    .page-content {
+        padding: 30px 21px 40px;
+    }
+
+    .page p,
+    .introduction-page p,
+    .description-page .description-text p {
+        font-size: 11.5px;
+        line-height: 1.55;
+        margin-bottom: 12px;
+    }
+
+    .introduction-page h1 {
+        font-size: 23px;
+    }
+
+    .description-page {
+        padding: 20px 19px 30px;
+    }
+
+    .description-heading {
+        font-size: 20px;
+        letter-spacing: 2.5px;
+    }
+
+    .artwork-page {
+        padding: 10px 14px 27px;
+    }
+}
+
+
+/* =====================================================
+   SHORT MOBILE SCREENS
+===================================================== */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+    .book-stage {
+        height: 570px;
+        min-height: 570px;
+    }
+
+    .page-content {
+        padding-top: 27px;
+        padding-bottom: 38px;
+    }
+}
+
 </style>  </head>  <body>  <!-- =====================================================  
      TOP NAVIGATION  
 ===================================================== -->  <header class="topbar">  <a href="reflectre.html">  
@@ -4576,241 +4399,261 @@ body {
 ===================================================== --> 
       <script>  
   
-/* =====================================================  
-   REFLECTRE BOOK NAVIGATION  
-===================================================== */  
-  
-let currentSpread = 0;  
-  
-  
-/* =====================================================  
-   OPEN BOOK  
-===================================================== */  
-  
-function openReflectre() {  
-  
-    currentSpread = 1;  
-  
-    updateBook();  
-  
-}  
-  
-  
-/* =====================================================  
-   NEXT SPREAD  
-===================================================== */  
-  
-function nextPage() {  
-  
-    const totalSpreads =  
-        document.querySelectorAll(".spread").length;  
-  
-    if (currentSpread < totalSpreads) {  
-  
-        currentSpread++;  
-  
-        updateBook();  
-  
-    }  
-  
-}  
-  
-  
-/* =====================================================  
-   PREVIOUS SPREAD  
-===================================================== */  
-  
-function previousPage() {  
-  
-    if (currentSpread > 0) {  
-  
-        currentSpread--;  
-  
-        updateBook();  
-  
-    }  
-  
-}  
-  
-  
-/* =====================================================  
-   UPDATE BOOK  
-===================================================== */  
-  
-function updateBook() {  
-  
-    const stage =  
-        document.getElementById("bookStage");  
-  
-    const book =  
-        document.getElementById("book");  
-  
-    const previousButton =  
-        document.getElementById("previousButton");  
-  
-    const nextButton =  
-        document.getElementById("nextButton");  
-  
-    const pageStatus =  
-        document.getElementById("pageStatus");  
-  
-  
-    /* ---------------------------------------------  
-       TOTAL SPREADS  
-    --------------------------------------------- */  
-  
-    const totalSpreads =  
-        document.querySelectorAll(".spread").length;  
-  
-  
-    /* ---------------------------------------------  
-       COVER  
-    --------------------------------------------- */  
-  
-    if (currentSpread === 0) {  
-  
-        stage.classList.remove("is-open");  
-  
-        book.classList.remove("open");  
-  
-        previousButton.disabled = true;  
-  
-        nextButton.disabled = false;  
-  
-        nextButton.textContent =  
-            "OPEN BOOK →";  
-  
-        pageStatus.textContent =  
-            "COVER";  
-  
-        return;  
-  
-    }  
-  
-  
-    /* ---------------------------------------------  
-       OPEN BOOK  
-    --------------------------------------------- */  
-  
-    stage.classList.add("is-open");  
-  
-    book.classList.add("open");  
-  
-    previousButton.disabled = false;  
-  
-  
-    /* ---------------------------------------------  
-       HIDE ALL SPREADS  
-    --------------------------------------------- */  
-  
-    document  
-        .querySelectorAll(".spread")  
-        .forEach(function(spread) {  
-  
-            spread.classList.remove("active");  
-  
-        });  
-  
-  
-    /* ---------------------------------------------  
-       SHOW CURRENT SPREAD  
-    --------------------------------------------- */  
-  
-    const activeSpread =  
-        document.getElementById(  
-            "spread-" + currentSpread  
-        );  
-  
-  
-    if (activeSpread) {  
-  
-        activeSpread.classList.add("active");  
-  
-    }  
-  
-/* ---------------------------------------------
-   PAGE NUMBERS
---------------------------------------------- */
+/* =====================================================
+   MOBILE — SINGLE PAGE DISPLAY
+===================================================== */
 
-const activePages =
-    activeSpread.querySelectorAll(".page-number");
+@media (max-width: 600px) {
 
-if (activePages.length === 2) {
+    .book-area {
+        min-height: calc(100vh - 120px);
+        padding: 15px 0 65px;
+        align-items: flex-start;
+        justify-content: center;
+    }
 
-    const leftPage =
-        activePages[0].textContent.trim();
+    .book-stage {
+        width: 100vw;
+        height: calc(100vh - 145px);
+        min-height: 500px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-    const rightPage =
-        activePages[1].textContent.trim();
+    .book {
+        width: 100%;
+        height: 100%;
+    }
 
-    pageStatus.textContent =
-        leftPage + "–" + rightPage;
+    /* Hide every spread */
+    .spread {
+        display: none !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
 
-} else if (activePages.length === 1) {
+    /* Show only the active spread container */
+    .spread.active {
+        display: block !important;
+    }
 
-    pageStatus.textContent =
-        activePages[0].textContent.trim();
+    /* Hide both pages inside the active spread */
+    .spread.active .page {
+        display: none !important;
 
-} else {
+        position: absolute;
+        top: 0;
+        left: 0;
 
-    pageStatus.textContent =
-        "";
+        width: 100% !important;
+        height: 100% !important;
 
+        min-height: 0;
+    }
+
+    /* JavaScript will show ONE page */
+    .spread.active .page.mobile-visible {
+        display: flex !important;
+    }
+
+    /* Remove centre spine on mobile */
+    .spine {
+        display: none !important;
+    }
+
+    /* Full-screen page */
+    .page-content {
+        width: 100%;
+        height: 100%;
+        padding: 35px 25px 45px;
+        overflow: hidden;
+        min-height: 0;
+    }
+
+    /* Artwork page */
+    .artwork-page {
+        width: 100% !important;
+        height: 100% !important;
+
+        padding: 12px 18px 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        overflow: hidden;
+    }
+
+    .artwork-main-image {
+        width: 100%;
+        flex: 1;
+        min-height: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 8px 0;
+        overflow: hidden;
+    }
+
+    .artwork-main-image img {
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: contain;
+        object-position: center center;
+
+        display: block;
+    }
+
+    .artwork-caption {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 20px;
+
+        font-size: 7px;
+        line-height: 1.25;
+        text-align: center;
+
+        flex-shrink: 0;
+    }
+
+    .artwork-caption strong {
+        font-size: 9px;
+    }
+
+    /* Description page */
+    .description-page {
+        width: 100% !important;
+        height: 100% !important;
+
+        padding: 25px 24px 35px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .description-page .description-text {
+        flex: 1;
+        min-height: 0;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        padding-right: 6px;
+
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    .description-page .description-text p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 14px;
+    }
+
+    /* Page number */
+    .page-number {
+        bottom: 14px;
+        font-size: 8px;
+        z-index: 10;
+    }
+
+    /* Mobile controls */
+    .controls {
+        height: 65px;
+        gap: 10px;
+        padding: 0 8px;
+    }
+
+    .control-button {
+        padding: 10px 13px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .page-status {
+        min-width: 45px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
 }
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .book-stage {
+        height: calc(100vh - 140px);
+        min-height: 480px;
+    }
+
+    .page-content {
+        padding: 30px 21px 40px;
+    }
+
+    .page p,
+    .introduction-page p,
+    .description-page .description-text p {
+        font-size: 11.5px;
+        line-height: 1.55;
+        margin-bottom: 12px;
+    }
+
+    .introduction-page h1 {
+        font-size: 23px;
+    }
+
+    .description-page {
+        padding: 20px 19px 30px;
+    }
+
+    .description-heading {
+        font-size: 20px;
+        letter-spacing: 2.5px;
+    }
+
+    .artwork-page {
+        padding: 10px 14px 27px;
+    }
+}
+
+
+/* =====================================================
+   SHORT MOBILE SCREENS
+===================================================== */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+    .book-stage {
+        height: 570px;
+        min-height: 570px;
+    }
+
+    .page-content {
+        padding-top: 27px;
+        padding-bottom: 38px;
+    }
+}
+        
   
-  
-    /* ---------------------------------------------  
-       NEXT BUTTON  
-    --------------------------------------------- */  
-  
-    if (currentSpread >= totalSpreads) {  
-  
-        nextButton.disabled = true;  
-  
-        nextButton.textContent =  
-            "END";  
-  
-    } else {  
-  
-        nextButton.disabled = false;  
-  
-        nextButton.textContent =  
-            "NEXT →";  
-  
-    }  
-  
-}  
-  
-  
-/* =====================================================  
-   KEYBOARD CONTROLS  
-===================================================== */  
-  
-document.addEventListener(  
-    "keydown",  
-    function(event) {  
-  
-        if (event.key === "ArrowRight") {  
-  
-            nextPage();  
-  
-        }  
-  
-        if (event.key === "ArrowLeft") {  
-  
-            previousPage();  
-  
-        }  
-  
-    }  
-);  
-  
-  
-/* =====================================================  
-   INITIAL STATE  
-===================================================== */  
-  
-updateBook();  
   
 </script> 
 </body>  
