@@ -4399,259 +4399,139 @@ body {
 ===================================================== --> 
       <script>  
   
-/* =====================================================
-   MOBILE — SINGLE PAGE DISPLAY
-===================================================== */
+let currentSpread = 0;
 
-@media (max-width: 600px) {
+function openReflectre() {
+    currentSpread = 1;
+    updateBook();
+}
 
-    .book-area {
-        min-height: calc(100vh - 120px);
-        padding: 15px 0 65px;
-        align-items: flex-start;
-        justify-content: center;
+function nextPage() {
+    const spreads = document.querySelectorAll(".spread");
+
+    if (currentSpread < spreads.length) {
+        currentSpread++;
+        updateBook();
+    }
+}
+
+function previousPage() {
+    if (currentSpread > 0) {
+        currentSpread--;
+        updateBook();
+    }
+}
+
+function updateBook() {
+
+    const stage = document.getElementById("bookStage");
+    const book = document.getElementById("book");
+
+    const previousButton =
+        document.getElementById("previousButton");
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+    const pageStatus =
+        document.getElementById("pageStatus");
+
+    const spreads =
+        document.querySelectorAll(".spread");
+
+
+    if (currentSpread === 0) {
+
+        stage.classList.remove("is-open");
+        book.classList.remove("open");
+
+        previousButton.disabled = true;
+        nextButton.disabled = false;
+
+        nextButton.textContent = "OPEN BOOK →";
+        pageStatus.textContent = "COVER";
+
+        return;
     }
 
-    .book-stage {
-        width: 100vw;
-        height: calc(100vh - 145px);
-        min-height: 500px;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+    stage.classList.add("is-open");
+    book.classList.add("open");
+
+
+    spreads.forEach(function(spread) {
+        spread.classList.remove("active");
+    });
+
+
+    const activeSpread =
+        document.getElementById(
+            "spread-" + currentSpread
+        );
+
+
+    if (activeSpread) {
+
+        activeSpread.classList.add("active");
+
+
+        const pageNumbers =
+            activeSpread.querySelectorAll(".page-number");
+
+
+        if (pageNumbers.length === 2) {
+
+            pageStatus.textContent =
+                pageNumbers[0].textContent.trim()
+                + "–" +
+                pageNumbers[1].textContent.trim();
+
+        } else if (pageNumbers.length === 1) {
+
+            pageStatus.textContent =
+                pageNumbers[0].textContent.trim();
+
+        } else {
+
+            pageStatus.textContent = "";
+
+        }
     }
 
-    .book {
-        width: 100%;
-        height: 100%;
-    }
 
-    /* Hide every spread */
-    .spread {
-        display: none !important;
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-    }
+    previousButton.disabled = false;
 
-    /* Show only the active spread container */
-    .spread.active {
-        display: block !important;
-    }
 
-    /* Hide both pages inside the active spread */
-    .spread.active .page {
-        display: none !important;
+    if (currentSpread >= spreads.length) {
 
-        position: absolute;
-        top: 0;
-        left: 0;
+        nextButton.disabled = true;
+        nextButton.textContent = "END";
 
-        width: 100% !important;
-        height: 100% !important;
+    } else {
 
-        min-height: 0;
-    }
+        nextButton.disabled = false;
+        nextButton.textContent = "NEXT →";
 
-    /* JavaScript will show ONE page */
-    .spread.active .page.mobile-visible {
-        display: flex !important;
-    }
-
-    /* Remove centre spine on mobile */
-    .spine {
-        display: none !important;
-    }
-
-    /* Full-screen page */
-    .page-content {
-        width: 100%;
-        height: 100%;
-        padding: 35px 25px 45px;
-        overflow: hidden;
-        min-height: 0;
-    }
-
-    /* Artwork page */
-    .artwork-page {
-        width: 100% !important;
-        height: 100% !important;
-
-        padding: 12px 18px 30px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-
-        overflow: hidden;
-    }
-
-    .artwork-main-image {
-        width: 100%;
-        flex: 1;
-        min-height: 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 8px 0;
-        overflow: hidden;
-    }
-
-    .artwork-main-image img {
-        width: 100%;
-        height: 100%;
-
-        max-width: 100%;
-        max-height: 100%;
-
-        object-fit: contain;
-        object-position: center center;
-
-        display: block;
-    }
-
-    .artwork-caption {
-        width: 100%;
-        margin-top: 5px;
-        margin-bottom: 20px;
-
-        font-size: 7px;
-        line-height: 1.25;
-        text-align: center;
-
-        flex-shrink: 0;
-    }
-
-    .artwork-caption strong {
-        font-size: 9px;
-    }
-
-    /* Description page */
-    .description-page {
-        width: 100% !important;
-        height: 100% !important;
-
-        padding: 25px 24px 35px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        min-height: 0;
-        overflow: hidden;
-    }
-
-    .description-page .description-text {
-        flex: 1;
-        min-height: 0;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        padding-right: 6px;
-
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
-    }
-
-    .description-page .description-text p {
-        font-size: 12px;
-        line-height: 1.6;
-        margin-bottom: 14px;
-    }
-
-    /* Page number */
-    .page-number {
-        bottom: 14px;
-        font-size: 8px;
-        z-index: 10;
-    }
-
-    /* Mobile controls */
-    .controls {
-        height: 65px;
-        gap: 10px;
-        padding: 0 8px;
-    }
-
-    .control-button {
-        padding: 10px 13px;
-        font-size: 8px;
-        letter-spacing: 1.5px;
-    }
-
-    .page-status {
-        min-width: 45px;
-        font-size: 8px;
-        letter-spacing: 1.5px;
     }
 }
 
 
-/* =====================================================
-   SMALL PHONES
-===================================================== */
+document.addEventListener("keydown", function(event) {
 
-@media (max-width: 380px) {
-
-    .book-stage {
-        height: calc(100vh - 140px);
-        min-height: 480px;
+    if (event.key === "ArrowRight") {
+        nextPage();
     }
 
-    .page-content {
-        padding: 30px 21px 40px;
+    if (event.key === "ArrowLeft") {
+        previousPage();
     }
 
-    .page p,
-    .introduction-page p,
-    .description-page .description-text p {
-        font-size: 11.5px;
-        line-height: 1.55;
-        margin-bottom: 12px;
-    }
-
-    .introduction-page h1 {
-        font-size: 23px;
-    }
-
-    .description-page {
-        padding: 20px 19px 30px;
-    }
-
-    .description-heading {
-        font-size: 20px;
-        letter-spacing: 2.5px;
-    }
-
-    .artwork-page {
-        padding: 10px 14px 27px;
-    }
-}
+});
 
 
-/* =====================================================
-   SHORT MOBILE SCREENS
-===================================================== */
-
-@media (max-width: 600px) and (max-height: 700px) {
-
-    .book-stage {
-        height: 570px;
-        min-height: 570px;
-    }
-
-    .page-content {
-        padding-top: 27px;
-        padding-bottom: 38px;
-    }
-}
+updateBook();
+        
+        
         
   
   
