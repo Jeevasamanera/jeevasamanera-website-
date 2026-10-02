@@ -30,9 +30,20 @@
     /* NAVIGATION */
 
     header {
-      padding: 70px 30px 40px;
-      text-align: center;
-    }
+  padding: 50px 30px 40px;
+  text-align: center;
+}
+
+.hero-image {
+  max-width: 900px;
+  margin: 0 auto 45px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
     nav {
       margin-bottom: 65px;
@@ -54,9 +65,9 @@
     /* HEADER */
 
     h1 {
-      font-size: clamp(36px, 8vw, 70px);
-      letter-spacing: 5px;
-      font-weight: normal;
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: 4px;
+  font-weight: normal;
     }
 
     .subtitle {
@@ -340,18 +351,23 @@
 
   <header>
 
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="index.html#about">ABOUT</a>
-      <a href="tattoo.html">TATTOO</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="index.html#about">ABOUT</a>
+    <a href="tattoo.html">TATTOO</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
 
-    <h1>JEEVA SAMANERA</h1>
+  <div class="hero-image">
+    <img src="1000013355.jpg"
+         alt="Jeeva Samanera, artist">
+  </div>
 
-    <div class="subtitle">
-      Tattoo Artist
-    </div>
+  <h1>JEEVA SAMANERA</h1>
+
+  <div class="subtitle">
+    Tattoo Artist
+  </div>
 
   </header>
 
