@@ -171,6 +171,15 @@
     .artwork img:hover {
       opacity: 0.78;
     }
+    .last-artwork {
+  grid-column: 1 / -1;
+  max-width: 750px;
+  margin: 20px auto 0;
+}
+
+.last-artwork img {
+  width: 100%;
+}
 
     /* FEATURED WORK */
 
@@ -541,10 +550,10 @@
            onclick="openImage(this.src)">
     </article>
 
-    <article class="artwork">
-      <img src="1000006962.jpg"
-           alt="Tattoo artwork by Jeeva Samanera"
-           onclick="openImage(this.src)">
+    <article class="artwork last-artwork">
+  <img src="1000006962.jpg"
+       alt="Tattoo artwork by Jeeva Samanera"
+       onclick="openImage(this.src)">
     </article>
 
   </main>
