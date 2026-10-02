@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Jeeva Samanera | Tattoo</title>
+  <title>Jeeva Samanera | Tattoo Artist</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
@@ -16,6 +16,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Georgia, serif;
       background: #111;
@@ -23,13 +27,15 @@
       line-height: 1.6;
     }
 
+    /* NAVIGATION */
+
     header {
       padding: 70px 30px 40px;
       text-align: center;
     }
 
     nav {
-      margin-bottom: 60px;
+      margin-bottom: 65px;
     }
 
     nav a {
@@ -38,11 +44,19 @@
       margin: 0 12px;
       font-size: 14px;
       letter-spacing: 2px;
+      transition: opacity 0.3s ease;
     }
+
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    /* HEADER */
 
     h1 {
       font-size: clamp(36px, 8vw, 70px);
       letter-spacing: 5px;
+      font-weight: normal;
     }
 
     .subtitle {
@@ -53,9 +67,11 @@
       opacity: 0.7;
     }
 
+    /* INTRO */
+
     .intro {
-      max-width: 750px;
-      margin: 70px auto;
+      max-width: 780px;
+      margin: 70px auto 110px;
       padding: 0 25px;
       text-align: center;
     }
@@ -71,10 +87,57 @@
       opacity: 0.8;
     }
 
+    /* SECTIONS */
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 30px 110px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: normal;
+      letter-spacing: 2px;
+      margin-bottom: 45px;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      margin: -20px auto 55px;
+      text-align: center;
+      font-size: 17px;
+      opacity: 0.7;
+    }
+
+    /* ARTISTIC CONCEPT */
+
+    .concept {
+      max-width: 800px;
+      margin: 0 auto 120px;
+      padding: 0 25px;
+      text-align: center;
+    }
+
+    .concept h2 {
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    .concept p {
+      font-size: 19px;
+      line-height: 1.9;
+      opacity: 0.82;
+    }
+
+    /* GALLERY */
+
     .gallery {
       max-width: 1200px;
       margin: auto;
-      padding: 40px 30px 120px;
+      padding: 0 30px 110px;
 
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -86,18 +149,100 @@
     }
 
     .artwork img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  cursor: pointer;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
     }
 
-    .artwork h3 {
-      margin-top: 20px;
-      font-size: 20px;
-      font-weight: normal;
+    .artwork img:hover {
+      opacity: 0.78;
     }
+
+    /* FEATURED WORK */
+
+    .featured {
+      max-width: 1000px;
+      margin: 0 auto 120px;
+      padding: 0 30px;
+    }
+
+    .featured img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* EXPERIENCE */
+
+    .experience {
+      max-width: 750px;
+      margin: 0 auto 120px;
+      padding: 0 25px;
+      text-align: center;
+    }
+
+    .experience h2 {
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    .experience p {
+      font-size: 18px;
+      line-height: 1.9;
+      opacity: 0.8;
+    }
+
+    /* AVAILABILITY */
+
+    .availability {
+      max-width: 750px;
+      margin: 0 auto 120px;
+      padding: 0 25px;
+      text-align: center;
+    }
+
+    .availability h2 {
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 25px;
+    }
+
+    .availability p {
+      font-size: 18px;
+      opacity: 0.8;
+      line-height: 1.9;
+    }
+
+    /* CONTACT */
+
+    .portfolio-contact {
+      text-align: center;
+      padding: 40px 25px 120px;
+    }
+
+    .portfolio-contact h2 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 25px;
+    }
+
+    .portfolio-contact a {
+      color: #f4f0e8;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(244, 240, 232, 0.5);
+      padding-bottom: 3px;
+    }
+
+    .portfolio-contact p {
+      margin-top: 12px;
+      opacity: 0.7;
+    }
+
+    /* FOOTER */
 
     footer {
       padding: 50px;
@@ -106,24 +251,79 @@
       font-size: 13px;
     }
 
+    /* MOBILE */
+
     @media (max-width: 700px) {
 
-      .gallery {
-        grid-template-columns: 1fr;
-        padding: 30px 20px 80px;
-      }
-
-      .artwork img {
-        height: auto;
-        object-fit: contain;
-      }
-
       header {
-        padding-top: 50px;
+        padding: 50px 20px 35px;
       }
 
       nav {
         margin-bottom: 50px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+      }
+
+      .intro {
+        margin: 55px auto 85px;
+      }
+
+      .intro h2 {
+        font-size: 32px;
+      }
+
+      .intro p {
+        font-size: 17px;
+      }
+
+      .concept {
+        margin-bottom: 90px;
+      }
+
+      .concept h2 {
+        font-size: 27px;
+      }
+
+      .concept p {
+        font-size: 17px;
+      }
+
+      .section {
+        padding: 0 20px 85px;
+      }
+
+      .section-title {
+        font-size: 26px;
+        margin-bottom: 35px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        padding: 0 20px 85px;
+        gap: 35px;
+      }
+
+      .featured {
+        padding: 0 20px;
+        margin-bottom: 90px;
+      }
+
+      .experience,
+      .availability {
+        margin-bottom: 90px;
+      }
+
+      .portfolio-contact {
+        padding-bottom: 90px;
+      }
+
+      footer {
+        padding: 40px 20px;
       }
 
     }
@@ -132,7 +332,11 @@
 
 </head>
 
+
 <body>
+
+
+  <!-- NAVIGATION -->
 
   <header>
 
@@ -152,151 +356,234 @@
   </header>
 
 
+  <!-- INTRO -->
+
   <section class="intro">
 
     <h2>TATTOO</h2>
 
     <p>
-      A selection of tattoo works exploring symbolism,
-      portraiture, traditional Nepalese influences,
-      realism and contemporary visual expression.
+      A collection of tattoo works exploring realism,
+      blackwork, abstraction, symbolism and personal
+      visual expression.
     </p>
+
+  </section>
+
+
+  <!-- ARTISTIC CONCEPT -->
+
+  <section class="concept">
+
+    <h2>ARTISTIC CONCEPT</h2>
+
+    <p>
+      I approach tattooing as a form of visual reflection —
+      a meeting point between the client's personal story
+      and my own artistic language. I am interested in
+      emotion, symbolism, contrast and the transformation
+      of an idea into something permanently carried on the body.
+    </p>
+
+  </section>
+
+
+  <!-- FEATURED WORK -->
+
+  <section class="section">
+
+    <h2 class="section-title">SELECTED WORK</h2>
 
   </section>
 
 
   <main class="gallery">
 
-  <article class="artwork">
-    <img src="1000008556.jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
+    <article class="artwork">
+      <img src="1000008556.jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
 
-  <article class="artwork">
-    <img src="Screenshot_2026-08-18-17-03-37-317_com.miui.gallery-edit.jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
+    <article class="artwork">
+      <img src="Screenshot_2026-08-18-17-03-37-317_com.miui.gallery-edit.jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
 
-  <article class="artwork">
-    <img src="1000008014.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
+    <article class="artwork">
+      <img src="1000008014.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
 
-  </main>
-<article class="artwork">
-    <img src="DSC06599.jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
+    <article class="artwork">
+      <img src="DSC06599.jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="0ad4544ad5d00314b5452ee6d96c9103_3.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="5a5ecaafcb7d6568a69c8ea35bf4ba9c_5.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="0ad4544ad5d00314b5452ee6d96c9103_4.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="1000006962.jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="IMG_20260929_051415.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="1000014425.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="Blessings.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="IMG_20260919_112642 (2).jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="IMG_20260919_112632 (1) (2).jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="The space.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="252995e5a7390c6c4c50ffefd861e116_13.jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="8b5e7553ca9e0786a6a0d8c5aaf6f3f0_18.jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="IMG_20260119_195824_448.jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="IMG_20260119_195824_133.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="872affbf898355f6f98de89ea159855e_19.jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="7c6373aa9e218d60e1fee85f4c064efe_8.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="5a5ecaafcb7d6568a69c8ea35bf4ba9c_6.jpeg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
+    </article>
+
+    <article class="artwork">
+      <img src="IMG_20260128_110534_425 (1).jpg"
+           alt="Tattoo artwork by Jeeva Samanera"
+           onclick="openImage(this.src)">
     </article>
 
   </main>
 
 
-  </main>
-<article class="artwork">
-    <img src="0ad4544ad5d00314b5452ee6d96c9103_3.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-    </article>
+  <!-- PROFESSIONAL EXPERIENCE -->
 
-</main>
-    </main>
-<article class="artwork">
-    <img src="5a5ecaafcb7d6568a69c8ea35bf4ba9c_5.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-    </article>
+  <section class="experience">
+
+    <h2>THE PRACTICE</h2>
+
+    <p>
+      Tattooing since 2021, with a private studio practice
+      in Lisbon, Portugal. My work moves between realism,
+      blackwork, abstract composition and symbolic imagery,
+      with an emphasis on creating pieces that carry a
+      personal and emotional meaning for the wearer.
+    </p>
+
+  </section>
 
 
-  <article class="artwork">
-    <img src="0ad4544ad5d00314b5452ee6d96c9103_4.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
+  <!-- AVAILABILITY -->
 
-  <article class="artwork">
-    <img src="1000006962.jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
-  <main class="gallery">
+  <section class="availability">
 
-    
-  <article class="artwork">
-    <img src="IMG_20260929_051415.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
+    <h2>AVAILABLE FOR</h2>
 
-    
-  <article class="artwork">
-    <img src="1000014425.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
+    <p>
+      Guest spots · Studio collaborations ·
+      International projects · Custom tattoo work
+    </p>
 
-    
-  <article class="artwork">
-    <img src="Blessings.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
+  </section>
 
-  <article class="artwork">
-    <img src="IMG_20260919_112642 (2).jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
 
-  <article class="artwork">
-    <img src="IMG_20260919_112632 (1) (2).jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article> 
+  <!-- CONTACT -->
 
-    <article class="artwork">
-    <img src="The space.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-    </article>
+  <section class="portfolio-contact">
 
-        <article class="artwork">
-    <img src="252995e5a7390c6c4c50ffefd861e116_13.jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-        </article>
+    <h2>WORK WITH ME</h2>
 
-    <article class="artwork">
-    <img src="8b5e7553ca9e0786a6a0d8c5aaf6f3f0_18.jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-        </article>
+    <p>
+      For tattoo enquiries, guest spots and collaborations:
+    </p>
 
-    <article class="artwork">
-    <img src="IMG_20260119_195824_448.jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-    </article>
+    <p>
+      <a href="contact.html">CONTACT</a>
+    </p>
 
-    <article class="artwork">
-    <img src="IMG_20260119_195824_133.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-        </article>
+  </section>
 
-    <article class="artwork">
-    <img src="872affbf898355f6f98de89ea159855e_19.jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-        </article>
-    
-    <article class="artwork">
-    <img src="7c6373aa9e218d60e1fee85f4c064efe_8.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-    </article>
 
-    <article class="artwork">
-    <img src="5a5ecaafcb7d6568a69c8ea35bf4ba9c_6.jpeg"
-         alt="Tattoo artwork by Jeeva Samanera">
-    </article>
+  <!-- FOOTER -->
 
-    <article class="artwork">
-    <img src="IMG_20260128_110534_425 (1).jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-    </article>
-
-    
-</main>
-    <article class="artwork">
-    <img src="1000008556.jpg"
-         alt="Tattoo artwork by Jeeva Samanera">
-  </article>
-
-  </main>
   <footer>
     © 2026 Jeeva Samanera
   </footer>
@@ -305,13 +592,12 @@
   <script>
 
     function openImage(imageSource) {
-
       window.open(imageSource, "_blank");
-
     }
 
   </script>
 
+
 </body>
 
-</html>
+      </html>
